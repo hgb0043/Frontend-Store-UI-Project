@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  font-family: Zen Old Mincho, arial, sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-box {
+  color: white;
+  box-shadow: 0 0 4px rgb(255,255,255);
+  width: 200px;
+  height: 200px;
+}
+
+h1 {
+  font-size: 16px;
+}
