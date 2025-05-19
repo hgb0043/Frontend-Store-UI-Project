@@ -96,12 +96,16 @@ nav {
     visibility: hidden;
   }
 
+  .header-logo {
+    margin-left: 35px;
+  }
+
   .fa-bars {
     visibility: visible;
 
     color: black;
     width: 10px;
-    margin-left: 15px;
+    margin-left: 25px;
     font-size: 20px;
   }
 }

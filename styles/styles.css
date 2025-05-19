@@ -1,0 +1,63 @@
+body {
+  font-family: arial, sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 400px;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+}
+
+.logo {
+  height: 80px;
+}
+
+.email-address-container, .password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h1, h2 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+input {
+  width: 275px;
+}
+
+.password-box-container {
+  margin-left: 21px;
+}
+
+.log-in-button {
+  margin-top: 16px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 60px;
+}
+
+.message {
+  margin-bottom: 12px;
+}
+
+.sign-up {
+  color: blue;
+  text-decoration: underline;
+}
