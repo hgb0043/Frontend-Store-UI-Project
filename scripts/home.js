@@ -1,3 +1,5 @@
+console.log(firstName, lastName, emailAddress, password);
+
 const menuIcon = document.querySelector('.js-bars');
 const sidebar = document.querySelector('.sidebar');
 const sidebarLinks = document.querySelectorAll('.sidebar-link');

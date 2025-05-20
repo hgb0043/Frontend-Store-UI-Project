@@ -1,3 +1,8 @@
+const correctFirstName = localStorage.getItem('first-name');
+const correctLastName = localStorage.getItem('last-name');
+const correctEmailAddress = localStorage.getItem('email-address');
+const correctPassword = localStorage.getItem('password');
+
 const eye = document.querySelector('.js-eye');
 const passwordBox = document.querySelector('.js-password-box');
 const logInButton = document.querySelector('.js-log-in-button');

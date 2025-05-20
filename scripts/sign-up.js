@@ -8,18 +8,17 @@ const reEnterPasswordBox = document.querySelector('.js-re-enter-password-box');
 const signUpButton = document.querySelector('.js-sign-up-button');
 const signUpLink = document.querySelector('.sign-up-link');
 
-firstNameBox.value = localStorage.getItem('correct-first-name') || '';
-lastNameBox.value = localStorage.getItem('correct-last-name') || '';
-emailAddressBox.value = localStorage.getItem('correct-email-address') || '';
+firstNameBox.value = localStorage.getItem('input-first-name') || '';
+lastNameBox.value = localStorage.getItem('input-last-name') || '';
+emailAddressBox.value = localStorage.getItem('input-email-address') || '';
 passwordBox.value = localStorage.getItem('inputPassword') || '';
 
-
-let correctFirstName;
-let correctLastName;
-let correctEmailAddress;
+let inputFirstName;
+let inputLastName;
+let inputEmailAddress;
 let inputReEnterPassword;
 let inputPassword;
-let correctPassword;
+let validatedPassword;
 
 /* Control visibility of "password" field via its adjacent eye icon */
 eye.addEventListener('click', () => {
@@ -42,16 +41,16 @@ eye2.addEventListener('click', () => {
 signUpButton.addEventListener('click', () => {
   
   // Generate variables for the value of each input field.
-  correctFirstName = firstNameBox.value;
-  correctLastName = lastNameBox.value;
-  correctEmailAddress = emailAddressBox.value;
+  inputFirstName = firstNameBox.value;
+  inputLastName = lastNameBox.value;
+  inputEmailAddress = emailAddressBox.value;
   inputPassword = passwordBox.value;
   inputReEnterPassword = reEnterPasswordBox.value;
 
   /* Create array containing all input field values to simplify later code */
   const fields = [
-  correctFirstName,
-  correctLastName,
+  inputFirstName,
+  inputLastName,
   inputReEnterPassword,
   inputPassword,
 ]
@@ -61,9 +60,9 @@ signUpButton.addEventListener('click', () => {
       alert('Please fill in all forms');
     } else {
       if(inputPassword === inputReEnterPassword) {
-    correctPassword = inputPassword;
-    localStorage.setItem('correct-password', inputPassword);
-    signUpLink.href = "home.html";
+    validatedPassword = inputPassword;
+    localStorage.setItem('validated-password', validatedPassword);
+    signUpLink.href = "index.html";
     console.log('Passwords Match');
   } else if (inputPassword !== inputReEnterPassword){
     document.querySelector('.js-error-message')
@@ -75,13 +74,13 @@ signUpButton.addEventListener('click', () => {
 }
 
   // Store data in localStorage for future use 
-  localStorage.setItem('correct-first-name', correctFirstName);
-  localStorage.setItem('correct-last-name', correctLastName);
-  localStorage.setItem('correct-email-address', correctEmailAddress);
-  localStorage.setItem('correct-password', correctPassword);
+  localStorage.setItem('first-name', inputFirstName);
+  localStorage.setItem('last-name', inputLastName);
+  localStorage.setItem('email-address', inputEmailAddress);
+  localStorage.setItem('password', validatedPassword);
 
-  console.log(`Correct first name: ${correctFirstName}`);
-  console.log(`Correct last name: ${correctLastName}`);
-  console.log(`Correct email address: ${correctEmailAddress}`);
-  console.log(`Correct password: ${correctPassword}`);
+  console.log(`Input first name: ${inputFirstName}`);
+  console.log(`Input last name: ${inputLastName}`);
+  console.log(`Input email address: ${inputEmailAddress}`);
+  console.log(`Validated password: ${validatedPassword}`);
 });
