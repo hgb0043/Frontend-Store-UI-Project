@@ -52,8 +52,14 @@ input {
   margin-left: 21px;
 }
 
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
 .message-container {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .sign-in-button {
