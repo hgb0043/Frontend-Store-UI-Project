@@ -39,15 +39,41 @@ nav {
   max-width: 300px;
 }
 
-.header-link {
+.header-link, .permanent-header-link {
   color: black;
   font-size: 22px;
   text-decoration: none;
 }
 
-.fa-cart-shopping-container {
+.header-right-side {
   flex: 1;
 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.welcome-message {
+ width: 120px; 
+ font-size: 15px;
+ font-family: zain;
+ align-self: center;
+ margin-right: -7px;
+}
+
+.permanent-header-link {
+  font-size: 20px;
+  width: 50px;
+  text-decoration: underline;
+}
+
+.account-message {
+  display: flex;
+  align-items: center;
+  margin-right: 30px
+}
+
+.fa-cart-shopping-container {
   display: flex;
   justify-content: flex-end;
 }
