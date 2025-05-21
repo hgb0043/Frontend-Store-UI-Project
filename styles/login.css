@@ -11,6 +11,12 @@ main {
   align-items: center;
 }
 
+.fa-xmark {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
 .login-box {
   display: flex;
   flex-direction: column;
