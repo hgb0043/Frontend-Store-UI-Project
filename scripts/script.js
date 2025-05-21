@@ -10,7 +10,7 @@ const accountMessage = document.querySelector('.account-message');
 if (loginStatus === 'logged-in') {
   document.querySelector('.account-message').innerHTML = `<p class="welcome-message">Welcome back, ${firstName}</p>`
 } else {
-  document.querySelector('.account-message').innerHTML = `<a href="login.html" class="permanent-header-link">Log in</a> <a href="signup.html" class="permanent-header-link">Sign up</p></a>` 
+  document.querySelector('.account-message').innerHTML = '<a href="login.html" class="permanent-header-link">Log in</a> <a href="signup.html" class="permanent-header-link">Sign up</p></a>' 
 };
 
 menuIcon.addEventListener('click', () => {
