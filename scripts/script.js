@@ -1,38 +1,31 @@
-/* Signup information created by the user (from sign-up.js) */
-const correctEmailAddress = localStorage.getItem('email-address');
-const correctPassword = localStorage.getItem('password');
+const firstName = localStorage.getItem('first-name')
 
-const eye = document.querySelector('.js-eye');
-const passwordBox = document.querySelector('.js-password-box');
-const logInButton = document.querySelector('.js-log-in-button');
-const logInLink = document.querySelector('.js-log-in-link')
-const errorMessage = document.querySelector('.js-error-message');
-let email;
-let password;
+const menuIcon = document.querySelector('.js-bars');
+const sidebar = document.querySelector('.sidebar');
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
-/* Controls visibility of password through the eye icon*/
-eye.addEventListener('click', () => {
-  if (passwordBox.type === "password") {
-  passwordBox.type = "text";
-  } else if (passwordBox.type ==="text") {
-    passwordBox.type = "password";
-  } 
-});
+const loginStatus = localStorage.getItem('login-status') || '';
+const accountMessage = document.querySelector('.account-message');
 
-logInButton.addEventListener('click', () => {
+if (loginStatus === 'logged-in') {
+  document.querySelector('.account-message').innerHTML = `<p class="welcome-message">Welcome back, ${firstName}</p>`
+} else {
+  document.querySelector('.account-message').innerHTML = `<a href="login.html" class="permanent-header-link">Log in</a> <a href="signup.html" class="permanent-header-link">Sign up</p></a>` 
+};
 
-  // Store user attempted login information
-  inputEmailAddress = document.querySelector('.js-email-box').value; 
-  inputPassword = document.querySelector('.js-password-box').value;
-
-  if (inputEmailAddress === correctEmailAddress && inputPassword === correctPassword) {
-    document.querySelector('.js-log-in-link').href = 'home.html';
-    localStorage.setItem('login-status', 'logged-in');
-  } else if (inputEmailAddress === correctEmailAddress && inputPassword !== correctPassword) {
-    errorMessage.innerHTML = 'Password is incorrect. Please try again.';
-    console.log('Password entered is incorrect. Please try again.');
-  } else {
-    errorMessage.innerHTML = 'Email address not recognized. Please try again.';
-    console.log('Email address not recognized. Please try again.')
-  }
+menuIcon.addEventListener('click', () => {
+  sidebar.classList.toggle('expanded');
+  console.log('testing');
+  
+    sidebarLinks.forEach(element => {
+      if(element.classList.contains('hidden')) {
+        setTimeout( () => {
+          element.classList.remove('hidden');
+        }, 225);
+      } else {
+        setTimeout( () => {
+          element.classList.add('hidden');
+        }, 50);
+      };
+    });
 });

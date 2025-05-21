@@ -3,57 +3,62 @@
 <head>
 
   <!-- CSS Styles -->
-   <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/styles.css">
 
   <!-- Google Fonts and Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/220c13536d.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/220c13536d.js" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Login Page</title>
+  <title>Home Page</title>
+
 </head>
 
 <body>
-  <header></header>
-  <main>
-    <div class="login-box">
 
-      <img class="logo" src="../images/full-logo.png">
+  <header>
 
-      <div class="email-address-container">
-        <h1>Email Address</h1>
-        <input type="text" class="email-box js-email-box">
+    <!-- <a href="../index.html"> For all other pages (to return to homescreen)-->
+    <i class="fa-solid fa-bars js-bars"></i>
+    
+    <a>
+    <img class="header-logo" src="../images/full-logo.png">
+    </a>
+    <!-- </a> -->
+    <nav>
+      <a href="index.html" class="header-link">Home</a>
+      <a href="account.html" class="header-link">Account</a>
+      <a href="search.html" class="header-link">Search</a>
+      <a href="about-us.html" class="header-link">About Us</a>
+      <a></a>
+    </nav>
+    <div class="header-right-side">
+      <div class="account-message"></div>
+      <div class="fa-cart-shopping-container">
+      <i class="fa-solid fa-cart-shopping"></i>
       </div>
-
-      <div class="password-container">
-        <h2>Password</h2>
-        <div class="password-box-container">
-          <input type="password" class="password-box js-password-box">       
-          <i class="fa-solid fa-eye js-eye"></i>
-        </div>
-
-        <a class="js-log-in-link">
-        <button class="log-in-button js-log-in-button">Log In</button>
-        </a>
-
-        <p class="error-message js-error-message"></p>
-
-      </div>
-
-      <div>
-        <p class="sign-up-message">Don't have an account? <a href="sign-up.html" class="sign-up">Sign Up</a></p>
-      </div>
-
     </div>
+  </div>
+  </header>
+
+  <nav class="sidebar">
+    <a href="index.html" class="sidebar-link hidden" id="home-sidebar-link">Home</a>
+    <a href="account.html" class="sidebar-link hidden">Account</a>
+    <a href="search.html" class="sidebar-link hidden">Search</a>
+    <a href="about-us.html" class="sidebar-link hidden">About Us</a>
+  </nav>
+
+  <main>
+  
   </main>
 
-  <script src="../scripts/script.js"></script>
+  <footer></footer>
 
+  <script src="../scripts/styles.js"></script>
 </body>
 </html>

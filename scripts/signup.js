@@ -62,7 +62,7 @@ signUpButton.addEventListener('click', () => {
       if(inputPassword === inputReEnterPassword) {
     validatedPassword = inputPassword;
     localStorage.setItem('validated-password', validatedPassword);
-    signUpLink.href = "index.html";
+    signUpLink.href = "login.html";
     console.log('Passwords Match');
   } else if (inputPassword !== inputReEnterPassword){
     document.querySelector('.js-error-message')

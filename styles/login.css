@@ -1,22 +1,68 @@
 body {
-  background-color: black;
-  font-family: Zen Old Mincho, arial, sans-serif;
+  font-family: arial, sans-serif;
 }
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100vw;
   height: 100vh;
+
+  display: flex;
+  justify-content: center;    
+  align-items: center;
 }
 
 .login-box {
-  color: white;
-  box-shadow: 0 0 4px rgb(255,255,255);
-  width: 200px;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 400px;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
 }
 
-h1 {
+.logo {
+  height: 80px;
+}
+
+.email-address-container, .password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h1, h2 {
+  font-weight: normal;
   font-size: 16px;
+}
+
+input {
+  width: 275px;
+}
+
+.password-box-container {
+  margin-left: 21px;
+}
+
+.log-in-button {
+  margin-top: 16px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 60px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.sign-up-message {
+  margin-bottom: 10px;
+}
+
+.sign-up {
+  color: blue;
+  text-decoration: underline;
 }
