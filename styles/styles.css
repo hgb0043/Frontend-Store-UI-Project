@@ -53,8 +53,13 @@ input {
   width: 60px;
 }
 
-.message {
-  margin-bottom: 12px;
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.sign-up-message {
+  margin-bottom: 10px;
 }
 
 .sign-up {
