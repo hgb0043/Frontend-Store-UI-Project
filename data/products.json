@@ -1,0 +1,46 @@
+[
+ {
+    "id": 1,
+    "name": "Biodegradable Dental Flossers 100 Count 2 Packs",
+    "price": 9.99,
+    "brand": "Smart Feelings Company",
+    "image-path": "../images/product-1.jpg",  
+    "rating": 4.5,
+    "genre": "Health and Household",
+    "sub-genre": "Oral Health",
+    "availability": "available",
+    "amnt-available": 10,
+    "material": "Straw Wheat",
+    "color": "none"
+  },
+
+  {
+    "id": 2,
+    "name": "Mens Casual Shorts 7inch Inseam",
+    "price": 23.99,
+    "brand": "RQP",
+    "image-path": "../images/product-2.jpg",
+    "rating": 4.4,
+    "genre": "Clothing",
+    "sub-genre": "Mens Shorts",
+    "availability": "available",
+    "amnt-available": 3,
+    "material": "60% Cotton, 40% Linen",
+    "color": "Army-green"
+  },
+
+  {
+    "id": 2,
+    "name": "240z Stainless Steel Water Bottle",
+    "price": 14.99,
+    "brand": "Bambaw",
+    "image-path": "../images/product-3.jpg",
+    "rating": 4.7,
+    "genre": "Food and Drink",
+    "sub-genre": "Reuasable Water Bottles",
+    "availability": "available",
+    "amnt-available": 22,
+    "material": "Stainless Steel",
+    "color": "Stainless Steel"
+  }
+]
