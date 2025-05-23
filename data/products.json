@@ -1,0 +1,90 @@
+[
+ {
+    "id": 1,
+    "name": "Smart Feelings Co. Biodegradable Dental Flossers 100 Count 2 Packs",
+    "price": 9.99,
+    "path": "../images/product-images/product-1.jpg",  
+    "brand": "Smart Feelings Company",
+    "rating": 4.5,
+    "category": "Health and Household",
+    "sub-category": "Oral Health",
+    "availability": "available",
+    "amnt-available": 10,
+    "material": "Straw Wheat",
+    "color": "none"
+  },
+
+  {
+    "id": 2,
+    "name": " Waterdrop Glass Water Filter Filters Heavy Metals and other Chemicals",
+    "price": 49.99,
+    "path": "../images/product-images/product-2.jpg",
+    "brand": "Waterdrop",
+    "rating": 4.5,
+    "category": "Health and Household",
+    "sub-category": "Water Filters",
+    "availability": "available",
+    "amnt-available": 68,
+    "material": "glass",
+    "color": "none"
+  },
+
+  {
+    "id": 3,
+    "name": "24z Stainless Steel Water Bottle Non-insulated",
+    "price": 14.99,
+    "path": "../images/product-images/product-3.jpg",
+    "brand": "Bambaw",
+    "rating": 4.7,
+    "category": "Food and Drink",
+    "sub-category": "Reuasable Water Bottles",
+    "availability": "available",
+    "amnt-available": 22,
+    "material": "Stainless Steel",
+    "color": "Stainless Steel"
+  },
+
+  {
+    "id": 4,
+    "name": "Mens Casual Shorts 7inch Inseam",
+    "price": 23.99,
+    "path": "../images/product-images/product-4.jpg",
+    "brand": "RQP",
+    "rating": 4.4,
+    "category": "Clothing",
+    "sub-category": "Mens Shorts",
+    "availability": "available",
+    "amnt-available": 3,
+    "material": "60% Cotton, 40% Linen",
+    "color": "Army-green"
+  },
+
+  {
+    "id": 5,
+    "name": "Falari 4-Pack 100% Cotton Men's Boxers",
+    "price": 17.99,
+    "path": "../images/product-images/product-5.jpg",
+    "brand": "Falari",
+    "rating": 4.3,
+    "category": "Clothing",
+    "sub-category": "Men's Boxers",
+    "availability": "available",
+    "amnt-availability": "available",
+    "material": "100% cotton",
+    "color": "Varies"
+  },
+
+  {
+    "id": 6,
+    "name": "Monxiery 5 Pairs 100% Cotton Athletic Crew Socks",
+    "price": 14.99,
+    "path": "../images/product-images/product-6.jpg",
+    "brand": "Monxiery",
+    "rating": 4.2,
+    "category": "Clothing",
+    "sub-category": "Men's Socks",
+    "availability": "available",
+    "material": "100% Cotton",
+    "color": "Black"
+  }
+]
