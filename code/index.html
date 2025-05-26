@@ -1,3 +1,5 @@
+<!-- Consider a drop down array for a horizontal sub-header instead of a sidebar.-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,44 +25,45 @@
 
   <header>
 
-    <!-- <a href="../index.html"> For all other pages (to return to homescreen)-->
-    <i class="fa-solid fa-bars js-bars"></i>
-    
-    <a>
-    <img class="header-logo" src="../images/full-logo.png">
-    </a>
-    <!-- </a> -->
-    <nav>
-      <a href="index.html" class="header-link">Home</a>
-      <a href="account.html" class="header-link">Account</a>
-      <a href="search.html" class="header-link">Search</a>
-      <a href="about-us.html" class="header-link">About Us</a>
-      <a></a>
-    </nav>
+    <div class="main-header">
+      <div class="down-arrow-div">
+        <i class="fa-solid fa-arrow-down js-down-arrow"></i>
+      </div>    
+      <a>
+      <img class="header-logo" src="../images/full-logo.png">
+      </a>
 
-    <div class="header-right-side">
+      <nav class="header-links-container">
+        <a href="index.html" class="header-link">Home</a>
+        <a href="account.html" class="header-link">Account</a>
+        <a href="search.html" class="header-link">Search</a>
+        <a href="about-us.html" class="header-link">About Us</a>
+      </nav>
 
-      <div class="account-message"></div>
+      <div class="header-right-side">
 
-      <div class="fa-cart-shopping-container">
-      <i class="fa-solid fa-cart-shopping"></i>
+        <div class="account-message"></div>
+        <div class="fa-cart-shopping-container">
+        <i class="fa-solid fa-cart-shopping"></i>
+        </div>
       </div>
 
     </div>
 
+      <!-- Drop header that appears if user clicks down-arrow -->
+    <nav class="drop-header js-drop-header hidden">
+      <a href="index.html" class="drop-header-link" id="home-drop-header-link">Home</a>
+      <a href="account.html" class="drop-header-link">Account</a>
+      <a href="search.html" class="drop-header-link">Search</a>
+      <a href="about-us.html" class="drop-header-link">About Us</a>
+    </nav>
+
   </div>
   </header>
 
-  <nav class="sidebar">
-    <a href="index.html" class="sidebar-link hidden" id="home-sidebar-link">Home</a>
-    <a href="account.html" class="sidebar-link hidden">Account</a>
-    <a href="search.html" class="sidebar-link hidden">Search</a>
-    <a href="about-us.html" class="sidebar-link hidden">About Us</a>
-  </nav>
-
   <main>
 
-    <div class="sub-header-container" id="sub-header-container1">
+    <div class="sub-header-container js-health-container" id="health-">
       <h1 class="sub-header">Our Top Health Picks</h1>
     </div>
 
