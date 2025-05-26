@@ -15,7 +15,7 @@ body {
   font-family: East Sea Dokdo, arial, sans-serif;
 }
 
-.down-arrow-div {
+.arrow-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,13 +25,10 @@ body {
   width: 60px;
 }
 
-.fa-arrow-down {
-  visibility: hidden;
+.fa-arrow {
   flex-shrink: 0.25;
+  transform: translateX(-5px);
   width: 0;
-  transform: translate(-5px, 0);
-
-  padding: 10px;
 }
 
 .header-logo {
@@ -286,11 +283,9 @@ h2 {
     visibility: hidden;
   }
 
-  .fa-arrow-down  {
-    visibility: visible;
+  .fa-arrow  {
     color: black;
 
-    padding: 10px;
     font-size: 20px;
   }
 }
@@ -300,7 +295,7 @@ h2 {
     margin-left: 15px;
   }
   
-  .down-arrow-div {
+  .arrow-div {
     width: 0;
   }
 
