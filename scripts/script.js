@@ -1,11 +1,14 @@
 const firstName = localStorage.getItem('first-name');
 
 const menuIcon = document.querySelector('.js-bars');
-const sidebar = document.querySelector('.sidebar');
-const sidebarLinks = document.querySelectorAll('.sidebar-link');
+const healthPicksHeaderElement = document.getElementById('js-health-sub-header-container');
+const healthPicksElement = document.getElementById('js-health-products-container');
 
 const loginStatus = localStorage.getItem('login-status') || '';
 const accountMessage = document.querySelector('.account-message');
+const downArrow = document.querySelector('.js-down-arrow');
+const dropHeader = document.querySelector('.js-drop-header');
+const header = document.querySelector('header');
 
 /* Control whether header displays welcome message or log in/sign up buttons. */
 if (loginStatus === 'logged-in') {
@@ -14,23 +17,30 @@ if (loginStatus === 'logged-in') {
   document.querySelector('.account-message').innerHTML = '<a href="login.html" class="permanent-header-link">Log in</a> <a href="signup.html" class="permanent-header-link">Sign up</a></p>' 
 }
 
-// Make sidebar funtional
-menuIcon.addEventListener('click', () => {
-  sidebar.classList.toggle('expanded');
-  console.log('testing');
-  
-    sidebarLinks.forEach(element => {
-      if(element.classList.contains('hidden')) {
-        setTimeout( () => {
-          element.classList.remove('hidden');
-        }, 225);
-      } else {
-        setTimeout( () => {
-          element.classList.add('hidden');
-        }, 50);
-      }
-    })
-});
+// Make drop-header funtional
+downArrow.addEventListener('click', () => {
+  if (dropHeader.classList.contains('hidden')) {
+    header.style.height = '90px';
+    dropHeader.style.height = '40px';
+  } else if (!dropHeader.classList.contains('hidden')) {
+    header.style.height = '50px';
+  }
+  dropHeader.classList.toggle('hidden');
+})
+
+/* Makes drop-header retract if window is big enough to display header links in main header */ 
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1200) {
+    header.style.height = '50px';
+    dropHeader.style.height = '0';
+  } else if (window.innerWidth <= 1200 && !dropHeader.classList.contains('hidden')) {
+    header.style.height = '50px';
+    dropHeader.style.height = '0';
+    dropHeader.classList.add('hidden')
+    console.log('testing');
+    console.log(dropHeader.classList.contains('hidden'))
+  }
+})
 
 const healthProductsContainer = document.getElementById('js-health-products-container');
 const clothingProductsContainer = document.getElementById('js-clothing-products-container');
@@ -174,4 +184,3 @@ const generateFullTurtles = () => {
       </div>
     ` 
 });
-
