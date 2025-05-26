@@ -110,7 +110,7 @@ const clothingProducts = [
   }
 ];
 
-// Generate products in "Our Top Health Picks" section
+// Get the star rating for each product
 healthProducts.forEach(product => {
 
 // Gather first value after decimal point of rating  
@@ -131,7 +131,7 @@ if (ratingFirstDigit < 3) {
 console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
 
 // Store the turtle icons generated in a variable
-const generateFullTurtles = () => {
+const generateTurtles = () => {
   let turtles = '';
   for(let i = 1; i <= Math.floor(roundedProductRating); i++) {
     turtles += `<img class="turtle-icon" src="../images/turtle-icon.png" alt="Turtle rating icon"></img>`;
@@ -142,13 +142,12 @@ const generateFullTurtles = () => {
   return turtles;
 };
 
+// Generate products in "Our Top Health Picks" section
   healthProductsContainer.innerHTML += `
     <div class="item-container"> 
       <img class="product-img" src="../images/product-images/product-${product.id}.jpg"> 
-      <p class="product-name">${product.name}</p> 
-
-      <div class="turtle-container">${generateFullTurtles()}</div>
-
+      <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a> 
+      <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>
     </div>
     `
@@ -173,7 +172,7 @@ if (ratingFirstDigit < 3) {
 console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
 
 // Store the turtle icons generated in a variable
-const generateFullTurtles = () => {
+const generateTurtles = () => {
   let turtles = '';
   for(let i = 1; i <= Math.floor(roundedProductRating); i++) {
     turtles += `<img class="turtle-icon" src="../images/turtle-icon.png" alt="Turtle rating icon"></img>`;
@@ -187,9 +186,9 @@ const generateFullTurtles = () => {
 /* Generate products in "Shop Polyester-free Clothing" section */
   clothingProductsContainer.innerHTML += `
     <div class="item-container"> 
-      <img class="product-img" src="../images/product-images/product-${product.id}.jpg"> 
-      <p class="product-name">${product.name}</p>
-      <div class="turtle-container">${generateFullTurtles()}</div>
+      <img class="product-img" src="../images/product-images/product-${product.id}.jpg">
+      <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a>
+      <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>
       </div>
     ` 
