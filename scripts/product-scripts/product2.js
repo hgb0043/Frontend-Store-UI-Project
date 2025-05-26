@@ -47,18 +47,19 @@ window.addEventListener('resize', () => {
   }
 })
 
+
 // Product data from products.json
-const product =  {
-    "id": 1,
-    "name": "Smart Feelings Co. Biodegradable Dental Flossers 100 Count 2 Packs",
-    "price": 9.99,
-    "path": "../images/product-images/product-1.jpg",  
-    "brand": "Smart Feelings Company",
+ const product = {
+    "id": 2,
+    "name": " Waterdrop Glass Water Filter Filters Heavy Metals and other Chemicals",
+    "price": 49.99,
+    "path": "../images/product-images/product-2.jpg",
+    "brand": "Waterdrop",
     "rating": 4.5,
     "category": "Health and Household",
-    "sub-category": "Oral Health",
+    "sub-category": "Water Filters",
     "availability": "available",
-    "amnt-available": 10,
-    "material": "Straw Wheat",
+    "amnt-available": 68,
+    "material": "glass",
     "color": "none"
   };

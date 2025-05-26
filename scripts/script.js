@@ -1,15 +1,15 @@
 const firstName = localStorage.getItem('first-name');
 
-const menuIcon = document.querySelector('.js-bars');
-const healthPicksHeaderElement = document.getElementById('js-health-sub-header-container');
-const healthPicksElement = document.getElementById('js-health-products-container');
-
 const loginStatus = localStorage.getItem('login-status') || '';
 const accountMessage = document.querySelector('.account-message');
 const downArrow = document.querySelector('.js-down-arrow');
 const upArrow = document.querySelector('.js-up-arrow');
 const dropHeader = document.querySelector('.js-drop-header');
 const header = document.querySelector('header');
+
+const menuIcon = document.querySelector('.js-bars');
+const healthPicksHeaderElement = document.getElementById('js-health-sub-header-container');
+const healthPicksElement = document.getElementById('js-health-products-container');
 
 /* Control whether header displays welcome message or log in/sign up buttons. */
 if (loginStatus === 'logged-in') {
@@ -24,7 +24,6 @@ downArrow.addEventListener('click', () => {
   dropHeader.style.height = '40px';
   dropHeader.classList.remove('hidden');
   downArrow.classList.add('hidden');
-  console.log(downArrow.classList.contains('hidden'));
   upArrow.classList.remove('hidden');
 })
 
@@ -36,7 +35,7 @@ upArrow.addEventListener('click', () => {
   upArrow.classList.add('hidden');
 })
 
-/* Makes drop-header retract if window is big enough to display header links in main header */ 
+/* Make drop-header retract if window is big enough to display header links in main header */ 
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1200) {
     header.style.height = '50px';

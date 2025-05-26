@@ -47,18 +47,18 @@ window.addEventListener('resize', () => {
   }
 })
 
+
 // Product data from products.json
-const product =  {
-    "id": 1,
-    "name": "Smart Feelings Co. Biodegradable Dental Flossers 100 Count 2 Packs",
-    "price": 9.99,
-    "path": "../images/product-images/product-1.jpg",  
-    "brand": "Smart Feelings Company",
-    "rating": 4.5,
-    "category": "Health and Household",
-    "sub-category": "Oral Health",
+const product = {
+    "id": 6,
+    "name": "Monxiery 5 Pairs 100% Cotton Athletic Crew Socks",
+    "price": 14.99,
+    "path": "../images/product-images/product-6.jpg",
+    "brand": "Monxiery",
+    "rating": 4.2,
+    "category": "Clothing",
+    "sub-category": "Men's Socks",
     "availability": "available",
-    "amnt-available": 10,
-    "material": "Straw Wheat",
-    "color": "none"
+    "material": "100% Cotton",
+    "color": "Black"
   };

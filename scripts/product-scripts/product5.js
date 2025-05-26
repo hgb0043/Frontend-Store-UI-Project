@@ -47,18 +47,19 @@ window.addEventListener('resize', () => {
   }
 })
 
+
 // Product data from products.json
-const product =  {
-    "id": 1,
-    "name": "Smart Feelings Co. Biodegradable Dental Flossers 100 Count 2 Packs",
-    "price": 9.99,
-    "path": "../images/product-images/product-1.jpg",  
-    "brand": "Smart Feelings Company",
-    "rating": 4.5,
-    "category": "Health and Household",
-    "sub-category": "Oral Health",
+const product = {
+    "id": 5,
+    "name": "Falari 4-Pack 100% Cotton Men's Boxers",
+    "price": 17.99,
+    "path": "../images/product-images/product-5.jpg",
+    "brand": "Falari",
+    "rating": 4.3,
+    "category": "Clothing",
+    "sub-category": "Men's Boxers",
     "availability": "available",
-    "amnt-available": 10,
-    "material": "Straw Wheat",
-    "color": "none"
+    "amnt-availability": "available",
+    "material": "100% cotton",
+    "color": "Varies"
   };

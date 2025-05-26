@@ -47,18 +47,19 @@ window.addEventListener('resize', () => {
   }
 })
 
+
 // Product data from products.json
-const product =  {
-    "id": 1,
-    "name": "Smart Feelings Co. Biodegradable Dental Flossers 100 Count 2 Packs",
-    "price": 9.99,
-    "path": "../images/product-images/product-1.jpg",  
-    "brand": "Smart Feelings Company",
-    "rating": 4.5,
-    "category": "Health and Household",
-    "sub-category": "Oral Health",
+const product = {
+    "id": 4,
+    "name": "Mens Casual Shorts 7inch Inseam",
+    "price": 23.99,
+    "path": "../images/product-images/product-4.jpg",
+    "brand": "RQP",
+    "rating": 4.4,
+    "category": "Clothing",
+    "sub-category": "Mens Shorts",
     "availability": "available",
-    "amnt-available": 10,
-    "material": "Straw Wheat",
-    "color": "none"
+    "amnt-available": 3,
+    "material": "60% Cotton, 40% Linen",
+    "color": "Army-green"
   };
