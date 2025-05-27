@@ -133,13 +133,14 @@ console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
 const generateTurtles = () => {
   let turtles = '';
   for(let i = 1; i <= Math.floor(roundedProductRating); i++) {
-    turtles += `<img class="turtle-icon" src="../images/turtle-icon.png" alt="Turtle rating icon"></img>`;
+    turtles += `<img class="turtle-icon" src="/images/turtle-icon.png" alt="Turtle rating icon"></img>`;
   }
   if((roundedProductRating % 1) === 0.5) {
-    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="../images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
+    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="/images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
   }
 
   /* Store unique visual turtle rating for each product in localStorage */
+
   localStorage.setItem(`turtle-rating${product.id}`, turtles);
 
   return turtles;
