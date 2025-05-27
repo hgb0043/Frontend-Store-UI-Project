@@ -74,7 +74,7 @@ const healthProducts = [
 
   {
     "id": 3,
-    "name": "24z Stainless Steel Water Bottle Non-insulated",
+    "name": "24oz Stainless Steel Water Bottle Non-insulated",
     "price": 14.99,
     "path": "../images/product-3.jpg",
     "rating": 4.7
@@ -138,13 +138,17 @@ const generateTurtles = () => {
   if((roundedProductRating % 1) === 0.5) {
     turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="../images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
   }
+
+  /* Store unique visual turtle rating for each product in localStorage */
+  localStorage.setItem(`turtle-rating${product.id}`, turtles);
+
   return turtles;
-};
+}
 
 // Generate products in "Our Top Health Picks" section
   healthProductsContainer.innerHTML += `
     <div class="item-container"> 
-      <img class="product-img" src="../images/product-images/product-${product.id}.jpg"> 
+      <img class="product-img" src="../images/product-images/product${product.id}.jpg"> 
       <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a> 
       <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>
@@ -179,13 +183,16 @@ const generateTurtles = () => {
   if((roundedProductRating % 1) === 0.5) {
     turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="../images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
   }
+
+  localStorage.setItem(`turtle-rating${product.id}`, turtles);
+
   return turtles;
 };
 
 /* Generate products in "Shop Polyester-free Clothing" section */
   clothingProductsContainer.innerHTML += `
     <div class="item-container"> 
-      <img class="product-img" src="../images/product-images/product-${product.id}.jpg">
+      <img class="product-img" src="../images/product-images/product${product.id}.jpg">
       <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a>
       <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>

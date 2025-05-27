@@ -50,16 +50,16 @@ window.addEventListener('resize', () => {
 
 // Product data from products.json
 const product = {
-    "id": 3,
-    "name": "24z Stainless Steel Water Bottle Non-insulated",
-    "price": 14.99,
-    "path": "../images/product-images/product-3.jpg",
-    "brand": "Bambaw",
-    "rating": 4.7,
-    "category": "Food and Drink",
-    "sub-category": "Reuasable Water Bottles",
-    "availability": "available",
-    "amnt-available": 22,
-    "material": "Stainless Steel",
-    "color": "Stainless Steel"
-  };
+  "id": 3,
+  "name": "24z Stainless Steel Water Bottle Non-insulated",
+  "price": 14.99,
+  "path": "../images/product-images/product-3.jpg",
+  "brand": "Bambaw",
+  "rating": 4.7,
+  "category": "Food and Drink",
+  "sub-category": "Reuasable Water Bottles",
+  "availability": "available",
+  "amnt-available": 22,
+  "material": "Stainless Steel",
+  "color": "Stainless Steel"
+};

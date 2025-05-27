@@ -50,15 +50,15 @@ window.addEventListener('resize', () => {
 
 // Product data from products.json
 const product = {
-    "id": 6,
-    "name": "Monxiery 5 Pairs 100% Cotton Athletic Crew Socks",
-    "price": 14.99,
-    "path": "../images/product-images/product-6.jpg",
-    "brand": "Monxiery",
-    "rating": 4.2,
-    "category": "Clothing",
-    "sub-category": "Men's Socks",
-    "availability": "available",
-    "material": "100% Cotton",
-    "color": "Black"
-  };
+  "id": 6,
+  "name": "Monxiery 5 Pairs 100% Cotton Athletic Crew Socks",
+  "price": 14.99,
+  "path": "../images/product-images/product-6.jpg",
+  "brand": "Monxiery",
+  "rating": 4.2,
+  "category": "Clothing",
+  "sub-category": "Men's Socks",
+  "availability": "available",
+  "material": "100% Cotton",
+  "color": "Black"
+};

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="../../styles/reset.css">
+  <link rel="stylesheet" href="test.css">
+
+  <!-- Google Fonts and Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220c13536d.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="main-header">
+
+      <div class="arrow-div">
+        <i class="fa-solid fa-arrow-down fa-arrow js-down-arrow"></i>
+        <i class="fa-solid fa-arrow-up fa-arrow js-up-arrow hidden"></i>
+      </div>    
+      <a>
+      <img class="header-logo" src="../../images/full-logo.png">
+      </a>
+
+      <nav class="header-links-container">
+        <a href="../index.html" class="header-link">Home</a>
+        <a href="../account.html" class="header-link">Account</a>
+        <a href="../search.html" class="header-link">Search</a>
+        <a href="../about-us.html" class="header-link">About Us</a>
+      </nav>
+
+      <div class="header-right-side">
+
+        <div class="account-message"></div>
+        <div class="fa-cart-shopping-container">
+        <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+
+    </div>
+
+      <!-- Drop header that appears if user clicks down-arrow -->
+    <nav class="drop-header js-drop-header hidden">
+      <a href="../index.html" class="drop-header-link" id="home-drop-header-link">Home</a>
+      <a href="../account.html" class="drop-header-link">Account</a>
+      <a href="../search.html" class="drop-header-link">Search</a>
+      <a href="../about-us.html" class="drop-header-link">About Us</a>
+    </nav>
+
+  </div>
+  </header>
+
+  <main>
+
+    <div class="product-main-container">
+      <img class="product-img" src="/images/product-images/product1.jpg">
+
+      <div class="product-description-container">
+        <h1 class="product-name">Smart Feelings Co. Biodegradable Dental Flossers 100 Count 2 Packs</h1>
+
+        <p class="price">$9.99</p>
+
+        <div class="rating-section">
+          <p class="rating-num">4.7</p>
+          
+          <div class="turtle-rating"></div>
+          <p class="ratings-count">28 ratings</p>
+            <span class="divider">|</span><a class="reviews-count">3 reviews</a>
+        </div>
+
+        <div class="user-prompts-container">
+          <button class="add-to-cart-button">Add to Cart</button>
+          <button class="buy-now-button">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-info-container">
+      <div class="description-container">
+        <h2>Description</h2>
+        <p class="description">Keep your smile fresh and the planet happy with these biodegradable dental flossers made from eco-friendly straw wheat. Each pack includes 100 mint-flavored floss picks with a comfortable grip and shred-resistant floss for easy cleaning. Featuring a flexible toothpick end and plastic-free packaging, these flossers offer a convenient, sustainable way to maintain oral hygiene.</p>
+      </div>
+      <div class="product-details-container">
+        <h3>Product Details</h3>
+        <ul class="details-list">
+          <li><strong>Brand:</strong> Smart Feelings Company</li>
+          <li><strong>Category:</strong> Health and Household</li>
+          <li><strong>Sub-category</strong> Oral Health</li>
+          <li><strong>Material:</strong> Straw Wheat</li>
+          <li><strong>Color:</strong> None</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reviews-section">
+      <h4>Reviews</h4>
+        
+        <div class="review-container">
+
+          <div class="reviewer-description">
+
+            <div class="reviewer-profile">
+              <i class="fa-solid fa-circle-user"></i>
+              <p class="reviewer-name">Mike Tyson</p>
+            </div>
+
+            <div class="turtle-rating reviewer-rating" id="review-rating1"></div>
+
+          <p class="review-text">
+            "These flossers cured my lisp!"
+          </p>
+          
+        </div>
+
+        <div class="review-container">
+
+          <div class="reviewer-description">
+
+            <div class="reviewer-profile">
+              <i class="fa-solid fa-circle-user"></i>
+              <p class="reviewer-name">Taylor Swift</p>
+            </div>
+
+            <div class="turtle-rating reviewer-rating" id="review-rating1"></div>
+
+          <p class="review-text">
+            "Does this make up for all those jet flights?"
+          </p>
+          
+
+          <div class="review-container">
+
+          <div class="reviewer-description">
+
+            <div class="reviewer-profile">
+              <i class="fa-solid fa-circle-user"></i>
+              <p class="reviewer-name">John Travolta</p>
+            </div>
+
+            <div class="turtle-rating reviewer-rating" id="review-rating1"></div>
+
+          <p class="review-text">
+            "First I gotta pay 5 dollas for a milkshake and now they want 10 for some floss?"
+          </p>
+          
+        </div>
+        </div>
+
+    </div>
+
+
+
+  </main>
+
+    <script src="test.js"></script>
+  </body>
+  </html>

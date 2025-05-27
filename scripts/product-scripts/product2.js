@@ -50,16 +50,16 @@ window.addEventListener('resize', () => {
 
 // Product data from products.json
  const product = {
-    "id": 2,
-    "name": " Waterdrop Glass Water Filter Filters Heavy Metals and other Chemicals",
-    "price": 49.99,
-    "path": "../images/product-images/product-2.jpg",
-    "brand": "Waterdrop",
-    "rating": 4.5,
-    "category": "Health and Household",
-    "sub-category": "Water Filters",
-    "availability": "available",
-    "amnt-available": 68,
-    "material": "glass",
-    "color": "none"
-  };
+  "id": 2,
+  "name": " Waterdrop Glass Water Filter Filters Heavy Metals and other Chemicals",
+  "price": 49.99,
+  "path": "../images/product-images/product-2.jpg",
+  "brand": "Waterdrop",
+  "rating": 4.5,
+  "category": "Health and Household",
+  "sub-category": "Water Filters",
+  "availability": "available",
+  "amnt-available": 68,
+  "material": "glass",
+  "color": "none"
+};

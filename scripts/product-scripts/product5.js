@@ -50,16 +50,16 @@ window.addEventListener('resize', () => {
 
 // Product data from products.json
 const product = {
-    "id": 5,
-    "name": "Falari 4-Pack 100% Cotton Men's Boxers",
-    "price": 17.99,
-    "path": "../images/product-images/product-5.jpg",
-    "brand": "Falari",
-    "rating": 4.3,
-    "category": "Clothing",
-    "sub-category": "Men's Boxers",
-    "availability": "available",
-    "amnt-availability": "available",
-    "material": "100% cotton",
-    "color": "Varies"
-  };
+  "id": 5,
+  "name": "Falari 4-Pack 100% Cotton Men's Boxers",
+  "price": 17.99,
+  "path": "../images/product-images/product-5.jpg",
+  "brand": "Falari",
+  "rating": 4.3,
+  "category": "Clothing",
+  "sub-category": "Men's Boxers",
+  "availability": "available",
+  "amnt-availability": "available",
+  "material": "100% cotton",
+  "color": "Varies"
+};

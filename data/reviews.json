@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "product": 1,
+    "name": "Mike Tyson",
+    "rating": 5,
+    "review": "These flossers cured my lisp!"
+  },
+
+  {
+    "id": 2,
+    "product": 1,
+    "name": "Taylor Swift",
+    "rating": 5,
+    "review": "Does this make up for all those jet flights?"
+  },
+
+  {
+    "id": 3,
+    "product": 1,
+    "name": "John Travolta",
+    "rating": 2,
+    "review": "First I gotta pay 5 dollas for a milkshake and now they're chargin' me 10 for some floss?"
+  }
+
+
+]
