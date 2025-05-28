@@ -149,7 +149,7 @@ const generateTurtles = () => {
 // Generate products in "Our Top Health Picks" section
   healthProductsContainer.innerHTML += `
     <div class="item-container"> 
-      <img class="product-img" src="../images/product-images/product${product.id}.jpg"> 
+      <img class="product-img" src="/images/product-images/product${product.id}.jpg"> 
       <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a> 
       <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>
@@ -179,10 +179,10 @@ console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
 const generateTurtles = () => {
   let turtles = '';
   for(let i = 1; i <= Math.floor(roundedProductRating); i++) {
-    turtles += `<img class="turtle-icon" src="../images/turtle-icon.png" alt="Turtle rating icon"></img>`;
+    turtles += `<img class="turtle-icon" src="/images/turtle-icon.png" alt="Turtle rating icon"></img>`;
   }
   if((roundedProductRating % 1) === 0.5) {
-    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="../images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
+    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="/images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
   }
 
   localStorage.setItem(`turtle-rating${product.id}`, turtles);
@@ -193,7 +193,7 @@ const generateTurtles = () => {
 /* Generate products in "Shop Polyester-free Clothing" section */
   clothingProductsContainer.innerHTML += `
     <div class="item-container"> 
-      <img class="product-img" src="../images/product-images/product${product.id}.jpg">
+      <img class="product-img" src="/images/product-images/product${product.id}.jpg">
       <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a>
       <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>

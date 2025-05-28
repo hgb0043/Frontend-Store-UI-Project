@@ -20,8 +20,191 @@
     "product": 1,
     "name": "John Travolta",
     "rating": 2,
-    "review": "First I gotta pay 5 dollas for a milkshake and now they're chargin' me 10 for some floss?"
-  }
+    "review": "First I gotta pay 5 dollas for a milkshake, and now they're chargin' me 10 for some floss?"
+  },
 
+  {
+    "id": 4,
+    "product": 2,
+    "name": "Logan Paul",
+    "rating": 5,
+    "review": "It filters Prime too!"
+  },
+
+  {
+    "id": 5,
+    "product": 2,
+    "name": "Gordon Ramsey",
+    "rating": 1,
+    "review": "Makes it taste like a donkey's bathwater. Next!"
+  },
+
+  {
+    "id": 6,
+    "product": 2,
+    "name": "Pedro Pascal",
+    "rating": 5,
+    "review": "I am your water daddy now."
+  },
+
+  {
+    "id": 7,
+    "product": 2,
+    "name": "Ricky Gervais",
+    "rating": 5,
+    "review": "The only time I'll ever use a filter."
+  },
+
+  {
+    "id": 8,
+    "product": 2,
+    "name": "Theo Von",
+    "rating": 5,
+    "review": "Man we had this one dude who would drink straight from the Mississipi man. I mean, we would just look over, and there he was, busting straight into the Bayou, man. So anyways... I'm thankful for this thang."
+  },
+
+  {
+    "id": 9,
+    "product": 3,
+    "name": "Roy Scheider",
+    "rating": 3,
+    "review": "We're gonna need a bigger bottle." 
+  },
+
+  {
+    "id": 10,
+    "product": 3,
+    "name": "Timothee Chalamet",
+    "rating": 5,
+    "review": "If it can survive the dune, it can survive anywhere."
+  },
+
+  {
+    "id": 11,
+    "product": 3,
+    "name": "George Washington",
+    "rating": 5,
+    "review": "I crossed the Delaware with this thing. It's legit."
+  },
+
+  {
+    "id": 12,
+    "product": 4,
+    "name": "Anakin Skywalker",
+    "rating": 4,
+    "review": "These shorts covered my missing leg, but I think I'm looking for something a bit more... dark."
+  },
+
+  {
+    "id": 13,
+    "product": 4,
+    "name": "The Incredible Hulk",
+    "rating": 3,
+    "review": "Warning: not for every skin tone!"
+  },
+
+  {
+    "id": 14,
+    "product": 4,
+    "name": "Lego Man",
+    "rating": 4,
+    "review": "Due to unforeseen circumstances, I had to purchase these out of necessity."
+  },
+
+  {
+    "id": 15,
+    "product": 4,
+    "name": "Charlie XCX",
+    "rating": 4,
+    "review": "Not exactly what I had in mind when I said 'Brat Summer,' but we can make it work."
+  },
+
+  {
+    "id": 16,
+    "product": 4,
+    "name": "Jeff Bezos",
+    "rating": 5,
+    "review": "Good to know at least one thing in my family isn't full of plastic."
+  },
+
+  {
+    "id": 17,
+    "product": 4,
+    "name": "Eiffel 65",
+    "rating": 2,
+    "review": "Make a blue one!"
+  },
+
+  {
+    "id": 18,
+    "product": 5,
+    "name": "John Cena",
+    "rating": 5,
+    "review": "Never seen but always delivers. Just like me!"
+  },
+
+  {
+    "id": 19,
+    "product": 5,
+    "name": "Arnold Schwarzaneggar",
+    "rating": 5,
+    "review": "Nice and snug, like my grip."
+  },
+
+  {
+    "id": 20,
+    "product": 5,
+    "name": "Harry Potter",
+    "rating": 5,
+    "review": "It feels good to know I'm protected in case Malfoy has any tricks up his sleeve."
+  },
+
+  {
+    "id": 21,
+    "product": 5,
+    "name": "Rocky Balboa",
+    "rating": 3,
+    "review": "Yo Adrian, why do they call 'em boxers if they ain't got nothin' to do with boxin?"
+  },
+
+  {
+    "id": 22,
+    "product": 5,
+    "name": "Mark Zuckerberg",
+    "rating": 4,
+    "review": "Ordering 4 units of 100% human clothing. Type: unknown; style: trousers (match confidence: 84%)."
+  },
+
+  {
+    "id": 23,
+    "product": 6,
+    "name": "Dwayne Johnson",
+    "rating": 4,
+    "review": "Hey Kevin I think I found some socks for you. They come in youth XS."
+  },
+
+  {
+    "id": 25,
+    "product": 6,
+    "name": "Joe Rogan",
+    "rating": 3,
+    "review": "Man, those socks are super black--Jamie pull up the video of those black bears fighting."
+  },
+
+  {
+    "id": 26,
+    "product": 6,
+    "name": "Harry Kane",
+    "rating": 3,
+    "review": "Speech recognition could not detect any speech. Please try again."
+  },
+
+  {
+    "id": 27,
+    "product": 6,
+    "name": "Inigo Montoya",
+    "rating": 5,
+    "review": "Hello, my name is Inigo Montoya. My old socks got holes in them. Prepare to be bought."
+  }
 
 ]

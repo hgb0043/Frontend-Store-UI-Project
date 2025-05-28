@@ -148,8 +148,6 @@ main {
 .product-description-container {
   display: flex;
   flex-direction: column;
-
-  height: 250px;
 }
 
 .product-name {
@@ -238,7 +236,7 @@ main {
   font-size: 18px;
   margin-top: 25px;
 
-  background-color: darkblue;
+  background-color: rgb(11, 53, 167);
   color: white;
   border: none;
   border-radius: 10px;
@@ -401,7 +399,7 @@ h4 {
   }
 
   .buy-now-button {
-    margin: 28px 25px 0 0;
+    margin: 28px 50px 0 0;
   }
   
   .product-info-container {

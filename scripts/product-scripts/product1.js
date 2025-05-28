@@ -68,36 +68,30 @@ const product = {
 
 // Product reviews from reviews.JSON
 const review1 = {
-  "id": 1,
-  "product": 1,
   "name": "Mike Tyson",
   "rating": 5,
   "review": "These flossers cured my lisp!"
 };
 
 const review2 = {
-  "id": 2,
-  "product": 1,
   "name": "Taylor Swift",
   "rating": 5,
   "review": "Does this make up for all those jet flights?"
 };
 
 const review3 = {
-  "id": 3,
-  "product": 1,
   "name": "John Travolta",
   "rating": 2,
-  "review": "First I gotta pay 5 dollas for a milkshake and now they're chargin' me 10 for some floss?"
+  "review": "First I gotta pay 5 dollas for a milkshake, and now they're chargin' me 10 for some floss?"
 };
 
 // Store each review in an object to keep tally of reviews
 const reviewsArray = [review1, review2, review3];
 
-// Generate main html content 
 const main = document.querySelector('main');
 const turtleRating = localStorage.getItem(`turtle-rating${product.id}`);
 
+// Generate main html content 
 main.innerHTML = `
 <div class="product-main-container">
   <img class="product-img" src="/images/product-images/product${product.id}.jpg">
@@ -105,7 +99,7 @@ main.innerHTML = `
   <div class="product-description-container">
     <h1 class="product-name">${product.name}</h1>
 
-    <p class="price">${product.price}</p>
+    <p class="price">$${product.price}</p>
 
     <div class="rating-section">
       <p class="rating-num">${product.rating}</p>
@@ -142,7 +136,7 @@ main.innerHTML = `
 <div class="review-title-container">
   <h4>Reviews</h4>
 </div>
-`
+`;
 
 reviewsArray.forEach(review => {
   main.innerHTML += ` 
@@ -165,4 +159,12 @@ reviewsArray.forEach(review => {
     </div>`
 });
 
-main.innerHTML += `</div>`;
+const reviewCount = document.querySelector('.reviews-count');
+
+// Scroll to reviews section when reviews link is clicked
+reviewCount.addEventListener('click', () => {
+  window.scrollTo({
+    top: 1000, 
+    behavior: "smooth"
+  });
+});

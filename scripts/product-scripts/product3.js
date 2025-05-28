@@ -56,10 +56,118 @@ const product = {
   "path": "../images/product-images/product-3.jpg",
   "brand": "Bambaw",
   "rating": 4.7,
+  "num-ratings": 21,
+  "num-reviews": 3,
   "category": "Food and Drink",
   "sub-category": "Reuasable Water Bottles",
   "availability": "available",
   "amnt-available": 22,
   "material": "Stainless Steel",
-  "color": "Stainless Steel"
+  "color": "Stainless Steel",
+  "description": "Experience cleaner, safer water with the Waterdrop Glass Water Filter. Designed to effectively reduce heavy metals, chlorine, and other harmful chemicals, this sleek glass filter provides fresh-tasting water straight from your tap. Easy to use and eco-friendly, it’s the perfect addition to your kitchen for healthier hydration every day."
 };
+
+const review1 = {
+    "id": 7,
+    "product": 3,
+    "name": "Roy Scheider",
+    "rating": 3,
+    "review": "We're gonna need a bigger bottle." 
+  };
+
+const review2 = {
+    "id": 8,
+    "product": 3,
+    "name": "Timothee Chalamet",
+    "rating": 5,
+    "review": "If it can survive the dune, it can survive anywhere."
+  };
+
+const review3 = {
+    "id": 9,
+    "name": "George Washington",
+    "rating": 5,
+    "review": "I crossed the Delaware with this thing. It's legit."
+  };
+
+const reviewsArray = [review1, review2, review3];
+
+const main = document.querySelector('main');
+const turtleRating = localStorage.getItem(`turtle-rating${product.id}`);
+
+main.innerHTML = `
+<div class="product-main-container">
+  <img class="product-img" src="/images/product-images/product${product.id}.jpg">
+
+  <div class="product-description-container">
+    <h1 class="product-name">${product.name}</h1>
+
+    <p class="price">$${product.price}</p>
+
+    <div class="rating-section">
+      <p class="rating-num">${product.rating}</p>
+      
+      <div class="turtle-rating-container">${turtleRating}</div>
+      <p class="ratings-count">${product["num-ratings"]} ratings</p>
+        <span class="divider">|</span><a class="reviews-count">${product["num-reviews"]} reviews</a>
+    </div>
+
+    <div class="user-prompts-container">
+      <button class="add-to-cart-button">Add to Cart</button>
+      <button class="buy-now-button">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="product-info-container">
+  <div class="description-container">
+    <h2>Description</h2>
+    <p class="description">${product.description}</p>
+  </div>
+  <div class="product-details-container">
+    <h3>Product Details</h3>
+    <ul class="details-list">
+      <li><strong>Brand:</strong> ${product.brand}</li>
+      <li><strong>Category:</strong> ${product.category}</li>
+      <li><strong>Sub-category</strong> ${product["sub-category"]}</li>
+      <li><strong>Material:</strong> ${product.material}</li>
+      <li><strong>Color:</strong> ${product.color}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="review-title-container">
+  <h4>Reviews</h4>
+</div>
+`;
+
+reviewsArray.forEach(review => {
+  main.innerHTML += ` 
+    <div class="review-container">
+
+      <div class="reviewer-description">
+
+        <div class="reviewer-profile">
+          <i class="fa-solid fa-circle-user"></i>
+          <p class="reviewer-name">${review.name}</p>
+        </div>
+
+        <div class="turtle-rating-container reviewer-rating">
+        ${localStorage.getItem(`${review.rating}star-turtle-rating`)}</div>
+
+      <p class="review-text">
+        ${review.review}
+      </p>
+      
+    </div>`
+});
+
+const reviewCount = document.querySelector('.reviews-count');
+
+// Scroll to reviews section when reviews link is clicked
+reviewCount.addEventListener('click', () => {
+  window.scrollTo({
+    top: 1000, 
+    behavior: "smooth"
+  });
+});
