@@ -6,42 +6,51 @@
     "path": "../images/product-images/product-1.jpg",  
     "brand": "Smart Feelings Company",
     "rating": 4.5,
+    "num-ratings": 28,
+    "num-reviews": 3,
     "category": "Health and Household",
     "sub-category": "Oral Health",
     "availability": "available",
     "amnt-available": 10,
     "material": "Straw Wheat",
-    "color": "none"
+    "color": "none",
+    "description": "Keep your smile fresh and the planet happy with these biodegradable dental flossers made from eco-friendly straw wheat. Each pack includes 100 mint-flavored floss picks with a comfortable grip and shred-resistant floss for easy cleaning. Featuring a flexible toothpick end and plastic-free packaging, these flossers offer a convenient, sustainable way to maintain oral hygiene."
   },
 
   {
     "id": 2,
-    "name": " Waterdrop Glass Water Filter Filters Heavy Metals and other Chemicals",
+    "name": "Waterdrop Glass Water Filter Filters Heavy Metals and other Chemicals",
     "price": 49.99,
     "path": "../images/product-images/product-2.jpg",
     "brand": "Waterdrop",
     "rating": 4.5,
+    "num-ratings": 29,
+    "num-reviews": 5,
     "category": "Health and Household",
     "sub-category": "Water Filters",
     "availability": "available",
     "amnt-available": 68,
     "material": "glass",
-    "color": "none"
+    "color": "none",
+    "description": "Experience cleaner, safer water with the Waterdrop Glass Water Filter. Designed to effectively reduce heavy metals, chlorine, and other harmful chemicals, this sleek glass filter provides fresh-tasting water straight from your tap. Easy to use and eco-friendly, it’s the perfect addition to your kitchen for healthier hydration every day."
   },
 
   {
     "id": 3,
-    "name": "24z Stainless Steel Water Bottle Non-insulated",
+    "name": "24oz Stainless Steel Water Bottle Non-insulated",
     "price": 14.99,
     "path": "../images/product-images/product-3.jpg",
     "brand": "Bambaw",
     "rating": 4.7,
+    "num-ratings": 21,
+    "num-reviews": 3,
     "category": "Food and Drink",
     "sub-category": "Reuasable Water Bottles",
     "availability": "available",
     "amnt-available": 22,
     "material": "Stainless Steel",
-    "color": "Stainless Steel"
+    "color": "Stainless Steel",
+    "description": "Stay hydrated on the go with this 24oz stainless steel water bottle. Its sturdy, non-insulated design makes it lightweight and easy to carry, perfect for everyday use. Built to last and easy to clean, it’s a reliable companion for work, workouts, or outdoor adventures." 
   },
 
   {
@@ -51,12 +60,15 @@
     "path": "../images/product-images/product-4.jpg",
     "brand": "RQP",
     "rating": 4.4,
+    "num-ratings": 68,
+    "num-reviews": 6,
     "category": "Clothing",
     "sub-category": "Mens Shorts",
     "availability": "available",
     "amnt-available": 3,
     "material": "60% Cotton, 40% Linen",
-    "color": "Army-green"
+    "color": "Army-green",
+    "description": "Stay comfortable and stylish with these men’s casual shorts featuring a 7-inch inseam. Perfect for warm weather, they offer a relaxed fit and versatile look ideal for everyday wear, whether you're out running errands or relaxing at home."
   },
 
   {
@@ -66,12 +78,15 @@
     "path": "../images/product-images/product-5.jpg",
     "brand": "Falari",
     "rating": 4.3,
+    "num-ratings": 55,
+    "num-reviews": 5,
     "category": "Clothing",
     "sub-category": "Men's Boxers",
     "availability": "available",
     "amnt-availability": "available",
     "material": "100% cotton",
-    "color": "Varies"
+    "color": "Varies",
+    "description": "Enjoy all-day comfort with this 4-pack of Falari men’s boxers made from 100% breathable cotton. Designed for a soft feel and a comfortable fit, these boxers provide essential support and durability for everyday wear."
   },
 
   {
@@ -81,10 +96,13 @@
     "path": "../images/product-images/product-6.jpg",
     "brand": "Monxiery",
     "rating": 4.2,
+    "num-ratings": 48,
+    "num-reviews": 4,
     "category": "Clothing",
     "sub-category": "Men's Socks",
     "availability": "available",
     "material": "100% Cotton",
-    "color": "Black"
+    "color": "Black",
+    "description": "Stay comfortable and supported during your workouts with these Monxiery athletic crew socks. Made from 100% breathable cotton, they offer cushioning and durability to keep your feet fresh and protected all day long." 
   }
 ]

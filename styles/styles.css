@@ -174,12 +174,13 @@ h2 {
 
 .product-name {
   width: 1fr;
-  font-size: 22px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 22px;
   text-align: center;
   margin: 8px 12px 0 12px;
-  
+
   color: blue;
+  text-decoration: none;
 }
 
 .turtle-container {
@@ -220,7 +221,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .circle-container {

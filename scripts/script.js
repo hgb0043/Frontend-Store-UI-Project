@@ -1,15 +1,15 @@
 const firstName = localStorage.getItem('first-name');
 
-const menuIcon = document.querySelector('.js-bars');
-const healthPicksHeaderElement = document.getElementById('js-health-sub-header-container');
-const healthPicksElement = document.getElementById('js-health-products-container');
-
 const loginStatus = localStorage.getItem('login-status') || '';
 const accountMessage = document.querySelector('.account-message');
 const downArrow = document.querySelector('.js-down-arrow');
 const upArrow = document.querySelector('.js-up-arrow');
 const dropHeader = document.querySelector('.js-drop-header');
 const header = document.querySelector('header');
+
+const menuIcon = document.querySelector('.js-bars');
+const healthPicksHeaderElement = document.getElementById('js-health-sub-header-container');
+const healthPicksElement = document.getElementById('js-health-products-container');
 
 /* Control whether header displays welcome message or log in/sign up buttons. */
 if (loginStatus === 'logged-in') {
@@ -24,7 +24,6 @@ downArrow.addEventListener('click', () => {
   dropHeader.style.height = '40px';
   dropHeader.classList.remove('hidden');
   downArrow.classList.add('hidden');
-  console.log(downArrow.classList.contains('hidden'));
   upArrow.classList.remove('hidden');
 })
 
@@ -36,7 +35,7 @@ upArrow.addEventListener('click', () => {
   upArrow.classList.add('hidden');
 })
 
-/* Makes drop-header retract if window is big enough to display header links in main header */ 
+/* Make drop-header retract if window is big enough to display header links in main header */ 
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1200) {
     header.style.height = '50px';
@@ -75,7 +74,7 @@ const healthProducts = [
 
   {
     "id": 3,
-    "name": "24z Stainless Steel Water Bottle Non-insulated",
+    "name": "24oz Stainless Steel Water Bottle Non-insulated",
     "price": 14.99,
     "path": "../images/product-3.jpg",
     "rating": 4.7
@@ -110,7 +109,7 @@ const clothingProducts = [
   }
 ];
 
-// Generate products in "Our Top Health Picks" section
+// Get the star rating for each product
 healthProducts.forEach(product => {
 
 // Gather first value after decimal point of rating  
@@ -131,24 +130,28 @@ if (ratingFirstDigit < 3) {
 console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
 
 // Store the turtle icons generated in a variable
-const generateFullTurtles = () => {
+const generateTurtles = () => {
   let turtles = '';
   for(let i = 1; i <= Math.floor(roundedProductRating); i++) {
-    turtles += `<img class="turtle-icon" src="../images/turtle-icon.png" alt="Turtle rating icon"></img>`;
+    turtles += `<img class="turtle-icon" src="/images/turtle-icon.png" alt="Turtle rating icon"></img>`;
   }
   if((roundedProductRating % 1) === 0.5) {
-    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="../images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
+    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="/images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
   }
-  return turtles;
-};
 
+  /* Store unique visual turtle rating for each product in localStorage */
+
+  localStorage.setItem(`turtle-rating${product.id}`, turtles);
+
+  return turtles;
+}
+
+// Generate products in "Our Top Health Picks" section
   healthProductsContainer.innerHTML += `
     <div class="item-container"> 
-      <img class="product-img" src="../images/product-images/product-${product.id}.jpg"> 
-      <p class="product-name">${product.name}</p> 
-
-      <div class="turtle-container">${generateFullTurtles()}</div>
-
+      <img class="product-img" src="/images/product-images/product${product.id}.jpg"> 
+      <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a> 
+      <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>
     </div>
     `
@@ -173,23 +176,26 @@ if (ratingFirstDigit < 3) {
 console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
 
 // Store the turtle icons generated in a variable
-const generateFullTurtles = () => {
+const generateTurtles = () => {
   let turtles = '';
   for(let i = 1; i <= Math.floor(roundedProductRating); i++) {
-    turtles += `<img class="turtle-icon" src="../images/turtle-icon.png" alt="Turtle rating icon"></img>`;
+    turtles += `<img class="turtle-icon" src="/images/turtle-icon.png" alt="Turtle rating icon"></img>`;
   }
   if((roundedProductRating % 1) === 0.5) {
-    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="../images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
+    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="/images/halved-turtle-icon.png" alt="Halved turtle rating icon"></img>`
   }
+
+  localStorage.setItem(`turtle-rating${product.id}`, turtles);
+
   return turtles;
 };
 
 /* Generate products in "Shop Polyester-free Clothing" section */
   clothingProductsContainer.innerHTML += `
     <div class="item-container"> 
-      <img class="product-img" src="../images/product-images/product-${product.id}.jpg"> 
-      <p class="product-name">${product.name}</p>
-      <div class="turtle-container">${generateFullTurtles()}</div>
+      <img class="product-img" src="/images/product-images/product${product.id}.jpg">
+      <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a>
+      <div class="turtle-container">${generateTurtles()}</div>
       <p class="product-price">$${product.price}</p>
       </div>
     ` 
