@@ -1,112 +1,57 @@
-[
- {
-    "id": 1,
-    "page": "Home",
-    "name": "Smart Feelings Co. Biodegradable Dental Flossers 100 Count 2 Packs",
-    "price": 9.99,
-    "path": "/images/product-images/product1.jpg",  
-    "rating": 4.5,
-    "brand": "Smart Feelings Company",
-    "num-ratings": 28,
-    "num-reviews": 3,
-    "category": "Health & Beauty",
-    "sub-category": "Oral Health",
-    "amnt-available": 10,
-    "material": "Wheat Straw",
-    "color": "Not Applicable",
-    "description": "Keep your smile fresh and the planet happy with these biodegradable dental flossers made from eco-friendly wheat straw. Each pack includes 100 mint-flavored floss picks with a comfortable grip and shred-resistant floss for easy cleaning. Featuring a flexible toothpick end and plastic-free packaging, these flossers offer a convenient, sustainable way to maintain oral hygiene."
-  },
+// Header Section
 
-  {
-    "id": 2,
-    "page": "Home",
-    "name": "Waterdrop Glass Water Filter Filters Heavy Metals and other Chemicals",
-    "price": 49.99,
-    "path": "/images/product-images/product2.jpg",
-    "rating": 4.5,
-    "brand": "Waterdrop",
-    "num-ratings": 29,
-    "num-reviews": 5,
-    "category": "Health & Beauty",
-    "sub-category": "Water Filters",
-    "amnt-available": 68,
-    "material": "Glass",
-    "color": "Not Applicable",
-    "description": "Experience cleaner, safer water with the Waterdrop Glass Water Filter. Designed to effectively reduce heavy metals, chlorine, and other harmful chemicals, this sleek glass filter provides fresh-tasting water straight from your tap. Easy to use and eco-friendly, it’s the perfect addition to your kitchen for healthier hydration every day."
-  },
+const firstName = localStorage.getItem('first-name');
+const loginStatus = localStorage.getItem('login-status') || '';
+const accountMessage = document.querySelector('.account-message');
+const downArrow = document.querySelector('.js-down-arrow');
+const upArrow = document.querySelector('.js-up-arrow');
+const dropHeader = document.querySelector('.js-drop-header');
+const header = document.querySelector('header');
 
-  {
-    "id": 3,
-    "page": "Home",
-    "name": "24oz Stainless Steel Water Bottle Non-insulated",
-    "price": 14.99,
-    "path": "/images/product-images/product3.jpg",
-    "rating": 4.7,
-    "brand": "Bambaw",
-    "num-ratings": 21,
-    "num-reviews": 3,
-    "category": "Food & Drink",
-    "sub-category": "Reusable Water Bottles",
-    "amnt-available": 22,
-    "material": "Stainless Steel",
-    "color": "Stainless Steel",
-    "description": "Stay hydrated on the go with this 24oz stainless steel water bottle. Its sturdy, non-insulated design makes it lightweight and easy to carry, perfect for everyday use. Built to last and easy to clean, it’s a reliable companion for work, workouts, or outdoor adventures." 
-  },
+// Control whether header displays welcome message or log in/sign up buttons.
+if (loginStatus === 'logged-in') {
+  accountMessage.innerHTML = `<p class="welcome-message">Welcome back, ${firstName}</p>`;
+} else {
+  accountMessage.innerHTML = '<a href="login.html" class="permanent-header-link">Log in</a> <a href="signup.html" class="permanent-header-link">Sign up</a>'; 
+}
 
-  {
-    "id": 4,
-    "page": "Home",
-    "name": "Mens Casual Shorts 7inch Inseam",
-    "price": 23.99,
-    "path": "/images/product-images/product4.jpg",
-    "rating": 4.4,
-    "brand": "RQP",
-    "num-ratings": 68,
-    "num-reviews": 6,
-    "category": "Clothing",
-    "sub-category": "Mens Shorts",
-    "amnt-available": 3,
-    "material": "60% Cotton, 40% Linen",
-    "color": "Army-green",
-    "description": "Stay comfortable and stylish with these men’s casual shorts featuring a 7-inch inseam. Perfect for warm weather, they offer a relaxed fit and versatile look ideal for everyday wear, whether you're out running errands or relaxing at home."
-  },
+// Make drop-header funtional
+downArrow.addEventListener('click', () => {
+  header.style.height = '90px';
+  dropHeader.style.height = '40px';
+  dropHeader.classList.remove('hidden');
+  downArrow.classList.add('hidden');
+  upArrow.classList.remove('hidden');
+})
 
-  {
-    "id": 5,
-    "page": "Home",
-    "name": "Falari 4-Pack 100% Cotton Men's Boxers",
-    "price": 17.99,
-    "path": "/images/product-images/product5.jpg",
-    "rating": 4.3,
-    "brand": "Falari",
-    "num-ratings": 55,
-    "num-reviews": 5,
-    "category": "Clothing",
-    "sub-category": "Men's Boxers",
-    "amnt-available": 18,
-    "material": "100% Cotton",
-    "color": "Varies",
-    "description": "Enjoy all-day comfort with this 4-pack of Falari men’s boxers made from 100% breathable cotton. Designed for a soft feel and a comfortable fit, these boxers provide essential support and durability for everyday wear."
-  },
+upArrow.addEventListener('click', () => {
+  header.style.height = '50px';
+  dropHeader.style.height = '0';
+  dropHeader.classList.add('hidden');
+  downArrow.classList.remove('hidden');
+  upArrow.classList.add('hidden');
+})
 
-  {
-    "id": 6,
-    "page": "Home",
-    "name": "Monxiery 5 Pairs 100% Cotton Athletic Crew Socks",
-    "price": 14.99,
-    "path": "/images/product-images/product6.jpg",
-    "rating": 4.2,
-    "brand": "Monxiery",
-    "num-ratings": 48,
-    "num-reviews": 4,
-    "category": "Clothing",
-    "sub-category": "Men's Socks",
-    "amnt-available": 17,
-    "material": "100% Cotton",
-    "color": "Black",
-    "description": "Stay comfortable and supported during your workouts with these Monxiery athletic crew socks. Made from 100% breathable cotton, they offer cushioning and durability to keep your feet fresh and protected all day long." 
-  },
+// Make drop-header retract if window is big enough to display header links in main header 
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1200) {
+    header.style.height = '50px';
+    dropHeader.style.height = '0';
+    downArrow.classList.add('hidden');
+    upArrow.classList.add('hidden');
+  } else if (window.innerWidth <= 1200) {
+    header.style.height = '50px';
+    dropHeader.style.height = '0';
+    downArrow.classList.remove('hidden');
+  }
+})
 
+
+// Main Section 
+
+
+// Products from products.json
+const productsArray = [
   {
     "id": 7,
     "page": "Health & Beauty",
@@ -180,7 +125,7 @@
   },
 
   {
-   "id": 11,
+    "id": 11,
     "page": "Health & Beauty",
     "name": "Ethique Deep Clean Solid Face Cleanser for Oily to Balanced Skin Deep Green",
     "price": 19.99,
@@ -322,5 +267,56 @@
     "color": "Not Applicable",
     "description": "Gently exfoliate and smooth your feet with the Pumice Valley Wooden Pumice Stone Foot File. Designed to remove dead skin and calluses, this natural tool leaves your feet soft, refreshed, and sandal-ready."
   }
+];
+const main = document.querySelector('main');
 
-]
+// Gather first value after decimal point of rating 
+function determineFirstDecimalDigit(num) {
+  return Math.floor((num * 10) % 10);
+}
+
+function displayTurtleRating(product) {
+
+  // Get the star rating for each product
+  const ratingFirstDigit = determineFirstDecimalDigit(product.rating);
+  let roundedProductRating;
+
+  // Round product.rating to the nearest 0.5
+  if (ratingFirstDigit < 3) {
+    roundedProductRating = Math.floor(product.rating);
+  } else if (ratingFirstDigit > 2 && ratingFirstDigit < 8) {
+  roundedProductRating = Math.floor(product.rating) + 0.5;
+  } else if (ratingFirstDigit > 7) {
+  roundedProductRating = Math.ceil(product.rating);
+  }
+  console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
+
+  // Store the turtle icons generated in a variable
+  let turtles = '';
+  for(let i = 1; i <= Math.floor(roundedProductRating); i++) {
+    turtles += `<img class="turtle-icon" src="/images/base-images/turtle-icon.png" alt="Turtle rating icon" />`;
+  }
+  if((roundedProductRating % 1) === 0.5) {
+    turtles += `<img class="turtle-icon" id="halved-turtle-icon" src="/images/base-images/halved-turtle-icon.png" alt="Halved turtle rating icon" />`;
+  }
+
+  // Store unique visual turtle rating for each product in localStorage
+  localStorage.setItem(`turtle-rating${product.id}`, turtles);
+  return turtles;
+}
+
+// Reusable function to generate HTML for each product.
+function generateHTML(product) {
+  return ` 
+    <div class="item-container"> 
+      <img class="product-img" src="${product.path}" alt="${product.name}" /> 
+      <a href="/code/product-code/health-beauty-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
+      <div class="turtle-container">${displayTurtleRating(product)}</div>
+      <p class="product-price">$${product.price}</p>
+    </div>
+    `;
+}
+
+// Generate code
+let html = productsArray.map(generateHTML).join('');
+main.innerHTML = html;

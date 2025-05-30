@@ -180,7 +180,7 @@
     "product": 6,
     "name": "Dwayne Johnson",
     "rating": 4,
-    "review": "Hey Kevin I think I found some socks for you. They come in youth XS."
+    "review": "Hey Kevin I think I found some socks for you. They come in youth XS!"
   },
 
   {
@@ -205,6 +205,111 @@
     "name": "Inigo Montoya",
     "rating": 5,
     "review": "Hello, my name is Inigo Montoya. My old socks got holes in them. Prepare to be bought."
-  }
+  },
 
+  {
+    "id": 28,
+    "product": 7,
+    "name": "Shrek",
+    "rating": 2,
+    "review": "Don't buy. Left my teeth too white."
+  },
+
+  {
+  "id": 27,
+  "product": 7,
+  "name": "Keanu Reeves",
+  "rating": 5,
+  "review": "It’s simple. It’s clean. It’s kind. Brushing with bamboo is... breathtaking."
+  },
+
+
+  {
+    "id": 30,
+    "product": 8,
+    "name": "Kung Fu Panda",
+    "rating": 1,
+    "review": "Do you really have to ask?"
+  },
+
+  {
+    "id": 31,
+    "product": 9,
+    "name": "Spongebob SquarePants",
+    "rating": 5,
+    "review": "Finally!"
+  },
+
+  {
+    "id": 32, 
+    "product": 9,
+    "name": "Yoda",
+    "rating": 4,
+    "review": "Scrub wisely, you must."
+  },
+
+  {
+    "id": 33,
+    "product": 10,
+    "name": "Thanos",
+    "rating": 5,
+    "review": "A small price to pay for scentation."
+  },
+
+  {
+    "id": 34,
+    "product": 10,
+    "name": "Peter Griffin",
+    "rating": 5,
+    "review": "Hey Lois, look at this Push Pop. Looks like its grape flavored."
+  },
+
+  {
+    "id": 35,
+    "product": 11,
+    "name": "The Incredible Hulk",
+    "rating": 5,
+    "review": "Finally, one that keeps my face the right color!"
+  },
+
+
+  {
+  "id": 36,
+  "product": 11,
+  "name": "Danny DeVito",
+  "rating": 5,
+  "review": "I don’t usually wash my face with anything I can’t eat, but this thing? It’s a little soap brick of joy. No plastic, no nonsense. Smells like Mother Nature punched me in the pores."
+  },
+
+  {
+  "id": 37,
+  "product": 11,
+  "name": "Marie Kondo",
+  "rating": 4,
+  "review": "It sparked joy, and also removed three years of emotional clutter from my T-zone. Lost a star because the bar slipped into the drain once and I mourned it like a pet."
+  },
+
+  {
+  "id": 38,
+  "product": 11,
+  "name": "Batman",
+  "rating": 2,
+  "review": "Too bright. Too clean. Justice is supposed to be gritty. But Alfred likes it, so I keep it in the Batcave guest bathroom."
+  },
+
+  {
+  "id": 39,
+  "product": 12,
+  "name": "Aquaman",
+  "rating": 5,
+  "review": "Finally, a shampoo that doesn’t dissolve in saltwater. Hair’s flowin’, scalp’s chillin’, dolphins approved. Zero plastic, all power."
+  },
+
+  {
+  "id": 43,
+  "product": 12,
+  "name": "Wednesday Addams",
+  "rating": 3,
+  "review": "Hydrating. Disappointingly cheerful scent. I prefer the scent of despair, but it does leave my hair disturbingly soft."
+  }
 ]
