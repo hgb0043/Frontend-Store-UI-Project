@@ -71,9 +71,13 @@ const product = {
     "color": "Not Applicable",
     "description": "Clean tough messes effortlessly with the Airnex plant-based sponge. Made from natural, non-scratch fibers, it’s long-lasting, odor-free, and ideal for eco-friendly cleaning."
   };
-
+  
 const main = document.querySelector('main');
-const turtleRating = localStorage.getItem(`turtle-rating${product.id}`);
+
+// Get the turtle rating display from product.rating
+import { roundTurtleRating } from "/scripts/base-scripts/utils.js";
+const roundedTurtleRating = roundTurtleRating(product.rating);
+const turtleRating = localStorage.getItem(`${roundedTurtleRating}star-turtle-rating`);
 
 // Generate product HTML content
 function generateProductHTML(product) {

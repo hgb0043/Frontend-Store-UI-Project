@@ -11,7 +11,7 @@ const header = document.querySelector('header');
 if (loginStatus === 'logged-in') {
   document.querySelector('.account-message').innerHTML = `<p class="welcome-message">Welcome back, ${firstName}</p>`
 } else {
-  document.querySelector('.account-message').innerHTML = '<a href="/code/base-code/login.html" class="permanent-header-link">Log in</a> <a href="/code/base-code/signup.html" class="permanent-header-link">Sign up</a></p>' 
+  document.querySelector('.account-message').innerHTML = '<a href="/code/base-code/login.html" class="permanent-header-link">Log in</a> <a href="/code/base-code/signup.html" class="permanent-header-link">Sign up</a>' 
 }
 
 // Make drop-header funtional
@@ -67,7 +67,12 @@ const product = {
   };
 
 const main = document.querySelector('main');
-const turtleRating = localStorage.getItem(`turtle-rating${product.id}`);
+
+// Get the turtle rating display from product.rating
+import { roundTurtleRating } from "/scripts/base-scripts/utils.js";
+const roundedTurtleRating = roundTurtleRating(product.rating);
+const turtleRating = localStorage.getItem(`${roundedTurtleRating}star-turtle-rating`);
+
 
 // Generate product HTML content
 function generateProductHTML(product) {

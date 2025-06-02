@@ -146,7 +146,7 @@ function generateHTML(product) {
   return ` 
     <div class="item-container"> 
       <img class="product-img" src="${product.path}" alt="${product.name}" /> 
-      <a href="product-code/product${product.id}.html" class="product-name">${product.name}</a> 
+      <a href="/code/product-code/home-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
       <div class="turtle-container">${displayTurtleRating(product)}</div>
       <p class="product-price">$${product.price}</p>
     </div>
@@ -160,3 +160,5 @@ healthProductsContainer.innerHTML = html;
 // Generate code for "Shop Polyester-free Clothing Section"
 html = clothingProductsArray.map(generateHTML).join('');
 clothingProductsContainer.innerHTML = html;
+
+console.log(localStorage.getItem('turtle-rating18'));

@@ -71,9 +71,13 @@ const product = {
     "color": "Purple",
     "description": "Stay fresh the natural way with the Ethique Floral Solid Deodorant Stick in lavender and vanilla. Made with plant-based ingredients like magnesium and bamboo, it neutralizes odor without aluminum or baking soda. Gentle, effective, and zero-waste."
   };
-
+  
 const main = document.querySelector('main');
-const turtleRating = localStorage.getItem(`turtle-rating${product.id}`);
+
+// Get the turtle rating display from product.rating
+import { roundTurtleRating } from "/scripts/base-scripts/utils.js";
+const roundedTurtleRating = roundTurtleRating(product.rating);
+const turtleRating = localStorage.getItem(`${roundedTurtleRating}star-turtle-rating`);
 
 // Generate product HTML content
 function generateProductHTML(product) {
