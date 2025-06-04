@@ -756,26 +756,8 @@
   },
 
   {
-    "id": 43,
-    "page": "Office Supplies",
-    "name": "Rarlan Pre-Sharpened 200 Count Wood-Cased #2 HB Pencils",
-    "price": 15.99,
-    "path": "/images/product-images/product43.jpg",
-    "rating": 4.7,
-    "brand": "ClassicWrite",
-    "num-ratings": 58,
-    "num-reviews": 0,
-    "category": "Office Supplies",
-    "sub-category": "Writing Instruments",
-    "amnt-available": 75,
-    "material": "Wood",
-    "color": "Yellow",
-    "description": "Get ready for school, work, or creative projects with this bulk pack of 200 pre-sharpened #2 HB pencils. Crafted with high-quality wood casing for durability and smooth writing, these classic yellow pencils are perfect for everyday use, standardized testing, and drawing."
-  },
-
-  {
   "id": 43,
-  "page": "Office Supplies",
+  "page": "Office & School",
   "name": "Pre-Sharpened 200 Count Wood-Cased #2 HB Pencils",
   "price": 15.99,
   "path": "/images/product-images/product43.jpg",
@@ -783,7 +765,7 @@
   "brand": "ClassicWrite",
   "num-ratings": 58,
   "num-reviews": 0,
-  "category": "Office Supplies",
+  "category": "Office & School",
   "sub-category": "Writing Instruments",
   "amnt-available": 75,
   "material": "Wood",
@@ -793,7 +775,7 @@
 
   {
     "id": 44,
-    "page": "Office Supplies",
+    "page": "Office & School",
     "name": "Parker Stainless Steel Ballpoint Pen Blue Ink",
     "price": 12.99,
     "path": "/images/product-images/product44.jpg",
@@ -801,7 +783,7 @@
     "brand": "Parker",
     "num-ratings": 34,
     "num-reviews": 0,
-    "category": "Office Supplies",
+    "category": "Office & School",
     "sub-category": "Writing Instruments",
     "amnt-available": 65,
     "material": "Stainless Steel",
@@ -811,25 +793,25 @@
 
   {
     "id": 45,
-    "page": "Office Supplies",
-    "name": "Sandord Artgum Gum 2-Pack Erasers",
+    "page": "Office & School",
+    "name": "Sanford Artgum Gum 2-Pack Erasers",
     "price": 4.99,
     "path": "/images/product-images/product45.jpg",
     "rating": 4.5,
-    "brand": "Sandord",
+    "brand": "Sanford",
     "num-ratings": 18,
     "num-reviews": 0,
-    "category": "Office Supplies",
+    "category": "Office & School",
     "sub-category": "Erasers",
     "amnt-available": 45,
     "material": "Rubber",
     "color": "Beige",
-    "description": "Remove pencil marks cleanly with the Sandord Artgum Gum 2-Pack Erasers. Designed for precise corrections, these erasers leave minimal residue and are gentle on paper."
+    "description": "Remove pencil marks cleanly with the Sanford Artgum Gum 2-Pack Erasers. Designed for precise corrections, these erasers leave minimal residue and are gentle on paper."
   },
 
   {
     "id": 46,
-    "page": "Office Supplies",
+    "page": "Office & School",
     "name": "Swingline Metal Silver-Colored 30 Sheet Office Stapler",
     "price": 19.99,
     "path": "/images/product-images/product46.jpg",
@@ -837,7 +819,7 @@
     "brand": "Swingline",
     "num-ratings": 27,
     "num-reviews": 0,
-    "category": "Office Supplies",
+    "category": "Office & School",
     "sub-category": "Staplers",
     "amnt-available": 39,
     "material": "Metal",
@@ -847,7 +829,7 @@
 
   {
     "id": 47,
-    "page": "Office Supplies",
+    "page": "Office & School",
     "name": "Officemate Letter Size Clipboard from Recycled Wood Fibers",
     "price": 9.99,
     "path": "/images/product-images/product47.jpg",
@@ -855,7 +837,7 @@
     "brand": "Officemate",
     "num-ratings": 22,
     "num-reviews": 0,
-    "category": "Office Supplies",
+    "category": "Office & School",
     "sub-category": "Clipboards",
     "amnt-available": 50,
     "material": "Recycled Wood Fibers",
@@ -865,7 +847,7 @@
 
   {
     "id": 48,
-    "page": "Office Furniture",
+    "page": "Office & School",
     "name": "Giantex 100% Bamboo Compact Modern Work Desk",
     "price": 149.99,
     "path": "/images/product-images/product48.jpg",
@@ -873,7 +855,7 @@
     "brand": "Giantex",
     "num-ratings": 16,
     "num-reviews": 0,
-    "category": "Office Furniture",
+    "category": "Office & School",
     "sub-category": "Desks",
     "amnt-available": 12,
     "material": "Bamboo",
@@ -883,7 +865,7 @@
 
   {
     "id": 49,
-    "page": "Office Supplies",
+    "page": "Office & School",
     "name": "Liry Products Wood Office Desk Organizer",
     "price": 29.99,
     "path": "/images/product-images/product49.jpg",
@@ -891,7 +873,7 @@
     "brand": "Liry Products",
     "num-ratings": 25,
     "num-reviews": 0,
-    "category": "Office Supplies",
+    "category": "Office & School",
     "sub-category": "Organizers",
     "amnt-available": 28,
     "material": "Wood",
@@ -901,7 +883,7 @@
 
   {
     "id": 50,
-    "page": "Office Decor",
+    "page": "Office & School",
     "name": "Prettidecor Metal Thinker Statues with Step Platform",
     "price": 34.99,
     "path": "/images/product-images/product50.jpg",
@@ -909,7 +891,7 @@
     "brand": "Prettidecor",
     "num-ratings": 8,
     "num-reviews": 0,
-    "category": "Office Decor",
+    "category": "Office & School",
     "sub-category": "Statues",
     "amnt-available": 15,
     "material": "Metal",
@@ -919,7 +901,7 @@
 
   {
     "id": 51,
-    "page": "Office Decor",
+    "page": "Office & School",
     "name": "SunBlogs Horse Statue Decoration Metal Figurine",
     "price": 27.99,
     "path": "/images/product-images/product51.jpg",
@@ -927,7 +909,7 @@
     "brand": "SunBlogs",
     "num-ratings": 14,
     "num-reviews": 0,
-    "category": "Office Decor",
+    "category": "Office & School",
     "sub-category": "Figurines",
     "amnt-available": 17,
     "material": "Metal",
@@ -955,7 +937,7 @@
 
   {
     "id": 53,
-    "page": "Office Furniture",
+    "page": "Office & School",
     "name": "Anji Bamboo Office Chairmat Walnut Color",
     "price": 59.99,
     "path": "/images/product-images/product53.jpg",
@@ -963,7 +945,7 @@
     "brand": "Anji",
     "num-ratings": 11,
     "num-reviews": 0,
-    "category": "Office Furniture",
+    "category": "Office & School",
     "sub-category": "Chair Mats",
     "amnt-available": 14,
     "material": "Bamboo",
@@ -973,7 +955,7 @@
 
   {
     "id": 54,
-    "page": "Office Decor",
+    "page": "Office & School",
     "name": "Haus and Hue Modern Picture Frame Beige Oak Wood",
     "price": 39.99,
     "path": "/images/product-images/product54.jpg",
@@ -981,23 +963,11 @@
     "brand": "Haus and Hue",
     "num-ratings": 17,
     "num-reviews": 0,
-    "category": "Office Decor",
+    "category": "Office & School",
     "sub-category": "Picture Frames",
     "amnt-available": 26,
     "material": "Oak Wood",
     "color": "Beige",
     "description": "Showcase your favorite memories in style with the Haus and Hue Modern Picture Frame crafted from beige oak wood for a natural, contemporary look."
   }
-
-
-  
-
-
-
-
-
-
-  
-
-  
 ]
