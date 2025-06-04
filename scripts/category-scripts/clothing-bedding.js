@@ -310,7 +310,7 @@ function generateHTML(product) {
   return ` 
     <div class="item-container"> 
       <img class="product-img" src="${product.path}" alt="${product.name}" /> 
-      <a href="/code/product-code/health-beauty-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
+      <a href="/code/product-code/food-kitchen-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
       <div class="turtle-container">${displayTurtleRating(product)}</div>
       <p class="product-price">$${product.price}</p>
     </div>
