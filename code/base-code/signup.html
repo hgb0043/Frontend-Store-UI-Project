@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- CSS Styles -->
+   <link rel="stylesheet" href="/styles/base-styles/reset.css">
+    <link rel="stylesheet" href="/styles/base-styles/signup.css">
+
+  <!-- Google Fonts and Font Awesome -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+   <!-- Font Awesome Free CDN -->
+  <script src="https://kit.fontawesome.com/220c13536d.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign Up Page</title>
+</head>
+
+<body>
+
+  <header></header>
+
+  <main>
+
+    <!-- close page button -->
+    <a href="index.html">
+    <i class="fa-solid fa-xmark js-xmark"></i>
+    </a>
+
+    <div class="login-box">
+
+      <img class="logo" src="/images/base-images/full-logo.png">
+
+      <div class="container" id="first-name-container">
+        <h1 class="header">First Name</h1>
+        <input type="text" class="box js-first-name-container">
+      </div>
+
+      <div class="container" id="last-name-container">
+        <h1 class="header">Last Name</h1>
+        <input type="text" class="box js-last-name-container">
+      </div>
+
+      <div class="container" id="email-address-box">
+        <h2 class="header">Email Address</h1>
+        <input type="text" class="box js-email-container">
+      </div>
+
+      <div class="container" id="password-container">
+        <h3 class="header">Password</h2>
+        <div class="password-box-container">
+          <input type="password" class="box js-password-box" id="password-box">       
+          <i class="fa-solid fa-eye js-eye"></i>
+        </div>
+
+        <div class="container" id="re-enter-password-container">
+          <h4 class="header">Re-enter Password</h2>
+          <div class="password-box-container">
+            <input type="password" class="box js-re-enter-password-box" id="re-enter-password-box">       
+            <i class="fa-solid fa-eye js-eye2"></i>
+        </div>
+
+        <p class="error-message js-error-message"></p>
+
+        <div class="message-container">
+          <p>Already have an account? <a class="sign-in-button" href="login.html">Sign in</a></p>
+        </div>
+
+        <a class="sign-up-link"> 
+        <button class="sign-up-button js-sign-up-button">Sign Up</button>
+        </a>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script src="/scripts/base-scripts/signup.js"></script>
+
+</body>
+</html>
