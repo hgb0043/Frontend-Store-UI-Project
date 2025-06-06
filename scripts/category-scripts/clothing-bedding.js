@@ -32,19 +32,22 @@ upArrow.addEventListener('click', () => {
   upArrow.classList.add('hidden');
 })
 
-// Make drop-header retract if window is big enough to display header links in main header 
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 1200) {
-    header.style.height = '50px';
-    dropHeader.style.height = '0';
+// Manages drop=header and up/down arrow visibility based on resolution size
+function updateHeaderState() {
+  const isWideScreen = window.innerWidth > 1200;
+
+  header.style.height = '50px';
+  dropHeader.style.height = '0';
+
+  if (isWideScreen) {
     downArrow.classList.add('hidden');
     upArrow.classList.add('hidden');
-  } else if (window.innerWidth <= 1200) {
-    header.style.height = '50px';
-    dropHeader.style.height = '0';
+  } else {
     downArrow.classList.remove('hidden');
   }
-})
+}
+updateHeaderState();
+window.addEventListener('resize', updateHeaderState);
 
 
 // Main Section 
@@ -310,7 +313,7 @@ function generateHTML(product) {
   return ` 
     <div class="item-container"> 
       <img class="product-img" src="${product.path}" alt="${product.name}" /> 
-      <a href="/code/product-code/food-kitchen-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
+      <a href="/code/product-code/clothing-bedding-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
       <div class="turtle-container">${displayTurtleRating(product)}</div>
       <p class="product-price">$${product.price}</p>
     </div>

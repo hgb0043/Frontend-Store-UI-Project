@@ -100,7 +100,6 @@ body {
   position: absolute;
   top: 50px;
   height: 40px;
-  max-width: 100vw;
   min-width: 100vw;
   z-index: 1000;
 
@@ -134,15 +133,19 @@ main {
   justify-content: space-evenly;
   align-items: center;
 
-  height: 300px;
+  flex: 10;
+  height: auto;
+  flex-grow: stretch;
   margin: 25px 10px 0 10px;
 }
 
 .product-img {
   display: inline-block;
 
-  width: 215px;
-  margin-left: 15px;
+  max-height: 450px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 0 10px 15px;
 }
 
 .product-description-container {
@@ -354,12 +357,7 @@ h4 {
 }
 
 @media (min-width: 800px) {
-  .product-main-container {
-    height: 300px;
-  }
-  
   .product-img {
-    width: 250px;
     margin-left: 100px;
   }
 

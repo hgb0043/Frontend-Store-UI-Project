@@ -32,19 +32,22 @@ upArrow.addEventListener('click', () => {
   upArrow.classList.add('hidden');
 })
 
-// Make drop-header retract if window is big enough to display header links in main header 
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 1200) {
-    header.style.height = '50px';
-    dropHeader.style.height = '0';
+// Manages drop=header and up/down arrow visibility based on resolution size
+function updateHeaderState() {
+  const isWideScreen = window.innerWidth > 1200;
+
+  header.style.height = '50px';
+  dropHeader.style.height = '0';
+
+  if (isWideScreen) {
     downArrow.classList.add('hidden');
     upArrow.classList.add('hidden');
-  } else if (window.innerWidth <= 1200) {
-    header.style.height = '50px';
-    dropHeader.style.height = '0';
+  } else {
     downArrow.classList.remove('hidden');
   }
-})
+}
+updateHeaderState();
+window.addEventListener('resize', updateHeaderState);
 
 
 // Main Section 
