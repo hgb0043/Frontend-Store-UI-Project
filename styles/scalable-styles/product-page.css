@@ -3,6 +3,7 @@
 }
 
 body {
+  font-family: zain;
   overflow-x: hidden;
 }
 
@@ -12,10 +13,9 @@ body {
 
   height: 50px;
   box-shadow: 0 0 4px rgba(0,0,0,0.5);
-  font-family: East Sea Dokdo, arial, sans-serif;
 }
 
-.arrow-div {
+.arrow-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +49,7 @@ body {
 
 .header-link, .permanent-header-link {
   color: black;
-  font-size: 26px;
+  font-size: 22px;
   text-decoration: none;
 }
 
@@ -64,7 +64,6 @@ body {
 .welcome-message {
  width: 180px; 
  font-size: 18px;
- font-family: zain;
  align-self: center;
  margin-right: -10px;
 }
@@ -81,15 +80,57 @@ body {
   margin-right: -15px;
 }
 
-.fa-cart-shopping-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5px;
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1px;
+  border-radius: 50%;
+  text-decoration: none;
 }
 
 .fa-cart-shopping {
-  font-size: 16px;
-  margin-right: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.fa-cart-shopping:hover {
+  color: rgb(60,60,60);
+}
+
+.fa-cart-shopping-container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  margin-right: 25px;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  left: 15px;
+  top: -6px;
+
+
+  background-color: red;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.badge-quantity {
+  color: white;
+
+  font-size: 14px;
+  margin: none;
+  text-align: center;
+  line-height: 16px;
+  user-select: none;
 }
 
 .drop-header {
@@ -103,10 +144,9 @@ body {
   min-width: 100vw;
   z-index: 1000;
 
-  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
 
-  transition: height 500ms ease;
-  overflow: hidden;
+  transition: height 0.8s ease-out;
 }
 
 .drop-header.expanded {
@@ -117,8 +157,7 @@ body {
   color: black;
   text-decoration: none;
 
-  font-family: East Sea Dokdo, arial, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 main {
@@ -130,13 +169,11 @@ main {
 
 .product-main-container {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
 
-  flex: 10;
   height: auto;
-  flex-grow: stretch;
-  margin: 25px 10px 0 10px;
+  max-width: 100vw;
+  margin: 25px 0 0 10px;
 }
 
 .product-img {
@@ -151,13 +188,13 @@ main {
 .product-description-container {
   display: flex;
   flex-direction: column;
-
   margin-left: 20px;
 }
 
 .product-name {
   margin: 20px 22px 0 22px;
 
+  width: auto;
   font-size: 20px;
   font-weight: 450;
 }
@@ -231,24 +268,30 @@ main {
 
 .user-prompts-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .add-to-cart-button {
   width: 135px;
   height: 35px;
   font-size: 18px;
-  margin: 25px 0;
+  margin: 25px 5px 25px 45px;
 
   background-color: rgb(11, 53, 167);
   color: white;
   border: none;
   border-radius: 10px;
+  transition: background-color 0.5s ease-out, color 0.5s ease-out;
 }
+
 
 .add-to-cart-button:hover {
   background-color: rgb(3, 3, 85);
+}
+
+.display-added-now:hover, .display-added-later:hover {
+  background-color: white;
 }
 
 .buy-now-button {
@@ -265,6 +308,20 @@ main {
 
 .buy-now-button:hover {
   background-color: rgb(0, 103, 103);
+}
+
+.added-message {
+  align-self: center;
+  text-align: center;
+
+  color:  green;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.added-message-link {
+  color: blue;
 }
 
 .product-info-container {
@@ -394,13 +451,13 @@ h4 {
     height: 40px;
     border-radius: 12px;
   }
-  
+ 
   .add-to-cart-button {
-    margin: 28px 0 0 25px;
-  }
+    margin: 25px 15px 25px 65px;
+  } 
 
-  .buy-now-button {
-    margin: 28px 50px 0 0;
+  .added-message {
+    margin-right: 0;
   }
   
   .product-info-container {
@@ -452,7 +509,7 @@ h4 {
   }
 }
 
-@media (min-width: 1082px) {
+@media (min-width: 1102px) {
   .price {
     margin-top: 16px;
   }
@@ -461,7 +518,27 @@ h4 {
     margin-top: 12px;
   }
 
-  .add-to-cart-button, .buy-now-button {
-    margin-top: 42px;
+  .buy-now-button, .add-to-cart-button {
+    margin: 30px;
   }
+
+  .add-to-cart-button {
+    margin-left: 220px; 
+  }
+
+}
+
+.display-added-now {
+  background-color: white;
+  color: blue;
+  align-self: center;
+  margin-left: 0;
+  margin-right: 10px;
+} 
+
+.display-added-later {
+  color: green;
+  background-color: white;
+  width: 250px;
+  margin: 25px 10px 25px 0;
 }

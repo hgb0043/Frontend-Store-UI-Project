@@ -32,12 +32,12 @@ upArrow.addEventListener('click', () => {
   upArrow.classList.add('hidden');
 })
 
-// Manages drop=header and up/down arrow visibility based on resolution size
+// Manages drop-header and up/down arrow visibility based on resolution size
 function updateHeaderState() {
   const isWideScreen = window.innerWidth > 1200;
 
   header.style.height = '50px';
-  dropHeader.style.height = '0';
+  dropHeader.classList.add('hidden'); 
 
   if (isWideScreen) {
     downArrow.classList.add('hidden');
@@ -324,3 +324,19 @@ function generateHTML(product) {
 // Generate code
 let html = productsArray.map(generateHTML).join('');
 main.innerHTML = html;
+
+
+// Shopping Section
+
+
+let cartProductData = JSON.parse(localStorage.getItem('cart-product-data')) || [];
+let cartQuantity = cartProductData.length || 0;
+const badge = document.querySelector('.js-badge');
+const badgeQuantity = document.querySelector('.js-badge-quantity');
+
+// Display badge if cartSize > 0 upon load
+if (cartQuantity > 0) {
+  badge.classList.remove('hidden');
+  badgeQuantity.classList.remove('hidden');
+  badgeQuantity.innerHTML = cartQuantity;
+}

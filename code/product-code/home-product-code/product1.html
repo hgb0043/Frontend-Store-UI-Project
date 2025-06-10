@@ -24,7 +24,8 @@
   <header>
 
     <div class="main-header">
-      <div class="arrow-div">
+      
+      <div class="arrow-container">
         <i class="fa-solid fa-arrow-down fa-arrow js-down-arrow hidden"></i>
         <i class="fa-solid fa-arrow-up fa-arrow js-up-arrow hidden"></i>
       </div>    
@@ -43,7 +44,12 @@
 
         <div class="account-message"></div>
         <div class="fa-cart-shopping-container">
-        <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/code/base-code/checkout.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping js-cart-shopping"></i>
+          </a>
+          <div class="badge js-badge hidden">
+            <span class="badge-quantity js-badge-quantity hidden"></span>
+          </div>
         </div>
       </div>
 
@@ -63,8 +69,6 @@
   <main>
 <!-- Generate in js -->    
   </main>
-
-  <footer></footer>
 
   <script src="/scripts/product-scripts/home-product-scripts/product1.js" type="module"></script>
 </body>

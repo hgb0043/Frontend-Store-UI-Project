@@ -1,3 +1,5 @@
+// Header Section
+
 const firstName = localStorage.getItem('first-name');
 
 const loginStatus = localStorage.getItem('login-status') || '';
@@ -9,9 +11,9 @@ const header = document.querySelector('header');
  
  // Control whether header displays welcome message or log in/sign up buttons.
 if (loginStatus === 'logged-in') {
-  document.querySelector('.account-message').innerHTML = `<p class="welcome-message">Welcome back, ${firstName}</p>`
+  accountMessage.innerHTML = `<p class="welcome-message">Welcome back, ${firstName}</p>`
 } else {
-  document.querySelector('.account-message').innerHTML = '<a href="/code/base-code/login.html" class="permanent-header-link">Log in</a> <a href="/code/base-code/signup.html" class="permanent-header-link">Sign up</a></p>' 
+  accountMessage.innerHTML = '<a href="/code/base-code/login.html" class="permanent-header-link">Log in</a> <a href="/code/base-code/signup.html" class="permanent-header-link">Sign up</a></p>' 
 }
 
 // Make drop-header funtional
@@ -31,21 +33,25 @@ upArrow.addEventListener('click', () => {
   upArrow.classList.add('hidden');
 })
 
-// Make drop-header retract if window is big enough to display header links in main header  
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 1200) {
-    header.style.height = '50px';
-    dropHeader.style.height = '0';
+// Manages drop-header and up/down arrow visibility based on resolution size
+function updateHeaderState() {
+  const isWideScreen = window.innerWidth > 1200;
 
+  header.style.height = '50px';
+  dropHeader.classList.add('hidden'); 
+
+  if (isWideScreen) {
     downArrow.classList.add('hidden');
     upArrow.classList.add('hidden');
-  } else if (window.innerWidth <= 1200) {
-    header.style.height = '50px';
-    dropHeader.style.height = '0';
-
+  } else {
     downArrow.classList.remove('hidden');
   }
-})
+}
+updateHeaderState();
+window.addEventListener('resize', updateHeaderState);
+
+
+// Main Section
 
 
 // Product data from products.json
@@ -92,10 +98,11 @@ function generateProductHTML(product) {
           <span class="divider">|</span><a class="reviews-count">${product["num-reviews"]} reviews</a>
       </div>
 
-      <div class="user-prompts-container">
-        <button class="add-to-cart-button">Add to Cart</button>
-        <button class="buy-now-button">Buy Now</button>
+      <div class="user-prompts-container js-user-prompts-container">
+        <button class="add-to-cart-button js-add-to-cart-button">Add to Cart</button>
+        <button class="buy-now-button js-buy-now-button">Buy Now</button>
       </div>
+      <p class="added-message js-added-message"></p>
     </div>
   </div>
 
@@ -181,9 +188,72 @@ function generateReviewHTML(review) {
 }
 
 // Generate reviews HTML content 
-
 html += reviewArray.map(generateReviewHTML).join('');
-console.log(html);
 
 // Display all the generated HTML
 main.innerHTML = html;
+
+
+// Shopping Section 
+
+
+// Establish cartProductData and assign it a value if one is found
+let cartProductData = JSON.parse(localStorage.getItem('cart-product-data')) || [];
+let cartQuantity = cartProductData.length || 0;
+const badge = document.querySelector('.js-badge');
+const badgeQuantity = document.querySelector('.js-badge-quantity');
+const addToCartButton = document.querySelector('.js-add-to-cart-button');
+const buyNowButton = document.querySelector('.js-buy-now-button');
+const addedMessage = document.querySelector('.js-added-message');
+const userPromptsContainer = document.querySelector('.js-user-prompts-container');
+
+
+function displayAdded() {
+
+  // Create added Statement
+  addToCartButton.innerHTML = 'Added <i class="fa-solid fa-check"></i>';
+  addToCartButton.classList.add('display-added-now');
+  addedMessage.innerHTML = "Item added to cart. <a class='added-message-link js-added-message-link' href='/code/base-code/checkout.html'>See Cart</a></p>"; 
+
+  // Center 'Added' statement
+  buyNowButton.remove();
+}
+
+
+// Display badge if cartSize > 0 upon load
+if (cartQuantity > 0) {
+  badge.classList.remove('hidden');
+  badgeQuantity.classList.remove('hidden');
+  badgeQuantity.innerHTML = cartQuantity;
+}
+
+// Display 'Added' and 'addedMessage' if product already added to cart
+if (cartProductData.some(p => p.id === product.id)) {
+  displayAdded();
+  addToCartButton.classList.add('display-added-later');
+  addToCartButton.classList.remove('display-added-now');
+  addToCartButton.innerHTML = 'Item previously added <i class="fa-solid fa-check"></i>';
+  addedMessage.innerHTML = "<a class='added-message-link js-added-message-link' href='/code/base-code/checkout.html'>See Cart</a></p>";
+}
+
+// Run when 'Add to Cart' button is clicked
+addToCartButton.addEventListener('click', () => {
+
+  // Display checkmark and added message
+  if (addToCartButton.innerHTML === 'Add to Cart') displayAdded();
+
+  // If the product isn't already in cartProductData
+  if (!cartProductData.some(p => p.id === product.id)) {
+    cartProductData.push(product);
+    (localStorage.setItem('cart-product-data', JSON.stringify(cartProductData)));
+    cartQuantity++;
+  } 
+
+  // Display badge if cartQuantity isn't zero
+  if (cartQuantity > 0) {
+    badge.classList.remove('hidden');
+    badgeQuantity.classList.remove('hidden');
+    badgeQuantity.innerHTML = cartQuantity;
+  }
+  
+});
