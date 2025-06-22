@@ -170,7 +170,6 @@ main {
   display: flex;
   align-items: center;  
 
-  height: 70px; 
   color: white;
   background-color: rgb(0,93,108);
 }
@@ -178,7 +177,7 @@ main {
 .sub-header {
   width: 100vw;
   text-align: center;
-  font-size: 2em;
+  font-size: 36px;
 }
 
 h2 {

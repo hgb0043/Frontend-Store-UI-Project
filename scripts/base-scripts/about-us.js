@@ -17,11 +17,11 @@ if (loginStatus === 'logged-in') {
 
 // Make drop-header funtional
 downArrow.addEventListener('click', () => {
-  header.style.height = '90px';
-  dropHeader.style.height = '40px';
-  dropHeader.classList.remove('hidden');
-  downArrow.classList.add('hidden');
-  upArrow.classList.remove('hidden');
+    header.style.height = '90px';
+    dropHeader.style.height = '40px';
+    dropHeader.classList.remove('hidden');
+    downArrow.classList.add('hidden');
+    upArrow.classList.remove('hidden');    
 });
 
 upArrow.addEventListener('click', () => {
@@ -45,6 +45,23 @@ function updateHeaderState() {
   } else {
     downArrow.classList.remove('hidden');
   }
+  console.log('testing');
 }
 updateHeaderState();
 window.addEventListener('resize', updateHeaderState);
+
+
+// Shopping Section
+
+
+const cartProductData = [];
+const cartQuantity = cartProductData.length || 0;
+const badge = document.querySelector('.js-badge');
+const badgeQuantity = document.querySelector('.js-badge-quantity');
+
+// Display badge if cartSize > 0 upon load
+if (cartQuantity > 0) {
+  badge.classList.remove('hidden');
+  badgeQuantity.classList.remove('hidden');
+  badgeQuantity.innerHTML = cartQuantity;
+}

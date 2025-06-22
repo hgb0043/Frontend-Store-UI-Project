@@ -15,7 +15,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title></title>
+  <title>Checkout</title>
 
 </head>
 
@@ -44,14 +44,6 @@
       <div class="header-right-side">
 
         <div class="account-message"></div>
-        <div class="fa-cart-shopping-container">
-          <a href="/code/base-code/checkout.html" class="cart-link">
-            <i class="fa-solid fa-cart-shopping js-cart-shopping"></i>
-          </a>
-          <div class="badge js-badge hidden">
-            <span class="badge-quantity js-badge-quantity hidden"></span>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -68,12 +60,33 @@
   </header>
 
   <main>
+    <div class="title-div">
+      <h1 class="title">Checkout</h1>
+    </div>
+    <div class="content-container">
+      <div class="order-summary-container js-order-summary-container"> 
+        <h2 class="order-summary-title js-order-summary-title"></h2>
+        <div class="products-container js-products-container">
+          <!-- Generate Product Section in cart.js -->    
+        </div>
+      </div>
 
-    <h1 class="title">Shopping Cart</h1>
-    <!-- Generate Product Section in checkout.js -->
+      <div class="order-container js-order-container">
+        <div class="info-container">
+          <div class="words-container js-words-container">
+            <!-- Generate in cart.js -->
+          </div>
+
+          <div class="values-container js-values-container">
+            <!-- Generate in cart.js -->
+          </div>
+        </div>
+        <button class="place-order-button js-place-order-button">Place Order</button>
+      </div>
+    </div>
 
   </main>
 
-  <script src="/scripts/base-scripts/checkout.js" type="module"></script>
+  <script src="/scripts/base-scripts/checkout.js"></script>
 </body>
 </html>

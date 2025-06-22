@@ -1,3 +1,5 @@
+import { createCartProductData } from './utils.js'
+
 // Header Section
 
 const firstName = localStorage.getItem('first-name');
@@ -167,3 +169,19 @@ html = clothingProductsArray.map(generateHTML).join('');
 clothingProductsContainer.innerHTML = html;
 
 console.log(localStorage.getItem('turtle-rating18'));
+
+
+// Shopping Section
+
+
+const cartProductData = createCartProductData()
+const cartQuantity = cartProductData.length || 0;
+const badge = document.querySelector('.js-badge');
+const badgeQuantity = document.querySelector('.js-badge-quantity');
+
+// Display badge if cartSize > 0 upon load
+if (cartQuantity > 0) {
+  badge.classList.remove('hidden');
+  badgeQuantity.classList.remove('hidden');
+  badgeQuantity.innerHTML = cartQuantity;
+}

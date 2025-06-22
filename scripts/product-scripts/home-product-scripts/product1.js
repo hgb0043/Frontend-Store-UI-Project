@@ -77,7 +77,7 @@ const product = {
 const main = document.querySelector('main');
 
 // Get the turtle rating display from product.rating
-import { roundTurtleRating } from "/scripts/base-scripts/utils.js";
+import { roundTurtleRating, createCartProductData } from "/scripts/base-scripts/utils.js";
 const roundedTurtleRating = roundTurtleRating(product.rating);
 const turtleRating = localStorage.getItem(`${roundedTurtleRating}star-turtle-rating`);
 
@@ -97,7 +97,7 @@ function generateProductHTML(product) {
         
         <div class="turtle-rating-container">${turtleRating}</div>
         <p class="ratings-count">${product["num-ratings"]} ratings</p>
-          <span class="divider">|</span><a class="reviews-count">${product["num-reviews"]} reviews</a>
+          <span class="divider">|</span><span class="reviews-count js-reviews-count">${product["num-reviews"]} reviews</span>
       </div>
 
       <div class="user-prompts-container js-user-prompts-container">
@@ -183,15 +183,20 @@ html += reviewArray.map(generateReviewHTML).join('');
 // Display all the generated HTML
 main.innerHTML = html;
 
+// Scroll to review section when reviews text clicked
+const reviewTriggerElement = document.querySelector('.js-reviews-count');
+const reviewTitleElement = document.querySelector('h4');
+reviewTriggerElement.addEventListener('click', () => {
+  reviewTitleElement.scrollIntoView({behavior: 'smooth'});
+});
+
 
 // Shopping Section 
 
 
 // Establish cartProductData and assign it a value if one is found
-let cartProductData = JSON.parse(localStorage.getItem('cart-product-data')) || [];
-cartProductData = [];
-let cartQuantity = cartProductData.length || 0;
-const badge = document.querySelector('.js-badge');
+const cartProductData = createCartProductData()
+let cartQuantity = cartProductData.length || 0;const badge = document.querySelector('.js-badge');
 const badgeQuantity = document.querySelector('.js-badge-quantity');
 const addToCartButton = document.querySelector('.js-add-to-cart-button');
 const buyNowButton = document.querySelector('.js-buy-now-button');
@@ -204,15 +209,13 @@ function displayAdded() {
   // Create added Statement
   addToCartButton.innerHTML = 'Added <i class="fa-solid fa-check"></i>';
   addToCartButton.classList.add('display-added-now');
-  addedMessage.innerHTML = "Item added to cart. <a class='added-message-link js-added-message-link' href='/code/base-code/checkout.html'>See Cart</a></p>"; 
+  addedMessage.innerHTML = "Item added to cart. <a class='added-message-link js-added-message-link' href='/code/base-code/cart.html'>See Cart</a></p>"; 
 
   // Center 'Added' statement
   buyNowButton.remove();
-  if (window.innerWidth > 800) {
-    addToCartButton.classList.add('display-added-now-wide');
-  } 
 
 }
+
 
 // Display badge if cartSize > 0 upon load
 if (cartQuantity > 0) {
@@ -227,10 +230,7 @@ if (cartProductData.some(p => p.id === product.id)) {
   addToCartButton.classList.add('display-added-later');
   addToCartButton.classList.remove('display-added-now');
   addToCartButton.innerHTML = 'Item previously added <i class="fa-solid fa-check"></i>';
-  if (window.innerWidth > 800) {
-    addToCartButton.style.transform = 'translateX(100px)';
-  }
-  addedMessage.innerHTML = "<a class='added-message-link js-added-message-link' href='/code/base-code/checkout.html'>See Cart</a></p>";
+  addedMessage.innerHTML = "<a class='added-message-link js-added-message-link' href='/code/base-code/cart.html'>See Cart</a></p>";
 }
 
 // Run when 'Add to Cart' button is clicked
@@ -246,11 +246,11 @@ addToCartButton.addEventListener('click', () => {
     cartQuantity++;
   } 
 
-  // Display badge if cartQuantity isn't zero
+// Display badge if cartQuantity isn't zero
   if (cartQuantity > 0) {
     badge.classList.remove('hidden');
     badgeQuantity.classList.remove('hidden');
     badgeQuantity.innerHTML = cartQuantity;
   }
-  
+
 });

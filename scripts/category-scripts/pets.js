@@ -329,8 +329,7 @@ main.innerHTML = html;
 // Shopping Section
 
 
-let cartProductData = JSON.parse(localStorage.getItem('cart-product-data')) || [];
-let cartQuantity = cartProductData.length || 0;
+const cartProductData = createCartProductData()const cartQuantity = cartProductData.length || 0;
 const badge = document.querySelector('.js-badge');
 const badgeQuantity = document.querySelector('.js-badge-quantity');
 

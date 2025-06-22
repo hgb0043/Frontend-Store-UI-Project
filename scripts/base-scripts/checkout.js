@@ -49,15 +49,9 @@ function updateHeaderState() {
 updateHeaderState();
 window.addEventListener('resize', updateHeaderState);
 
-const healthProductsContainer = document.getElementById('js-health-products-container');
-const clothingProductsContainer = document.getElementById('js-clothing-products-container');
 
+// Main Section 
 
-// Main Section
-
-
-const main = document.querySelector('main');
-const cartProductData = JSON.parse(localStorage.getItem('cart-product-data')) || [];
 
 // Gather first value after decimal point of rating (used in both main sections) 
 function determineFirstDecimalDigit(num) {
@@ -78,7 +72,6 @@ function displayTurtleRating(product) {
   } else if (ratingFirstDigit > 7) {
   roundedProductRating = Math.ceil(product.rating);
   }
-  console.log(`product: ${product.id} rounded rating: ${roundedProductRating}`);
 
   // Store the turtle icons generated in a variable
   let turtles = '';
@@ -94,25 +87,71 @@ function displayTurtleRating(product) {
   return turtles;
 }
 
-function generateCheckoutProductHTML(product) {
+
+const cartProductData = createCartProductData()const productsContainer = document.querySelector('.js-products-container');
+let html = '';
+
+// Generate "Order Summary" section
+function generateProducts(product) {
   return `
-    <div class="item-container"> 
-      <img class="product-img" src="${product.path}" alt="${product.name}" /> 
-      <a href="/code/product-code/home-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
-      <div class="turtle-container">${displayTurtleRating(product)}</div>
-      <p class="product-price">$${product.price}</p>
-      <div class="edit-item-container">
-        <i class="fa-solid fa-trash reduce-cart-icon js-reduce-cart"></i>
-        <span class="cart-quantity">1</span>
-        <i class="fa-solid fa-plus increase-cart-icon"></i>
+  <div class="item-container"> 
+    <img class="product-img" src="${product.path}" alt="${product.name}" /> 
+    <a href="/code/product-code/home-product-code/product${product.id}.html" class="product-name">${product.name}</a> 
+    <div class="turtle-container">${displayTurtleRating(product)}</div>
+    <p class="product-price">$${product.price}</p>
+    <div class="edit-item-container">
+      <i class="fa-solid fa-trash decrease-product-icon js-decrease-product-icon${product.id}"></i>
+      <span class="product-quantity js-product-quantity${product.id}">${localStorage.getItem(`product-quantity${product.id}`)}</span>
+      <i class="fa-solid fa-plus increase-product-icon js-increase-product-icon${product.id}"></i>
     </div>
-    `;
+  </div>
+  `;
 }
 
-let cartHTML = '';
 cartProductData.forEach((product) => {
-  cartHTML += generateCheckoutProductHTML(product);
-  console.log(cartHTML);
+  html += generateProducts(product);
 });
 
-main.innerHTML += cartHTML;
+productsContainer.innerHTML = html;
+
+
+const order = document.querySelector('.js-order-container');
+const subtotal = localStorage.getItem('subtotal');
+const cartQuantity = localStorage.getItem('cart-quantity'); 
+const tax = (Number(subtotal) * 0.1).toFixed(2);
+const total = (Number(subtotal) + Number(tax)).toFixed(2);
+
+const orderSummaryTitle = document.querySelector('.js-order-summary-title');
+if(cartQuantity > 0) {
+  orderSummaryTitle.innerHTML = `Order Summary (${cartQuantity} items)`
+}
+
+const wordsSection = document.querySelector('.js-words-container');
+const valuesSection = document.querySelector('.js-values-container');
+function generateCheckout(data) {
+  if (data.length > 0) {
+    wordsSection.innerHTML =  `
+    <span class="word">Subtotal:</span>
+    <span class="word">Shipping & Handling:</span>
+    <span class="word">Tax:</span>
+    <span class="word">Total:</span>
+    `
+
+    valuesSection.innerHTML = `
+    <span class="value">$${subtotal}</span>
+    <span class="value">$0.00</span>
+    <span class="value">$${tax}</span>
+    <span class="value">$${total}</span>
+    `
+  } else {
+    return;
+  }
+}
+generateCheckout(cartProductData);
+
+const placeOrderButton = document.querySelector('.js-place-order-button')
+console.log(placeOrderButton);
+
+placeOrderButton.addEventListener('click', () => {
+  window.location.href = 'order-confirmation.html';
+});
