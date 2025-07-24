@@ -4,18 +4,18 @@
 
   <!-- CSS Styles -->
   <link rel="stylesheet" href="/styles/base-styles/reset.css">
-  <link rel="stylesheet" href="/styles/base-styles/about-us.css">
+  <link rel="stylesheet" href="/styles/base-styles/styles.css">
 
   <!-- Google Fonts and Font Awesome -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Patrick+Hand&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/220c13536d.js" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About Us Page</title>
+  <title></title>
 
 </head>
 
@@ -25,7 +25,7 @@
 
     <div class="main-header">
 
-      <div class="arrow-div">
+      <div class="arrow-container">
         <i class="fa-solid fa-arrow-down fa-arrow js-down-arrow hidden"></i>
         <i class="fa-solid fa-arrow-up fa-arrow js-up-arrow hidden"></i>
       </div>    
@@ -35,17 +35,17 @@
       </a>
 
       <nav class="header-links-container">
-        <a href="index.html" class="header-link">Home</a>
-        <a href="account.html" class="header-link">Account</a>
-        <a href="search.html" class="header-link">Search</a>
-        <a href="about-us.html" class="header-link">About Us</a>
+        <a href="/code/index.html" class="header-link">Home</a>
+        <a href="/code/account.html" class="header-link">Account</a>
+        <a href="/code/search.html" class="header-link">Search</a>
+        <a href="/code/about-us.html" class="header-link">About Us</a>
       </nav>
 
       <div class="header-right-side">
 
         <div class="account-message"></div>
         <div class="fa-cart-shopping-container">
-          <a href="/code/base-code/cart.html" class="cart-link">
+          <a href="/code/cart.html" class="cart-link">
             <i class="fa-solid fa-cart-shopping js-cart-shopping"></i>
           </a>
           <div class="badge js-badge hidden">
@@ -68,13 +68,37 @@
   </header>
 
   <main>
-    <h1>About Us</h1>
-    <p class="about-us-paragraph">Built in 2025, turtlemarket.com serves as the world's first 100% plastic free general marketplace. We founded turtlemarket because of our worry about the effects of plastic on both our health and the planet's. Whichever category you fall into, we beleive that you deserve a place to find quality products online guilt and worry free.</p>
+
+    <div class="sub-header-container js-health-container" id="health-">
+      <h1 class="sub-header">Our Top Health Picks</h1>
+    </div>
+
+    
+    <div class="product-container"  id="js-health-products-container">
+      <!-- Generate code in script.js -->
+    </div>
+
+    <div class="sub-header-container">
+      <h2 class="sub-header">Shop Polyester-free Clothing</h2>
+    </div>
+
+    <div class="product-container" id="js-clothing-products-container">
+       <!-- Generate code in script.js -->
+    </div>
+
+    <!-- Browse section -->
+    <div class="sub-header-container">
+      <h3 class="sub-header">Browse by Category</h3>
+    </div>
+
+    <div class="browse-section js-browse-section">
+      <!-- Generate code in script.js -->
+    </div>
 
   </main>
 
   <footer></footer>
 
-  <script src="/scripts/base-scripts/about-us.js" type="module"></script>
+  <script src="/scripts/base-scripts/script.js" type="module"></script>
 </body>
 </html>

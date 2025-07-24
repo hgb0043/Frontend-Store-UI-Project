@@ -1,4 +1,4 @@
-// Header Section 
+import { createCartProductData, calculateCartQuantity } from '/scripts/utils/cart-utils.js'
 
 export function initializeHeader() {
   generateHeaderAccountMessage();
@@ -13,6 +13,10 @@ export function initializeHeader() {
   window.addEventListener('resize', () => {
     updateHeaderState(header, dropHeader, upArrow, downArrow);
   });
+
+  const cartProductData = createCartProductData();
+  const cartQuantity = calculateCartQuantity(cartProductData);
+  manageBadgeUI(cartQuantity);
 }
 
 function generateHeaderAccountMessage() {
@@ -28,7 +32,7 @@ function displayHeaderLoginStatus(status, firstName) {
   if (status === 'logged-in') {
     return `<p class="welcome-message">Welcome back, ${firstName}</p>`;
   } else {
-    return '<a href="/code/base-code/login.html" class="permanent-header-link">Log in</a> <a href="/code/base-code/ssignup.html" class="permanent-header-link">Sign up</a>'; 
+    return '<a href="/code/login.html" class="permanent-header-link">Log in</a> <a href="/code/signup.html" class="permanent-header-link">Sign up</a>'; 
   }
 }
 
@@ -64,5 +68,19 @@ function updateHeaderState(header, dropHeader, upArrow, downArrow) {
     downArrow.classList.add('hidden');
   } else {
     downArrow.classList.remove('hidden');
+  }
+}
+
+// Display badge if cartSize > 0 upon load
+export function manageBadgeUI(cartQty) {
+  const badge = document.querySelector('.js-badge');
+  const badgeQuantity = document.querySelector('.js-badge-quantity');
+  if (cartQty > 0) {
+    badge.classList.remove('hidden');
+    badgeQuantity.classList.remove('hidden');
+    badgeQuantity.innerHTML = cartQty;
+  } else if (cartQty === 0) {
+    badge.classList.add('hidden');
+    badgeQuantity.classList.remove('hidden');
   }
 }

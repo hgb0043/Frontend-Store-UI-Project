@@ -1,4 +1,66 @@
+import { manageBadgeUI } from '/scripts/utils/header-utils.js';
+
 import { generateIndividualProduct } from '/scripts/utils/product-utils.js';
+
+export function initializeCartInteractivity(data, footer) {
+  data.forEach((product) => {
+    const plusSign = document.querySelector(`.js-increase-product-icon${product.id}`);
+    const minusSign = document.querySelector(`.js-decrease-product-icon${product.id}`);
+    
+    if (!plusSign || !minusSign) {
+      console.warn('plusSign and/or minusSign not found');
+      return;
+    }
+
+    plusSign.addEventListener('click', () => {
+      const newData = createCartProductData();
+      applyCartListenerChanges(
+        newData, 
+        product.id, 
+        '+',
+        footer,
+        minusSign
+      );
+    });
+
+    minusSign.addEventListener('click', () => {
+      const newData = createCartProductData();
+      applyCartListenerChanges(
+        newData,
+        product.id,
+        '-',
+        footer,
+        minusSign
+      )
+    });
+  });
+}
+
+// Apply logic to 'plusSign' and 'minusSign' event listeners
+function applyCartListenerChanges(data, productId, direction, footer, minusSign) {
+  const newQty = updateProductQuantity(data, productId, direction);
+  // Also updates data (cartProductData) sufficiently
+  switchDecreaseIcon(newQty, minusSign);
+  updateProductQuantityUI(productId, newQty);
+  if (newQty === 0) {
+    data = data.filter(p => p.id !== productId);
+    removeCartProduct(productId);
+  }
+
+  const cartQuantity = calculateCartQuantity(data);
+  manageBadgeUI(cartQuantity);
+  if (data.length === 0) displayEmptyCartMessage();
+  footer.innerHTML = generateCartStickyFooter(
+    calculateCartSubtotal(data), 
+    cartQuantity,
+    footer
+  );
+  if (data.length !== 0) {
+    updateCartSubtotalUI(data);
+  }
+
+  localStorage.setItem('cart-product-data', JSON.stringify(data));
+}
 
 // Combine generated product HTML content
 export function generateCartProductHTML(data, page) {
@@ -8,35 +70,35 @@ export function generateCartProductHTML(data, page) {
   }, '');
 }
 
-// Calculate cart quantity variable
 export function calculateCartQuantity(data) {
-  const cartTotal = data.reduce((total, product) => {
-    const qty = Number(localStorage.getItem(`product-quantity${product.id}`)) || 1;
-    return total + qty;
-  }, 0);    
-  localStorage.setItem('cart-quantity', cartTotal);
-  return cartTotal;
+  if (Array.isArray(data)) {
+    const cartQuantity = data.reduce((total, product) => {
+      const qty = Number(product.quantity) || 0;
+      return total + qty;
+    }, 0);
+    return cartQuantity;
+  } else {
+    return 0;
+  }
 }
 
 // Calculate subtotal variable
 export function calculateCartSubtotal(data) {
-  return data.reduce((total, product) => {
-    const productCount = Number(localStorage.getItem(`product-quantity${product.id}`)) || 1;
-    const price = Math.round(product.price * 100 * productCount) / 100;
-    return total + price; 
+  const result = data.reduce((total, product) => {
+    const price = Math.round(product.price * 100 * product.quantity) / 100;
+    return (total + price); 
   }, 0);
+  return result.toFixed(2);
 }
-
 
 export function createCartProductData() {
   let data;
-  // DELETE LATER
   try {
     data = JSON.parse(localStorage.getItem('cart-product-data')) || [];
   } catch(e) {
     data = [];
+    console.error('Invalid cart-product-data:', e);
   }
-  console.log(data);
   return data;
 }
 
@@ -48,29 +110,21 @@ export function displayEmptyCartMessage() {
 }
 
 // Update cartProductData and UI when an item is removed
-function removeCartProduct(data, productId) {
+function removeCartProduct(productId) {
   const itemContainer = document.querySelector(`.item-container[data-product-id="${productId}"]`);
   if (itemContainer) itemContainer.remove();
-
-  const newData = data.filter(p => p.id !== productId);
-  localStorage.setItem('cart-product-data', JSON.stringify(newData));
-  if (newData.length === 0) displayEmptyCartMessage();
 }
 
-// Update product quantity when the plus or minus icon is selected
-function updateProductQuantity(productId, qty, data, direction) {
-  let newQty = qty;
-  if (direction === '+') newQty = qty + 1;
-  else if (direction === '-') newQty = qty - 1;
-
-  if (newQty < 1) {
-    localStorage.removeItem(`product-quantity${productId}`);
-    removeCartProduct(data, productId);
-    return newQty;
+function updateProductQuantity(data, productId, direction) {
+  const prdct = data.find(p => p.id === productId);
+  // Defensive measure
+  if (prdct.quantity > 0) {
+    if (direction === '+') prdct.quantity++;
+    else if (direction === '-') prdct.quantity--;
   } else {
-    localStorage.setItem(`product-quantity${productId}`, JSON.stringify(newQty));
+    prdct.quantity = 0;
   }
-  updateProductQuantityUI(productId, newQty);
+  return prdct.quantity;
 }
 
 // display updated product quantity
@@ -81,26 +135,12 @@ export function updateProductQuantityUI(productId, qty) {
   }
 }
 
-
-// Calculate subtotal variable
-export function calculateSubtotal(data) {
-  const totalPrice = data.reduce((total, product) => {
-    const productCount = Number(localStorage.getItem(`product-quantity${product.id}`)) || 1;
-    const productPrice = (product.price * productCount)
-    return total + Number(productPrice);
-  }, 0);
-
-  const roundedTotal = Number(totalPrice.toFixed(2));
-  localStorage.setItem('subtotal', roundedTotal);
-  return roundedTotal;
-}
-
 // display update cart quantity and subtotal
 function updateCartSubtotalUI(data) {
   const newSubtotal = calculateCartSubtotal(data);
   const subtotalText = document.querySelector('.js-subtotal-text');
   if (subtotalText) {
-    subtotalText.textContent = `Subtotal: $${newSubtotal.toFixed(2)}` || '';
+    subtotalText.textContent = `Subtotal: $${newSubtotal}` || '';
   }
 }
 
@@ -126,61 +166,17 @@ export function generateCartStickyFooter(subtotal, qty, footer) {
   }
 }
 
-// Apply logic to 'plusSign' and 'minusSign' event listeners
-function applyCartListenerChanges(data, productId, qty, direction, footer) {
-  updateProductQuantity(productId, qty, data, direction);
-  const newData = createCartProductData();
-  switchDecreaseIcon(productId);
-  footer.innerHTML = generateCartStickyFooter(
-    calculateCartSubtotal(newData), 
-    calculateCartQuantity(newData), 
-    footer
-  );
-  if (newData.length !== 0) {
-    updateCartSubtotalUI(newData);
-  }
-}
-
-export function initializeCartInteractivity(data, footer) {
-  data.forEach((product) => {
-    const plusSign = document.querySelector(`.js-increase-product-icon${product.id}`);
-    const minusSign = document.querySelector(`.js-decrease-product-icon${product.id}`);
-    
-    plusSign.addEventListener('click', () => {
-      const productQuantity = Number(localStorage.getItem(`product-quantity${product.id}`)) || 1;
-      applyCartListenerChanges(
-        data, 
-        product.id, 
-        productQuantity,
-        '+',
-        footer
-      );
-    });
-
-    minusSign.addEventListener('click', () => {
-      const productQuantity = Number(localStorage.getItem(`product-quantity${product.id}`)) || 1;
-      applyCartListenerChanges(
-        data,
-        product.id,
-        productQuantity,
-        '-',
-        footer
-      );
-    });
-  });
-}
-
 // Switch between trash can and minus-sign icon depending on productQuantity
-export function switchDecreaseIcon(productId, el) {
+export function switchDecreaseIcon(qty, el) {
   if (!el) return;
 
-  const raw = localStorage.getItem(`product-quantity${productId}`);
-  const quantity = Number(raw || '1');
-  if (quantity > 1) {
-    el.classList.add('fa-minus');
-    el.classList.remove('fa-trash');
-  } else {
-    el.classList.add('fa-trash');
-    el.classList.remove('fa-minus'); 
+  if (!isNaN(qty)) {
+    if (qty > 1) {
+      el.classList.add('fa-minus');
+      el.classList.remove('fa-trash');    
+    } else {
+      el.classList.add('fa-trash');
+      el.classList.remove('fa-minus'); 
+    }
   }
-}
+} 

@@ -100,11 +100,11 @@ export function generateIndividualProduct(product, page) {
       if (page === 'cart') {
         html += `
           <i class="fa-solid fa-trash decrease-product-icon js-decrease-product-icon${product.id}"></i>
-          <span class="product-quantity js-product-quantity${product.id}">${getProductQuantity(product.id)}</span>
+          <span class="product-quantity js-product-quantity${product.id}">${product.quantity}</span>
           <i class="fa-solid fa-plus increase-product-icon js-increase-product-icon${product.id}"></i>        
         `;
       } else if (page === 'checkout') {
-        html += `<span class="product-quantity js-product-quantity${product.id}">Quantity: ${getProductQuantity(product.id)}</span>`
+        html += `<span class="product-quantity js-product-quantity${product.id}">Quantity: ${product.quantity}</span>`
       }
       html += `
       </div>
@@ -112,10 +112,6 @@ export function generateIndividualProduct(product, page) {
     `;
   }
   return html;
-}
-
-export function getProductQuantity(productId) {
-  return Number(localStorage.getItem(`product-quantity${productId}`)) || 1;
 }
 
 // Independent function that stores potential ratings in localStorage
@@ -138,3 +134,15 @@ function storePotentialTurtleRatings() {
   }
 }
 storePotentialTurtleRatings();
+
+// Reusable function to generate HTML for each product.
+export function generateCategoryProductHTML(product) {
+  return ` 
+    <div class="item-container"> 
+      <img class="product-img" src="${product.path}" alt="${product.name}" /> 
+      <a href="/code/product.html?id=${product.id}" class="product-name">${product.name}</a> 
+      <div class="turtle-container">${generateProductTurtleRating(product)}</div>
+      <p class="product-price">$${product.price}</p>
+    </div>
+    `;
+}

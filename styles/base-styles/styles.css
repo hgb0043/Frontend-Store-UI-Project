@@ -3,8 +3,8 @@
 }
 
 body {
-  overflow-x: hidden;
   font-family: zain;
+  overflow-x: hidden;
 }
 
 .main-header {
@@ -15,7 +15,7 @@ body {
   box-shadow: 0 0 4px rgba(0,0,0,0.5);
 }
 
-.arrow-div {
+.arrow-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,8 +64,9 @@ body {
 .welcome-message {
  width: 180px; 
  font-size: 18px;
- align-self: center;
  margin-right: -10px;
+
+ align-self: center;
 }
 
 .permanent-header-link {
@@ -115,7 +116,6 @@ body {
   position: absolute;
   left: 15px;
   top: -6px;
-
 
   background-color: red;
   width: 18px;
@@ -346,7 +346,7 @@ h2 {
     margin-left: 15px;
   }
   
-  .arrow-div {
+  .arrow-container {
     width: 0;
   }
 

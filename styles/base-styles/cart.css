@@ -3,8 +3,8 @@
 }
 
 body {
+  font-family: zain;
   overflow-x: hidden;
-  font-family: zain, arial, sans-serif;
 }
 
 .main-header {
@@ -13,10 +13,9 @@ body {
 
   height: 50px;
   box-shadow: 0 0 4px rgba(0,0,0,0.5);
-  overflow-x: hidden;
 }
 
-.arrow-div {
+.arrow-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +32,7 @@ body {
 }
 
 .header-logo {
+  width: 100%;
   width: 200px;
   height: 35px;
 }
@@ -47,7 +47,7 @@ body {
   max-width: 450px;
 }
 
-.header-link {
+.header-link, .permanent-header-link {
   color: black;
   text-decoration: none;
 
@@ -64,10 +64,11 @@ body {
 }
 
 .welcome-message {
- width: 180px; 
- font-size: 18px;
- font-family: zain, arial, sans-serif;
- align-self: center;
+  width: 180px; 
+  font-size: 18px;
+  margin-right: -10px;
+
+  align-self: center;
 }
 
 .permanent-header-link {
@@ -80,6 +81,58 @@ body {
   display: flex;
   align-items: center;
   margin-right: -15px;
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-cart-shopping {
+  font-size: 20px;
+  color: black;
+}
+
+.fa-cart-shopping:hover {
+  color: rgb(60,60,60);
+}
+
+.fa-cart-shopping-container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  margin-right: 25px;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  left: 15px;
+  top: -6px;
+
+  background-color: red;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.badge-quantity {
+  color: white;
+
+  font-size: 14px;
+  margin: none;
+  text-align: center;
+  line-height: 16px;
+  user-select: none;
 }
 
 .drop-header {
@@ -106,10 +159,8 @@ body {
 .drop-header-link {
   color: black;
   text-decoration: none;
-  font-family: zain, arial, sans-serif;
 
   font-size: 22px;
-  margin-top: 2px;
 }
 
 main {
@@ -302,7 +353,7 @@ main {
     margin-left: 15px;
   }
   
-  .arrow-div {
+  .arrow-container {
     width: 0;
   }
 

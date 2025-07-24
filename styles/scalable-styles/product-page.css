@@ -116,7 +116,6 @@ body {
   left: 15px;
   top: -6px;
 
-
   background-color: red;
   width: 18px;
   height: 18px;
@@ -144,7 +143,7 @@ body {
   min-width: 100vw;
   z-index: 1000;
 
-  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
 
   transition: height 0.8s ease-out;
 }
