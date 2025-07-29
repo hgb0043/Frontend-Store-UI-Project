@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "page": "health",
+    "name": "Health & Beauty",
+    "icon": "leaf"  
+  },
+
+  {
+    "id": 2,
+    "page": "clothing",
+    "name": "Clothing & Bedding",
+    "icon": "shirt"
+  },
+
+  {
+    "id": 3,
+    "page": "food",
+    "name": "Food & Kitchen",
+    "icon": "utensils"  
+  },
+
+  {
+    "id": 4,
+    "page": "office",
+    "name": "Office & School",
+    "icon": "pencil"  
+  },
+
+  {
+    "id": 5,
+    "page": "baby",
+    "name": "Baby & Kids",
+    "icon": "baby"  
+  },
+
+  {
+    "id": 6,
+    "page": "pets",
+    "name": "Pets",
+    "icon": "dog"
+  }
+]

@@ -1,86 +1,69 @@
-const eye = document.querySelector('.js-eye');
-const eye2 = document.querySelector('.js-eye2');
-const firstNameBox = document.querySelector('.js-first-name-container');
-const lastNameBox = document.querySelector('.js-last-name-container');
-const emailAddressBox = document.querySelector('.js-email-container');
-const passwordBox = document.querySelector('.js-password-box');
-const reEnterPasswordBox = document.querySelector('.js-re-enter-password-box');
-const signUpButton = document.querySelector('.js-sign-up-button');
-const signUpLink = document.querySelector('.sign-up-link');
+import { eyeEventListener } from '/scripts/utils/auth-utils.js';
 
-firstNameBox.value = localStorage.getItem('input-first-name') || '';
-lastNameBox.value = localStorage.getItem('input-last-name') || '';
-emailAddressBox.value = localStorage.getItem('input-email-address') || '';
-passwordBox.value = localStorage.getItem('inputPassword') || '';
+function runSignupLogic() {
+  const eyeIcon = document.querySelector('.js-eye');
+  const eyeIcon2 = document.querySelector('.js-eye2');
+  const passwordBox = document.querySelector('.js-password-box');
+  const reEnterPasswordBox = document.querySelector('.js-re-enter-password-box');
+  eyeEventListener(eyeIcon, passwordBox);
+  eyeEventListener(eyeIcon2, reEnterPasswordBox);
 
-let inputFirstName;
-let inputLastName;
-let inputEmailAddress;
-let inputReEnterPassword;
-let inputPassword;
-let validatedPassword;
+  const firstNameBox = document.querySelector('.js-first-name-container');
+  const lastNameBox = document.querySelector('.js-last-name-container');
+  const emailAddressBox = document.querySelector('.js-email-container');
+  const signUpButton = document.querySelector('.js-sign-up-button');
 
-/* Control visibility of "password" field via its adjacent eye icon */
-eye.addEventListener('click', () => {
-  if (passwordBox.type === "password") {
-  passwordBox.type = "text";
-  } else if (passwordBox.type === "text") {
-    passwordBox.type = "password";
-  } 
-});
+  const boxes = {
+    firstName: firstNameBox,
+    lastName: lastNameBox,
+    email: emailAddressBox,
+    password: passwordBox,
+    reEnterPassword: reEnterPasswordBox
+  };
 
-/* Control visibility of "re-enter password" field via its adjacent eye icon */
-eye2.addEventListener('click', () => {
-  if(reEnterPasswordBox.type === "password") {
-    reEnterPasswordBox.type = "text";
-  } else if (reEnterPasswordBox.type === "text") {
-    reEnterPasswordBox.type = "password";
-  }
-})
+  signUpEventListener(signUpButton, boxes);
 
-signUpButton.addEventListener('click', () => {
-  
-  // Generate variables for the value of each input field.
-  inputFirstName = firstNameBox.value;
-  inputLastName = lastNameBox.value;
-  inputEmailAddress = emailAddressBox.value;
-  inputPassword = passwordBox.value;
-  inputReEnterPassword = reEnterPasswordBox.value;
+}
+// Run when page first loads or is refreshed
+runSignupLogic();
 
-  /* Create array containing all input field values to simplify later code */
-  const fields = [
-  inputFirstName,
-  inputLastName,
-  inputReEnterPassword,
-  inputPassword,
-]
+function signUpEventListener(button, boxes) {
+  button.addEventListener('click', () => {
+    // Generate inputs object
+    const inputs = {
+      firstName: boxes.firstName.value.trim(),
+      lastName: boxes.lastName.value.trim(),
+      email: boxes.email.value.trim(),
+      password: boxes.password.value,
+      reEnterPassword: boxes.reEnterPassword.value
+    }
+    const errorMessage = document.querySelector('.js-error-message')
+    checkInputs(inputs, errorMessage, boxes);
+  });
+}
 
+// Create array containing all input field values to simplify later code 
+function checkInputs(inputs, message, boxes) {
   // Check for errors in input field values 
-  if(fields.some(value => !value )) {
-      alert('Please fill in all forms');
+  if (Object.values(inputs).some(value => !value)) {
+    message.innerHTML = 'Please fill in all forms';
+  } else {
+    if (inputs.password === inputs.reEnterPassword) {
+      const validatedPassword = inputs.password;
+      localStorage.setItem('validated-password', validatedPassword);
+      window.location.href = 'login.html';
+      storeUserInformation(inputs);
     } else {
-      if(inputPassword === inputReEnterPassword) {
-    validatedPassword = inputPassword;
-    localStorage.setItem('validated-password', validatedPassword);
-    signUpLink.href = "login.html";
-    console.log('Passwords Match');
-  } else if (inputPassword !== inputReEnterPassword){
-    document.querySelector('.js-error-message')
-      .innerHTML = 'Passwords do not match. Try again.'
-    reEnterPasswordBox.value = '';
-
-    console.log('Passwords do not match');
+      message.innerHTML = 'Passwords do not match. Try again.';
+      boxes.reEnterPassword.value = '';
+    }
   }
 }
 
-  // Store data in localStorage for future use 
-  localStorage.setItem('first-name', inputFirstName);
-  localStorage.setItem('last-name', inputLastName);
-  localStorage.setItem('email-address', inputEmailAddress);
-  localStorage.setItem('password', validatedPassword);
-
-  console.log(`Input first name: ${inputFirstName}`);
-  console.log(`Input last name: ${inputLastName}`);
-  console.log(`Input email address: ${inputEmailAddress}`);
-  console.log(`Validated password: ${validatedPassword}`);
-});
+// Store data in localStorage for external use 
+function storeUserInformation(inputs) {
+  localStorage.setItem('first-name', inputs.firstName);
+  localStorage.setItem('last-name', inputs.lastName);
+  localStorage.setItem('email-address', inputs.email);
+  localStorage.setItem('password', inputs.password);
+}

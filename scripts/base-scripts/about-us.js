@@ -1,26 +1,21 @@
-const menuIcon = document.querySelector('.js-bars');
-const sidebar = document.querySelector('.sidebar');
-const sidebarLinks = document.querySelectorAll('.sidebar-link');
-const aboutUsSection = document.querySelector('main');
+import { initializeHeader } from './utils.js'
 
-menuIcon.addEventListener('click', () => {
-  sidebar.classList.toggle('expanded');
-  console.log('testing');
-  
-    sidebarLinks.forEach(element => {
 
-      if(element.classList.contains('hidden')) {
-        setTimeout( () => {
-          element.classList.remove('hidden');
-        }, 225);
-      } else {
-        setTimeout( () => {
-          element.classList.add('hidden');
-        }, 50);
-      };
-    });
+// Run header logic when page first loads or is refreshed
+initializeHeader();
 
-    aboutUsSection.classList.toggle('diminished')
 
-});
+// Shopping Section
 
+
+const cartProductData = [];
+const cartQuantity = cartProductData.length || 0;
+const badge = document.querySelector('.js-badge');
+const badgeQuantity = document.querySelector('.js-badge-quantity');
+
+// Display badge if cartSize > 0 upon load
+if (cartQuantity > 0) {
+  badge.classList.remove('hidden');
+  badgeQuantity.classList.remove('hidden');
+  badgeQuantity.innerHTML = cartQuantity;
+}

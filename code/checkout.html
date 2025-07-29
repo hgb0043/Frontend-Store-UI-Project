@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="/styles/base-styles/reset.css">
+  <link rel="stylesheet" href="/styles/base-styles/checkout.css">
+
+  <!-- Google Fonts and Font Awesome -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Patrick+Hand&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220c13536d.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Checkout</title>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="main-header">
+
+      <div class="arrow-container">
+        <i class="fa-solid fa-arrow-down fa-arrow js-down-arrow hidden"></i>
+        <i class="fa-solid fa-arrow-up fa-arrow js-up-arrow hidden"></i>
+      </div>    
+
+      <a>
+      <img class="header-logo" src="/images/base-images/full-logo.png">
+      </a>
+
+      <nav class="header-links-container">
+        <a href="/code/index.html" class="header-link">Home</a>
+        <a href="/code/account.html" class="header-link">Account</a>
+        <a href="/code/search.html" class="header-link">Search</a>
+        <a href="/code/about-us.html" class="header-link">About Us</a>
+      </nav>
+
+      <div class="header-right-side">
+
+        <div class="account-message"></div>
+        <div class="fa-cart-shopping-container">
+          <a href="/code/cart.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping js-cart-shopping"></i>
+          </a>
+          <div class="badge js-badge hidden">
+            <span class="badge-quantity js-badge-quantity hidden"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      <!-- Drop header that appears if user clicks down-arrow hidden -->
+    <nav class="drop-header js-drop-header hidden">
+      <a href="index.html" class="drop-header-link" id="home-drop-header-link">Home</a>
+      <a href="account.html" class="drop-header-link">Account</a>
+      <a href="search.html" class="drop-header-link">Search</a>
+      <a href="about-us.html" class="drop-header-link">About Us</a>
+    </nav>
+
+  </div>
+  </header>
+
+  <main>
+    <div class="title-div">
+      <h1 class="title">Checkout</h1>
+    </div>
+    <div class="content-container">
+      <div class="order-summary-container js-order-summary-container"> 
+        <h2 class="order-summary-title js-order-summary-title"></h2>
+        <div class="products-container js-products-container">
+          <!-- Generate Product Section in cart.js -->    
+        </div>
+      </div>
+
+      <div class="order-container js-order-container">
+
+        <div class="address-container">
+
+          <form class="delivery-form js-delivery-form">
+            
+            <p class="address-title">Select a Delivery Address <i class="fa-solid fa-truck-fast"></i></p>
+
+            <div class="radio-option"> 
+              <input type="radio" name="address" value="sherlock-holmes">
+              <label for="sherlock-holmes">221B Baker Street, London</label>
+            </div>
+
+            <div class="delivery-message-container">
+              <span class="delivery-message" id="sherlock-holmes"></span>
+            </div>
+
+            <div class="radio-option">
+              <input type="radio" name="address" value="batman"> 
+              <label for="batman">1007 Mountain Drive, Gotham City</label>
+            </div>
+
+            <div class="delivery-message-container">
+              <span class="delivery-message" id="batman"></span>
+            </div>
+
+            <div class="radio-option"> 
+              <input type="radio" name="address" value="harry-potter">
+              <label for="harry-potter">4 Privet Drive, Surrey</label>
+            </div>
+
+            <div class="delivery-message-container">
+              <span class="delivery-message" id="harry-potter"></span>
+            </div>
+
+          </form>
+
+          <!-- For styling purposes only -->
+          <p class="update-delivery-info">Update delivery information</p>
+
+        </div>
+
+        <div class="info-container">
+          <div class="info-text-container">          
+            <div class="words-container js-words-container">
+            <!-- Generate in cart.js -->
+            </div>
+
+            <div class="values-container js-values-container">
+            <!-- Generate in cart.js -->
+            </div>
+          </div>
+
+          <button class="place-order-button js-place-order-button">Place Order</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/scripts/base-scripts/checkout.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="/styles/base-styles/reset.css">
+  <link rel="stylesheet" href="/styles/base-styles/cart.css">
+
+  <!-- Google Fonts and Font Awesome -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Patrick+Hand&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/220c13536d.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cart</title>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="main-header js-main-header">
+
+      <div class="arrow-container">
+        <i class="fa-solid fa-arrow-down fa-arrow js-down-arrow hidden"></i>
+        <i class="fa-solid fa-arrow-up fa-arrow js-up-arrow hidden"></i>
+      </div>    
+
+      <a href="index.html">
+      <img class="header-logo" src="/images/base-images/full-logo.png" alt="header-logo">
+      </a>
+
+      <nav class="header-links-container">
+        <a href="/code/index.html" class="header-link">Home</a>
+        <a href="/code/account.html" class="header-link">Account</a>
+        <a href="/code/search.html" class="header-link">Search</a>
+        <a href="/code/about-us.html" class="header-link">About Us</a>
+      </nav>
+
+      <div class="header-right-side">
+
+        <div class="account-message"></div>
+        <div class="fa-cart-shopping-container">
+          <a href="/code/cart.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping js-cart-shopping"></i>
+          </a>
+          <div class="badge js-badge hidden">
+            <span class="badge-quantity js-badge-quantity hidden"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      <!-- Drop header that appears if user clicks down-arrow hidden -->
+    <nav class="drop-header js-drop-header hidden">
+      <a href="index.html" class="drop-header-link">Home</a>
+      <a href="account.html" class="drop-header-link">Account</a>
+      <a href="search.html" class="drop-header-link">Search</a>
+      <a href="about-us.html" class="drop-header-link">About Us</a>
+    </nav>
+
+  </header>
+
+  <main>
+    
+    <div class="sub-header-container">
+      <h1 class="sub-header">Shopping Cart</h1>
+    </div>
+
+    <div class="empty-cart-message-container js-empty-cart-message-container">
+      <h2 class="empty-cart-message js-empty-cart-message"></h2>
+    </div>
+
+    <div class="products-container js-products-container">
+      <!-- Generate Product Section in checkout.js -->
+    </div>
+      
+    <div class="sticky-footer-container js-sticky-footer-container">
+      <!-- Generate Checkout Section in checkout.js -->
+    </div>
+    
+  </main>
+
+  <script src="/scripts/base-scripts/cart.js" type="module"></script>
+</body>
+</html>

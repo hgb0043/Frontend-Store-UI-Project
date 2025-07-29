@@ -11,6 +11,11 @@ main {
   align-items: center;
 }
 
+a:hover {
+  color: rgba(52, 7, 165, 0.85);
+  text-decoration: underline;
+}
+
 .fa-xmark {
   position: absolute;
   top: 15px;

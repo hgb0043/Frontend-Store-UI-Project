@@ -3,6 +3,11 @@ body {
   font-family: Zen Old Mincho, arial, sans-serif;
 }
 
+a:hover {
+  color: rgba(52, 7, 165, 0.85);
+  text-decoration: underline;
+}
+
 main {
   display: flex;
   align-items: center;
