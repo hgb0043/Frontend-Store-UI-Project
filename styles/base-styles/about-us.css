@@ -7,6 +7,11 @@ body {
   font-family: zain;
 }
 
+a:hover {
+  color: rgba(52, 7, 165, 0.85);
+  text-decoration: underline;
+}
+
 .main-header {
   display: flex;
   align-items: center;

@@ -80,6 +80,7 @@ export function generateIndividualProduct(product, page) {
           <li><strong>Category:</strong> ${product.category}</li>
           <li><strong>Sub-category</strong> ${product["sub-category"]}</li>
           <li><strong>Material:</strong> ${product.material}</li>
+          <li><strong>Weight:</strong> ${product.weight} Lbs</li>
           <li><strong>Color:</strong> ${product.color}</li>
         </ul>
       </div>

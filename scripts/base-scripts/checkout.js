@@ -3,7 +3,8 @@ import { initializeHeader } from '/scripts/utils/header-utils.js';
 import { 
   calculateCartQuantity,   
   createCartProductData,
-  generateCartProductHTML 
+  generateCartProductHTML,
+  calculateCartSubtotal 
  } from '/scripts/utils/cart-utils.js';
 
 
@@ -13,37 +14,45 @@ initializeHeader();
 
 function initializeCheckoutPage() {
   const cartProductData = createCartProductData();
+  const cartQuantity = calculateCartQuantity(cartProductData);
+  if (!cartQuantity) return;
+  const subtotal = calculateCartSubtotal(cartProductData);
 
   const orderSummaryTitle = document.querySelector('.js-order-summary-title');
-  const cartQuantity = determineCheckoutCartQuantity(cartProductData);
   orderSummaryTitle.innerHTML = generateOrderSummaryTitle(cartQuantity);
-  if(cartProductData.length === 0) {
-    return;
-  }
 
   const productsContainer = document.querySelector('.js-products-container');
   productsContainer.innerHTML = generateCartProductHTML(cartProductData, 'checkout');
-  console.log(productsContainer.innerHTML);
 
   generatePlaceOrderButton();
 
-  const subtotal = Number(localStorage.getItem('subtotal')) || 0;
   generateCheckoutDescriptionHTML(
     cartProductData, 
     subtotal, 
     calculateCheckoutTax(subtotal),
     calculateCheckoutTotal(subtotal)
   );
+
+  manageDeliveryAddress();
+  maintainSelectedAddress();
+
+  // manageDeliveryAddress();
+}
+
+function maintainSelectedAddress() {
+  const id = localStorage.getItem('address-id');
+  if (id) {
+    const all = document.querySelectorAll('input[type="radio"][name="address"]');
+    all.forEach((input) => {
+      const current = input.value;
+      if (current === id) {
+        input.checked = true;
+      }
+    })
+  }
 }
 // Run when page first loads or is refreshed
 initializeCheckoutPage();
-
-
-function determineCheckoutCartQuantity(data) {
-  const raw = localStorage.getItem('cart-quantity');
-  if (raw) return Number(raw);
-  else return calculateCartQuantity(data);
-}
 
 
 function generateOrderSummaryTitle(qty) {
@@ -78,14 +87,70 @@ function generateCheckoutDescriptionHTML(data, subtotal, tax, total) {
     <span class="value">$${subtotal}</span>
     <span class="value">$0.00</span>
     <span class="value">$${tax}</span>
-    <span class="value">$${total}</span>
+    <span class="value" id="total">$${total}</span>
     `
   }
 }
 
 function generatePlaceOrderButton() {
   const placeOrderButton = document.querySelector('.js-place-order-button')
-  placeOrderButton.addEventListener('click', () => {
-    window.location.href = 'order-confirmation.html';
+  if (placeOrderButton) {
+    placeOrderButton.addEventListener('click', () => {
+      window.location.href = 'order-confirmation.html';
+      getOrderDateTime();
+
+    });
+  } 
+}
+
+function manageDeliveryAddress() {
+  const deliveryForm = document.querySelector('.js-delivery-form');
+  deliveryForm.addEventListener('change', () => {
+  
+    const selected = document.querySelector('input[name="address"]:checked');
+
+    if (selected) {
+      // displayEstDeliveryTime(selected);
+      const label = document.querySelector(`label[for="${selected.value}"]`);
+      const fullAddress = label.textContent;
+      const addressId = label.htmlFor;
+
+      localStorage.setItem('address', fullAddress);
+      localStorage.setItem('address-id', addressId);
+    }
   });
 }
+
+function getOrderDateTime() {
+  const now = new Date();
+  const dateTime = now.toLocaleString();
+  localStorage.setItem('order-date-time', dateTime);
+}
+
+/* Finish project first
+
+function displayEstDeliveryTime(selected) {
+  
+  const prevId = localStorage.getItem('delivery-message-id')?.trim();
+  console.log(prevId);
+  const prevElement = document.getElementById(prevId);
+  console.log(prevElement);
+  console.log(document.getElementById("sherlock-holmes"));
+  if (prevElement) {
+    prevElement.classList.add('hidden');
+  }
+
+  // Get delivery date (date three days from current time) 
+  const today = new Date();
+  const threeDaysLater = new Date();
+  threeDaysLater.setDate(today.getDate() + 2);
+  const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  const dayOfWeek = daysOfWeek[threeDaysLater.getDay()];
+
+  const element = document.querySelector(`#${selected.value}`);
+  localStorage.setItem('delivery-message-id', JSON.stringify(element.id));
+
+  element.innerHTML = `estimated delivery date: ${dayOfWeek}`;
+}
+
+*/

@@ -1,14 +1,19 @@
-body {
-  background-color: rgb(240,240,240);
-}
-
 .hidden {
   visibility: hidden;
+}
+
+span {
+  white-space: nowrap;
 }
 
 body {
   overflow-x: hidden;
   font-family: Zain, arial, sans-serif;
+}
+
+a:hover {
+  color: rgba(52, 7, 165, 0.85);
+  text-decoration: underline;
 }
 
 .main-header {
@@ -17,10 +22,9 @@ body {
 
   height: 50px;
   box-shadow: 0 0 4px rgba(0,0,0,0.5);
-  background-color: white;
 }
 
-.arrow-div {
+.arrow-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,12 +56,10 @@ body {
   max-width: 450px;
 }
 
-.header-link {
+.header-link, .permanent-header-link {
   color: black;
-  text-decoration: none;
-
   font-size: 22px;
-  margin-top: 2px;
+  text-decoration: none;
 }
 
 .header-right-side {
@@ -69,11 +71,11 @@ body {
 }
 
 .welcome-message {
-  width: 180px; 
-  font-size: 18px;
-  font-family: zain;
-  align-self: center;
-  margin-right: 0px;
+ width: 180px; 
+ font-size: 18px;
+ margin-right: -10px;
+
+ align-self: center;
 }
 
 .permanent-header-link {
@@ -85,6 +87,7 @@ body {
 .account-message {
   display: flex;
   align-items: center;
+  margin-right: -15px;
 }
 
 .cart-link {
@@ -123,7 +126,6 @@ body {
   left: 15px;
   top: -6px;
 
-
   background-color: red;
   width: 18px;
   height: 18px;
@@ -148,14 +150,12 @@ body {
   position: absolute;
   top: 50px;
   height: 40px;
-  width: 100%;
+  min-width: 100vw;
   z-index: 1000;
 
   box-shadow: 0 0 4px rgba(0,0,0,0.3);
 
-  transition: height 500ms ease;
-  overflow: hidden;
-  background-color: white;
+  transition: height 0.8 ease-out;
 }
 
 .drop-header.expanded {
@@ -165,15 +165,14 @@ body {
 .drop-header-link {
   color: black;
   text-decoration: none;
-  font-family: zain, arial, sans-serif;
 
-  font-size: 22px;
-  margin-top: 2px;
+  font-size: 20px;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  background-color: rgb(235,235,235);
 }
 
 .title-div {
@@ -219,7 +218,7 @@ main {
   align-items: center;
 
   width: 40vw;
-  box-shadow: 0 0 4px rgba(0,0,0,0.5);
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
   margin-bottom: 12px;
   background-color: white;
 }
@@ -280,21 +279,57 @@ main {
   font-size: 11px;
 }
 
-.decrease-product-icon {
-  margin-left: 8px;
-}
-
 .product-quantity {
   font-size: 18px;
   margin-top: 2px;
 }
 
-.increase-product-icon {
-  margin-right: 8px;
+.order-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 18px;
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+
+  margin: 76px 20px 10px 0;
+  padding: 3px 3px 8px 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
 }
 
 form {
   margin: 0 20px;
+}
+
+.address-title {
+  align-self: center;
+
+  font-size: 22px;
+  font-weight: 600;
+  margin: 6px 0 10px 0; 
+  border-bottom: 2px solid black;
+}
+
+.fa-truck-fast {
+  margin-left: 5px;
+}
+
+.radio-option {
+  display: flex;
+  margin-bottom: 5px;
+
+  font-weight: 400;
 }
 
 label {
@@ -303,25 +338,49 @@ label {
   flex-direction: column;
 }
 
-.order-container {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  
-  width: auto;
-  height: 175px;
-  padding-top: 6px;
-  margin: 15vh 5vw 0 0; 
+input {
+  margin-right: 6px;
+}
 
-  border: 2px solid black;
-  background-color: white;
+.delivery-message {
+  color: red;
+  font-size: 14px;
+}
+
+.update-delivery-info {
+  align-self: center;
+
+  color: blue;
+  cursor: pointer;
+}
+
+.update-delivery-info:hover {
+  color: rgba(52, 7, 165, 0.85);
+  text-decoration: underline;
 }
 
 .info-container {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  align-self: center;
 
   font-size: 18px;
+
+  width: auto;
+  height: auto;
+
+  padding: 4px 4px 8px 4px;
+  margin: 20px 5vw 0 0; 
+  border-radius: 4px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background-color: white;
+}
+
+.info-text-container {
+  display: flex;
+
+  font-size: 20px;
 }
 
 .words-container {
@@ -338,15 +397,21 @@ label {
   margin-right: 7px;
 }
 
+#total {
+  font-weight: 700;
+}
+
 .place-order-button {
   align-self: center;
+
   background-color: rgb(0,93,108);
   color: white;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
 
-  padding: 3px 5px;
+  border: none;
+  border-radius: 12px;
+  padding: 2px 9px;
   margin-top: 15px;
 }
 
@@ -384,15 +449,12 @@ label {
 
   .order-summary-container {
     width: 25vw;
+    margin-left: 200px;
   }
 
   .item-container {
     width: 25vw;
     align-self: flex-start;
-  }
-
-  .order-summary-container {
-    margin-left: 100px;
   }
 
   .order-container {

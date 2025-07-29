@@ -13,6 +13,7 @@
     "sub-category": "Oral Health",
     "amnt-available": 10,
     "material": "Wheat Straw",
+    "weight": 0.26,
     "color": "Not Applicable",
     "description": "Keep your smile fresh and the planet happy with these biodegradable dental flossers made from eco-friendly wheat straw. Each pack includes 100 mint-flavored floss picks with a comfortable grip and shred-resistant floss for easy cleaning. Featuring a flexible toothpick end and plastic-free packaging, these flossers offer a convenient, sustainable way to maintain oral hygiene.",
     "quantity": 1
@@ -32,6 +33,7 @@
     "sub-category": "Water Filters",
     "amnt-available": 68,
     "material": "Glass",
+    "weight": 3.97,
     "color": "Not Applicable",
     "description": "Experience cleaner, safer water with the Waterdrop Glass Water Filter. Designed to effectively reduce heavy metals, chlorine, and other harmful chemicals, this sleek glass filter provides fresh-tasting water straight from your tap. Easy to use and eco-friendly, it’s the perfect addition to your kitchen for healthier hydration every day.",
     "quantity": 1
@@ -51,6 +53,7 @@
     "sub-category": "Reusable Water Bottles",
     "amnt-available": 22,
     "material": "Stainless Steel",
+    "weight": 0.66,
     "color": "Stainless Steel",
     "description": "Stay hydrated on the go with this 24oz stainless steel water bottle. Its sturdy, non-insulated design makes it lightweight and easy to carry, perfect for everyday use. Built to last and easy to clean, it’s a reliable companion for work, workouts, or outdoor adventures.",
     "quantity": 1
@@ -70,6 +73,7 @@
     "sub-category": "Mens Shorts",
     "amnt-available": 3,
     "material": "60% Cotton, 40% Linen",
+    "weight": 0.55,
     "color": "Army-green",
     "description": "Stay comfortable and stylish with these men’s casual shorts featuring a 7-inch inseam. Perfect for warm weather, they offer a relaxed fit and versatile look ideal for everyday wear, whether you're out running errands or relaxing at home.",
     "quantity": 1
@@ -89,6 +93,7 @@
     "sub-category": "Men's Boxers",
     "amnt-available": 18,
     "material": "100% Cotton",
+    "weight": 0.77,
     "color": "Varies",
     "description": "Enjoy all-day comfort with this 4-pack of Falari men’s boxers made from 100% breathable cotton. Designed for a soft feel and a comfortable fit, these boxers provide essential support and durability for everyday wear.",
     "quantity": 1
@@ -108,6 +113,7 @@
     "sub-category": "Men's Socks",
     "amnt-available": 17,
     "material": "100% Cotton",
+    "weight": 0.77,
     "color": "Black",
     "description": "Stay comfortable and supported during your workouts with these Monxiery athletic crew socks. Made from 100% breathable cotton, they offer cushioning and durability to keep your feet fresh and protected all day long.",
     "quantity": 1
@@ -127,6 +133,7 @@
     "sub-category": "Oral Health",
     "amnt-available": 25,
     "material": "100% Plant Based",
+    "weight": 0.18,
     "color": "Not Applicable",
     "description": "Keep your smile fresh and your impact low with this 100% plant-based toothbrush from Sea Turtle LLC. Made from biodegradable materials, it delivers a gentle, effective clean while helping reduce plastic waste. Perfect for eco-friendly daily care.",
     "quantity": 1
@@ -146,6 +153,7 @@
     "sub-category": "Cotton Swabs",
     "amnt-available": 65,
     "material": "Bamboo Cotton",
+    "weight": 0.22,
     "color": "White",
     "description": "Keep your routine plastic-free with EcoFox bamboo cotton buds from Sea Turtle LLC. Made with 100% biodegradable bamboo and soft organic cotton, they offer a gentle, eco-friendly alternative for everyday use.",
     "quantity": 1
@@ -165,6 +173,7 @@
     "sub-category": "Sponges",
     "amnt-available": 12,
     "material": "Plant-based, non-specified",
+    "weight": 0.26,
     "color": "Not Applicable",
     "description": "Clean tough messes effortlessly with the Airnex plant-based sponge. Made from natural, non-scratch fibers, it’s long-lasting, odor-free, and ideal for eco-friendly cleaning.",
     "quantity": 1
@@ -184,6 +193,7 @@
     "sub-category": "Deodorant",
     "amnt-available": 28,
     "material": "See brand website for ingredients",
+    "weight": 0.17,
     "color": "Purple",
     "description": "Stay fresh the natural way with the Ethique Floral Solid Deodorant Stick in lavender and vanilla. Made with plant-based ingredients like magnesium and bamboo, it neutralizes odor without aluminum or baking soda. Gentle, effective, and zero-waste.",
     "quantity": 1
@@ -203,6 +213,7 @@
     "sub-category": "Face Wash/Cleanser",
     "amnt-available": 5,
     "material": "See brand website for ingredients",
+    "weight": 0.22,
     "color": "Green",
     "description": "Refresh your skin with the Ethique Deep Clean Solid Face Cleanser. Ideal for oily to balanced skin, this deep green bar gently lifts away excess oil and impurities using natural ingredients — all without plastic packaging.",
     "quantity": 1
@@ -222,6 +233,7 @@
     "sub-category": "Hair Care",
     "amnt-available": 12,
     "material": "See brand website for ingredients",
+    "weight": 0.24,
     "color": "Blue",
     "description": "Cleanse and hydrate your hair naturally with the hibar Solid Moisturizing Shampoo. This eco-friendly shampoo bar nourishes your scalp while reducing plastic waste, making it perfect for everyday hair care.",
     "quantity": 1
@@ -241,6 +253,7 @@
     "sub-category": "Toothpaste",
     "amnt-available": 19,
     "material": "See brand website for ingredients",
+    "weight": 0.33,
     "color": "Not Applicable",
     "description": "Freshen your smile with NOBS Fluoride-Free Toothpaste Tablets. These eco-friendly tablets clean effectively without harsh chemicals, offering a natural alternative to traditional toothpaste while helping reduce plastic waste.",
     "quantity": 1
@@ -260,6 +273,7 @@
     "sub-category": "Makeup",
     "amnt-available": 59,
     "material": "See brand website for ingredients",
+    "weight": 0.11,
     "color": "Happy Berry Red",
     "description": "Add a natural flush with the ATTITUDE Lightweight Blush Stick in Happy Berry. This vegan, plastic- and cruelty-free formula glides on smoothly for buildable color, offering a clean, eco-conscious touch to your beauty routine.",
     "quantity": 1
@@ -279,6 +293,7 @@
     "sub-category": "Tampons",
     "amnt-available": 22,
     "material": "100% Cotton",
+    "weight": 0.35,
     "color": "Not Applicable",
     "description": "Stay confident and protected with Cora 100% Organic Cotton Tampons. Featuring a SoftTouch compact applicator and dual absorbency options, these tampons offer reliable leak protection with no synthetic ingredients—just clean, comfortable care.",
     "quantity": 1
@@ -298,6 +313,7 @@
     "sub-category": "Razors",
     "amnt-available": 39,
     "material": "Metal",
+    "weight": 0.44,
     "color": "Pink",
     "description": "Shave sustainably with the Bambaw 5 Blade Double Edge Reusable Safety Razor. Designed for both women and men, this eco-friendly razor delivers a close, smooth shave without the waste of disposable alternatives.",
     "quantity": 1
@@ -317,6 +333,7 @@
     "sub-category": "Shaving Cream",
     "amnt-available": 2,
     "material": "See brand website for ingredients",
+    "weight": 0.37,
     "color": "Not Applicable",
     "description": "Soothe and protect your skin with The Art of Shaving Sandalwood Shaving Cream. Formulated for sensitive skin, this rich, hydrating cream softens facial hair and nourishes the skin for a smooth, irritation-free shave.",
     "quantity": 1
@@ -336,6 +353,7 @@
     "sub-category": "Pumice Stone",
     "amnt-available": 2,
     "material": "Wood",
+    "weight": 0.33,
     "color": "Not Applicable",
     "description": "Gently exfoliate and smooth your feet with the Pumice Valley Wooden Pumice Stone Foot File. Designed to remove dead skin and calluses, this natural tool leaves your feet soft, refreshed, and sandal-ready.",
     "quantity": 1
@@ -355,6 +373,7 @@
     "sub-category": "Men's Shorts",
     "amnt-available": 21,
     "material": "100% Cotton",
+    "weight": 0.55,
     "color": "Navy Blue",
     "description": "Stay cool and move freely with the Amy Coulee 100% Cotton Men's Athletic Shorts. Crafted for comfort and breathability, these soft navy shorts are perfect for workouts, lounging, or everyday wear. With a secure elastic waistband and mid-thigh fit, they deliver both ease and style—wherever your day takes you.",
     "quantity": 1
@@ -374,6 +393,7 @@
     "sub-category": "Men's Shorts",
     "amnt-available": 26,
     "material": "100% Cotton",
+    "weight": 0.55,
     "color": "Pale Pink",
     "description": "Move with ease and stay comfortable in the Arjen Kroos Men's 100% Cotton Athletic Shorts. Designed with a breathable fabric and a modern 5-inch inseam, these shorts offer soft, all-day wear for workouts, lounging, or casual outings. The elastic waistband ensures a secure fit—keeping you cool, confident, and ready for anything.",
     "quantity": 1
@@ -393,6 +413,7 @@
     "sub-category": "Men's Shirts",
     "amnt-available": 32,
     "material": "100% Cotton",
+    "weight": 0.62,
     "color": "Caramel",
     "description": "Keep it breezy and effortless with the Coofandy Men's 100% Cotton Button Down Shirt. Lightweight and breathable in a warm caramel hue, this beach-inspired shirt brings laid-back comfort and style to sunny days, casual outings, or weekend getaways.",
     "quantity": 1
@@ -412,6 +433,7 @@
     "sub-category": "Men's Jeans",
     "amnt-available": 34,
     "material": "100% Cotton",
+    "weight": 1.54,
     "color": "Blue",
     "description": "Step into everyday comfort with Wrangler Authentics 100% Cotton Men's Classic Regular Fit Jeans. Made from durable cotton denim, these timeless jeans offer a relaxed fit through the seat and thigh—perfect for casual wear, outdoor work, or laid-back weekends.",
     "quantity": 1
@@ -431,6 +453,7 @@
     "sub-category": "Men's Boxers",
     "amnt-available": 24,
     "material": "100% Cotton",
+    "weight": 0.88,
     "color": ["Black", "Gray"],
     "description": "Stay dry and comfortable all day with Hanes Men's Moisture-Wicking and Breathable Boxer Briefs. This convenient 5-pack delivers soft, supportive fit and advanced moisture control—perfect for workouts, busy days, or everyday wear.",
     "quantity": 1
@@ -450,6 +473,7 @@
     "sub-category": "Socks",
     "amnt-available": 24,
     "material": "100% Irish Wool",
+    "weight": 0.77,
     "color": "Black, Gray",
     "description": "Wrap your feet in cozy comfort with Grange Craft 100% Irish Wool Socks for Women and Men. Crafted in Ireland from pure wool, these socks provide natural warmth, breathability, and timeless style—perfect for chilly mornings, relaxed evenings, or thoughtful gifting.",
     "quantity": 1
@@ -469,6 +493,7 @@
     "sub-category": "Bedding",
     "amnt-available": 12,
     "material": "100% Cotton",
+    "weight": 2.65,
     "color": "White",
     "description": "Wrap yourself in luxurious softness with the California Design 100% Cotton Sheets Queen Size Bed Set. Made from premium 400 thread count cotton, these crisp white sheets offer exceptional comfort, breathability, and durability—perfect for restful nights, stylish bedrooms, and thoughtful gifting.",
     "quantity": 1
@@ -488,6 +513,7 @@
     "sub-category": "Bedding",
     "amnt-available": 12,
     "material": "100% Cotton",
+    "weight": 2.65,
     "color": "White",
     "description": "Elevate your bedding with the Palassio 100% Cotton Queen Size Set, complete with 2 matching pillow shams. Crafted from pure, breathable cotton, this set offers soft comfort, lasting quality, and classic style—ideal for cozy nights, everyday elegance, or thoughtful gifting.",
     "quantity": 1
@@ -507,6 +533,7 @@
     "sub-category": "Sleep Masks",
     "amnt-available": 50,
     "material": "100% Mulberry Silk",
+    "weight": 0.22,
     "color": "Olive",
     "description": "Indulge in restful sleep with the Dore & Rose Mulberry Silk Light Blocking Adjustable Eye Mask. Made from luxurious mulberry silk, it features a soft, skin-friendly feel, full light blocking, and an adjustable strap—perfect for travel, meditation, or nightly relaxation.",
     "quantity": 1
@@ -526,6 +553,7 @@
     "sub-category": "Women's Pants",
     "amnt-available": 6,
     "material": "70% Cotton, 30% Linen",
+    "weight": 0.66,
     "color": "Khaki",
     "description": "Stay stylish and comfortable with the Duyang Women’s Palazzo Pants, featuring a relaxed fit, elastic waistband, and handy side pockets. Perfect for everyday wear or travel, these lightweight pants offer breezy movement and easy elegance in any setting.",
     "quantity": 1
@@ -545,6 +573,7 @@
     "sub-category": "Women's Dresses",
     "amnt-available": 6,
     "material": "70% Cotton, 30% Linen",
+    "weight": 0.77,
     "color": "Black",
     "description": "Embrace timeless elegance with the R. Vivimos Women's Black Dress, featuring long sleeves and delicate floral embroidery. Crafted for both comfort and charm, this flowy silhouette is perfect for special occasions, evening outings, or a touch of romance in everyday wear.",
     "quantity": 1
@@ -564,6 +593,7 @@
     "sub-category": "Hoodies",
     "amnt-available": 22,
     "material": "100% Cotton",
+    "weight": 0.99,
     "color": "White",
     "description": "Stay cozy in the Comfort Colors Lightweight Hoodie, designed with ultra-soft cotton for relaxed everyday wear. With a lived-in feel, adjustable hood, and classic fit, it’s perfect for layering through every season—easygoing comfort with timeless style.",
     "quantity": 1
@@ -583,6 +613,7 @@
     "sub-category": "Cutting Boards",
     "amnt-available": 14,
     "material": "Bamboo",
+    "weight": 3.09,
     "color": "Wood",
     "description": "Prep meals in style with the Royal Craft Wood Bamboo Cutting Board, crafted from sustainable bamboo for lasting durability. Featuring deep juice grooves and built-in side handles, it’s perfect for slicing, serving, and carrying with ease—natural function meets timeless kitchen design.",
     "quantity": 1
@@ -602,6 +633,7 @@
     "sub-category": "Teapots and Kettles",
     "amnt-available": 2,
     "material": "Stainless Steel",
+    "weight": 1.76,
     "color": "Black",
     "description": "Bring charm to your stovetop with the Luxgrace Stainless Steel Whistling Teapot, blending old-fashioned elegance with modern function. Its durable stainless steel body and classic whistle ensure a perfect brew every time—timeless style for your daily tea ritual.",
     "quantity": 1
@@ -621,6 +653,7 @@
     "sub-category": "Coffee Makers",
     "amnt-available": 44,
     "material": "Stainless Steel",
+    "weight": 2.65,
     "color": "Stainless Steel",
     "description": "Brew bold, rich coffee with the MuellerLiving Stainless Steel French Press—crafted for flavor and built to last. With double-wall insulation and sleek design, it delivers café-quality results in minutes—perfect for morning rituals and effortless elegance.",
     "quantity": 1
@@ -640,6 +673,7 @@
     "sub-category": "Cookware",
     "amnt-available": 32,
     "material": "Wood",
+    "weight": 0.44,
     "color": "Wood",
     "description": "Cook and serve with natural charm using the MemoGem 2-Piece Wooden Spatula Set. Handcrafted for durability and a smooth finish, these kitchen essentials are gentle on cookware and perfect for everyday use—rustic elegance meets practical design.",
     "quantity": 1
@@ -659,6 +693,7 @@
     "sub-category": "Cleaning Utensils",
     "amnt-available": 23,
     "material": "Boars Hair",
+    "weight": 0.55,
     "color": "Wood",
     "description": "Tackle tough messes with the Redecker 2-Set Natural Boar’s Hair Kitchen Cleaner. Crafted with dense, gentle bristles and sturdy wooden handles, these brushes offer effective, scratch-free cleaning—classic craftsmanship built for everyday shine.",
     "quantity": 1
@@ -678,6 +713,7 @@
     "sub-category": "Food Preparation & Storage",
     "amnt-available": 99,
     "material": "Beeswax",
+    "weight": 0.22,
     "color": "Not Applicable",
     "description": "Wrap, seal, and store naturally with Akeeko Beeswax Food Wraps—this 9-pack of reusable wraps offers a sustainable alternative to plastic. Made with organic cotton and beeswax, they mold easily around food and containers for fresh, eco-friendly storage.",
     "quantity": 1
@@ -697,6 +733,7 @@
     "sub-category": "Food",
     "amnt-available": 99,
     "material": "See brand website for ingredients",
+    "weight": 1.10,
     "color": "Not Applicable",
     "description": "Enjoy wholesome comfort with Annie’s Organic Mac and Cheese, crafted with real aged cheddar and organic pasta. A family favorite made with simple ingredients, it’s a creamy, delicious classic you can feel good about—quick to make, satisfying to share.",
     "quantity": 1
@@ -716,6 +753,7 @@
     "sub-category": "Cookware",
     "amnt-available": 16,
     "material": "Stainless Steel",
+    "weight": 3.09,
     "color": "Stainless Steel",
     "description": "Upgrade your kitchen with the Berglander 13-Piece Stainless Steel Utensil Set—sleek, durable, and designed for everyday cooking. With essential tools for every recipe, this set blends modern style with lasting performance for a polished, practical kitchen experience.",
     "quantity": 1
@@ -728,13 +766,14 @@
     "price": 19.99,
     "path": "/images/product-images/product39.jpg",
     "rating": 4.8,
-    "brand": "Berglander",
+    "brand": "Fox Run",
     "num-ratings": 18,
     "num-reviews": 0,
     "category": "Food & Kitchen",
     "sub-category": "Cookware",
     "amnt-available": 20,
     "material": "Stainless Steel",
+    "weight": 1.32,
     "color": "Stainless Steel",
     "description": "Keep butter fresh and stylishly stored with the Fox Run Stainless Steel Butter Dish Set. Crafted for durability with a sleek, modern design, it includes a fitted lid for clean storage and a polished finish that complements any kitchen or table setting.",
     "quantity": 1
@@ -754,6 +793,7 @@
     "sub-category": "Cutting Boards",
     "amnt-available": 20,
     "material": "Titanium",
+    "weight": 2.00,
     "color": "Stainless Steel",
     "description": "Elevate your serving game with the Huachancn 100% Titanium Charcuterie Cutting Board. Combining lightweight strength and sleek design, this board offers a durable, rust-resistant surface perfect for slicing, serving, and presenting your favorite meats and cheeses with style and ease.",
     "quantity": 1
@@ -773,6 +813,7 @@
     "sub-category": "Dining and Tableware",
     "amnt-available": 20,
     "material": "Metal",
+    "weight": 0.44,
     "color": "Stainless Steel",
     "description": "Enjoy effortless dining with the Muyos 5 Pairs Metal Non-Slip Chopsticks. Crafted for a secure grip and sleek durability, these chopsticks combine modern metal design with practical non-slip features, making every meal comfortable and stylish.",
     "quantity": 1
@@ -792,6 +833,7 @@
     "sub-category": "Food Preparation & Storage",
     "amnt-available": 90,
     "material": "Stainless Steel",
+    "weight": 0.77,
     "color": "Stainless Steel",
     "description": "Keep snacks fresh and your kitchen organized with the Findmag 8 Pack Stainless Steel Chip Clips. Durable, rust-resistant, and designed with a strong grip, these sleek clips seal bags tightly while adding a touch of style to pantry storage.",
     "quantity": 1
@@ -811,6 +853,7 @@
     "sub-category": "Writing Instruments",
     "amnt-available": 75,
     "material": "Wood",
+    "weight": 2.65,
     "color": "Yellow",
     "description": "Get ready for school, work, or creative projects with this bulk pack of 200 pre-sharpened #2 HB pencils. Crafted with high-quality wood casing for durability and smooth writing, these classic yellow pencils are perfect for everyday use, standardized testing, and drawing.",
     "quantity": 1
@@ -830,6 +873,7 @@
     "sub-category": "Writing Instruments",
     "amnt-available": 65,
     "material": "Stainless Steel",
+    "weight": 0.22,
     "color": "Silver",
     "description": "Write smoothly and stylishly with the Parker Stainless Steel Ballpoint Pen featuring blue ink. Known for its durability and classic design, it delivers a comfortable grip for everyday use.",
     "quantity": 1
@@ -849,6 +893,7 @@
     "sub-category": "Erasers",
     "amnt-available": 45,
     "material": "Rubber",
+    "weight": 0.33,
     "color": "Beige",
     "description": "Remove pencil marks cleanly with the Sanford Artgum Gum 2-Pack Erasers. Designed for precise corrections, these erasers leave minimal residue and are gentle on paper.",
     "quantity": 1
@@ -868,6 +913,7 @@
     "sub-category": "Staplers",
     "amnt-available": 39,
     "material": "Metal",
+    "weight": 1.10,
     "color": "Silver",
     "description": "Staple up to 30 sheets effortlessly with the Swingline Metal Silver-Colored Office Stapler. Durable and reliable, it’s perfect for both home and office use.",
     "quantity": 1
@@ -887,6 +933,7 @@
     "sub-category": "Clipboards",
     "amnt-available": 50,
     "material": "Recycled Wood Fibers",
+    "weight": 0.77,
     "color": "Brown",
     "description": "Eco-friendly and sturdy, the Officemate Letter Size Clipboard made from recycled wood fibers provides a reliable writing surface wherever you go.",
     "quantity": 1
@@ -906,6 +953,7 @@
     "sub-category": "Desks",
     "amnt-available": 12,
     "material": "Bamboo",
+    "weight": 22.00,
     "color": "Natural Bamboo",
     "description": "Bring natural style to your workspace with the Giantex 100% Bamboo Compact Modern Work Desk. Sustainable and sleek, it fits perfectly in small spaces while providing ample workspace.",
     "quantity": 1
@@ -925,6 +973,7 @@
     "sub-category": "Organizers",
     "amnt-available": 28,
     "material": "Wood",
+    "weight": 2.20,
     "color": "Natural Wood",
     "description": "Keep your desk neat and stylish with the Liry Products Wood Office Desk Organizer, offering multiple compartments for all your stationery and office essentials.",
     "quantity": 1
@@ -944,6 +993,7 @@
     "sub-category": "Statues",
     "amnt-available": 15,
     "material": "Metal",
+    "weight": 2.65,
     "color": "Black",
     "description": "Add a touch of thoughtful elegance with the Prettidecor Metal Thinker Statues featuring a stepped platform for modern office or home decor.",
     "quantity": 1
@@ -963,6 +1013,7 @@
     "sub-category": "Figurines",
     "amnt-available": 17,
     "material": "Metal",
+    "weight": 2.43,
     "color": "Bronze",
     "description": "Decorate your workspace with the SunBlogs Horse Statue Metal Figurine, blending artistic design with durable construction for a statement piece.",
     "quantity": 1
@@ -982,6 +1033,7 @@
     "sub-category": "Baskets",
     "amnt-available": 33,
     "material": "Cotton",
+    "weight": 1.32,
     "color": "White",
     "description": "Store essentials stylishly with the ABenkle Cotton Woven White Basket, perfect for both office and home organization with its natural cotton weave.",
     "quantity": 1
@@ -1001,6 +1053,7 @@
     "sub-category": "Chair Mats",
     "amnt-available": 14,
     "material": "Bamboo",
+    "weight": 6.60,
     "color": "Walnut",
     "description": "Protect your floors and add style with the Anji Bamboo Office Chairmat in a warm walnut color, combining eco-friendly materials with durability.",
     "quantity": 1
@@ -1020,6 +1073,7 @@
     "sub-category": "Picture Frames",
     "amnt-available": 26,
     "material": "Oak Wood",
+    "weight": 1.65,
     "color": "Beige",
     "description": "Showcase your favorite memories in style with the Haus and Hue Modern Picture Frame crafted from beige oak wood for a natural, contemporary look.",
     "quantity": 1
@@ -1039,6 +1093,7 @@
     "sub-category": "Pacifiers & Teethers",
     "amnt-available": 22,
     "material": "Natural Rubber",
+    "weight": 0.33,
     "color": "Brown",
     "description": "Soothe your newborn naturally with the Hevea Natural Rubber Pacifier set. Made from 100% natural rubber, these pacifiers are soft, safe, and gentle on sensitive skin—an eco-friendly essential for peaceful comfort.",
     "quantity": 1
@@ -1058,6 +1113,7 @@
     "sub-category": "Bath & Hygiene",
     "amnt-available": 35,
     "material": "Bamboo",
+    "weight": 0.22,
     "color": "Multi",
     "description": "Make brushing fun and sustainable with the Sea Turtle Natural Fiber Toothbrush Set for kids. Crafted from eco-friendly bamboo and designed for small hands, this 4-pack supports healthy habits while protecting the planet.",
     "quantity": 1
@@ -1077,6 +1133,7 @@
     "sub-category": "Feeding & Storage",
     "amnt-available": 15,
     "material": "Stainless Steel",
+    "weight": 1.98,
     "color": "Silver",
     "description": "Upgrade school lunches with the PlanetBox Old School Lunch Box. Made of durable stainless steel and free of plastic, it keeps food fresh and compartments organized—classic design for modern mealtime.",
     "quantity": 1
@@ -1096,6 +1153,7 @@
     "sub-category": "Clothing",
     "amnt-available": 28,
     "material": "Cotton Blend",
+    "weight": 0.44,
     "color": "Cream",
     "description": "Wrap your baby in comfort with the Cherie Soft Jumpsuit Onesie. Designed for all-day coziness, this unisex outfit features breathable cotton and an easy snap design—perfect for playtime or naptime.",
     "quantity": 1
@@ -1115,6 +1173,7 @@
     "sub-category": "Toys",
     "amnt-available": 40,
     "material": "Wood",
+    "weight": 0.66,
     "color": "Multi",
     "description": "Delight little ones with the Shumee Spinning Top Toy, crafted from natural wood and painted with safe colors. Designed to encourage fine motor skills and curiosity, it’s a joyful and safe classic.",
     "quantity": 1
@@ -1134,6 +1193,7 @@
     "sub-category": "Home Safety",
     "amnt-available": 19,
     "material": "Wood & Metal",
+    "weight": 5.50,
     "color": "Walnut",
     "description": "Keep your child safe with the Evenflo Extra Tall Stair Gate, built from strong wood and metal. Its height and durable design make it ideal for stairways and doorways—secure protection with timeless style.",
     "quantity": 1
@@ -1153,6 +1213,7 @@
     "sub-category": "Arts & Crafts",
     "amnt-available": 22,
     "material": "Natural Pigment",
+    "weight": 0.77,
     "color": "Multi",
     "description": "Let creativity flow with the Honeysticks Watercolor Paint Set, made from natural, non-toxic materials. Designed for little hands, these safe and vibrant paints are perfect for artistic toddlers and eco-conscious parents.",
     "quantity": 1
@@ -1161,19 +1222,20 @@
   {
     "id": 62,
     "page": "baby",
-    "name": "HonestBaby 100% Organic Cotton 5-Pack Short Sleeve Onesie",
-    "price": 28.99,
+    "name": "StrdyGate Wooden Gate for Pets & Babies",
+    "price": 35.99,
     "path": "/images/product-images/product62.jpg",
-    "rating": 4.9,
-    "brand": "HonestBaby",
-    "num-ratings": 19,
+    "rating": 4.6,
+    "brand": "StrdyGate",
+    "num-ratings": 25,
     "num-reviews": 0,
     "category": "Baby & Kids",
     "sub-category": "Clothing",
-    "amnt-available": 33,
+    "amnt-available": 17,
     "material": "100% Organic Cotton",
+    "weight": 5.89,
     "color": "White",
-    "description": "Dress your little one in softness and sustainability with the HonestBaby Organic Cotton Onesies. This 5-pack offers breathable comfort, simple snaps, and timeless white for everyday wear.",
+    "description": "Keep your little ones and furry friends safe with the StrdyGate Wooden Gate—crafted from durable, natural wood for sturdy protection and timeless style. Easy to install and adjustable to fit doorways or staircases, this gate provides peace of mind without compromising your home’s aesthetic. Perfect for creating safe play areas and preventing unwanted access, the StrdyGate blends safety, quality, and convenience seamlessly.",
     "quantity": 1
   },
 
@@ -1191,6 +1253,7 @@
     "sub-category": "Clothing",
     "amnt-available": 33,
     "material": "100% Organic Cotton",
+    "weight": 0.88,
     "color": "White",
     "description": "Dress your little one in softness and sustainability with the HonestBaby Organic Cotton Onesies. This 5-pack offers breathable comfort, simple snaps, and timeless white for everyday wear.",
     "quantity": 1
@@ -1210,6 +1273,7 @@
     "sub-category": "Feeding & Storage",
     "amnt-available": 26,
     "material": "Bamboo Fiber",
+    "weight": 0.66,
     "color": "Assorted",
     "description": "Make mealtimes fun and sustainable with the WeeSprout Bamboo Kids Cups. This colorful 4-piece set is lightweight, eco-friendly, and perfectly sized for little hands—durability meets delightful design.",
     "quantity": 1
@@ -1229,6 +1293,7 @@
     "sub-category": "Feeding & Storage",
     "amnt-available": 30,
     "material": "Bamboo Fiber",
+    "weight": 1.32,
     "color": "Assorted",
     "description": "Encourage healthy eating with the Grow Forward Eco-Friendly Dinnerware Set. Made with sustainable bamboo, this set of plates and bowls is sturdy, kid-safe, and gentle on the planet—perfect for conscious families.",
     "quantity": 1
@@ -1248,6 +1313,7 @@
     "sub-category": "Toys",
     "amnt-available": 21,
     "material": "Wood",
+    "weight": 0.88,
     "color": "Multi",
     "description": "Reel in fun with the Magnetic Wood Fishing Game, designed for curious toddlers. Featuring colorful fish, magnetic rods, and safe wooden pieces, it promotes hand-eye coordination and imaginative play.",
     "quantity": 1
@@ -1267,6 +1333,7 @@
     "sub-category": "Toys",
     "amnt-available": 45,
     "material": "Cotton Rope",
+    "weight": 0.66,
     "color": "Natural",
     "description": "The Lay Lo Cotton Rope Dog Toy is made from durable natural cotton, ideal for interactive play and gentle on your dog's teeth.",
     "quantity": 1
@@ -1286,6 +1353,7 @@
     "sub-category": "Toys",
     "amnt-available": 33,
     "material": "Cotton and Coconut Fiber",
+    "weight": 0.66,
     "color": "Gray and White",
     "description": "This bunny-shaped dog toy has a soft cotton exterior and a coconut fiber interior for sustainable chewing fun.",
     "quantity": 1
@@ -1305,6 +1373,7 @@
     "sub-category": "Pet Clothing",
     "amnt-available": 40,
     "material": "Breathable Cotton",
+    "weight": 0.22,
     "color": "Blue and White Stripes",
     "description": "A lightweight, breathable cotton tee for dogs featuring classic blue and white stripes, perfect for comfortable wear during warmer months.",
     "quantity": 1
@@ -1325,6 +1394,7 @@
     "sub-category": "Bird Accessories",
     "amnt-available": 22,
     "material": "Natural Wood",
+    "weight": 1.10,
     "color": "Wood",
     "description": "The Manoai 5-pack of bird perches is made from untreated wood and provides a safe, fun environment for pet birds to perch and play.",
     "quantity": 1
@@ -1344,6 +1414,7 @@
     "sub-category": "Cat Furniture",
     "amnt-available": 18,
     "material": "MDF and Wood Veneer",
+    "weight": 24.00,
     "color": "Walnut",
     "description": "A modern cat tree with multiple levels, cozy nooks, and a durable wood finish that blends into any home décor.",
     "quantity": 1
@@ -1363,6 +1434,7 @@
     "sub-category": "Dog Houses",
     "amnt-available": 12,
     "material": "Wood",
+    "weight": 28.00,
     "color": "Natural Wood",
     "description": "A sturdy and stylish wooden dog house designed to keep your pet comfortable outdoors all year round.",
     "quantity": 1
@@ -1382,7 +1454,8 @@
     "sub-category": "Treats",
     "amnt-available": 38,
     "material": "Beef Liver",
-    "color": "N/A",
+    "weight": 0.77,
+    "color": "null",
     "description": "All-natural beef liver dog treats packed in a reusable, plastic-free tin container. Made in the USA for quality and freshness.",
     "quantity": 1
   },
@@ -1401,6 +1474,7 @@
     "sub-category": "Litter Boxes",
     "amnt-available": 15,
     "material": "Wood",
+    "weight": 20.00,
     "color": "Oak",
     "description": "Stylish wooden litter box enclosure that doubles as furniture, giving your cat privacy and your home a cleaner look.",
     "quantity": 1
@@ -1420,6 +1494,7 @@
     "sub-category": "Small Pet Food",
     "amnt-available": 30,
     "material": "Timothy Hay, Pellets",
+    "weight": 4.40,
     "color": "Green/Brown",
     "description": "Nutritious rabbit food formulated with high-fiber Timothy hay and quality pellets to support your rabbit's digestive health.",
     "quantity": 1
@@ -1439,6 +1514,7 @@
     "sub-category": "Feeders & Fountains",
     "amnt-available": 26,
     "material": "Stainless Steel",
+    "weight": 2.65,
     "color": "Silver",
     "description": "Quiet and efficient cat water fountain made from stainless steel, encouraging healthy hydration with easy cleaning.",
     "quantity": 1
@@ -1458,6 +1534,7 @@
     "sub-category": "Toys",
     "amnt-available": 21,
     "material": "Wood",
+    "weight": 2.20,
     "color": "Natural Wood",
     "description": "A fun, engaging ball tower toy made from sustainable wood, designed to keep cats entertained for hours.",
     "quantity": 1
@@ -1477,6 +1554,7 @@
     "sub-category": "Small Pet Toys",
     "amnt-available": 32,
     "material": "Natural Grass",
+    "weight": 0.66,
     "color": "Light Brown",
     "description": "An 8-piece set of natural grass chew balls designed for rabbits and guinea pigs to promote dental health and provide hours of fun.",
     "quantity": 1
