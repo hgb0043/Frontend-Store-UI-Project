@@ -3,7 +3,8 @@
 <head>
 
   <!-- CSS Styles -->
-   <link rel="stylesheet" href="/styles/base-styles/reset.css">
+   <link rel="stylesheet" href="/styles/scalable-styles/reset.css">
+  <link rel="stylesheet" href="/styles/scalable-styles/header.css">
     <link rel="stylesheet" href="/styles/base-styles/login.css">
 
   <!-- Google Fonts and Font Awesome -->
@@ -20,44 +21,49 @@
 </head>
 
 <body>
-  <header></header>
-  <main>
+  <div class="page-wrapper">
+    <main>
 
-      <!-- close page button -->
-    <a href="index.html">
-    <i class="fa-solid fa-xmark js-xmark"></i>
-    </a>
+        <!-- close page button -->
+      <a href="/index.html">
+      <i class="fa-solid fa-xmark js-xmark"></i>
+      </a>
 
-    <div class="login-box">
+      <div class="login-box">
 
-      <img class="logo" src="/images/base-images/full-logo.png">
+        <img class="logo" src="/images/base-images/full-logo.png">
 
-      <div class="email-address-container">
-        <h1>Email Address</h1>
-        <input type="text" class="email-box js-email-box">
-      </div>
-
-      <div class="password-container">
-        <h2>Password</h2>
-        <div class="password-box-container">
-          <input type="password" class="password-box js-password-box">       
-          <i class="fa-solid fa-eye js-eye"></i>
+        <div class="email-address-container">
+          <h1>Email Address</h1>
+          <input type="text" class="email-box js-email-box">
         </div>
 
-        <a class="js-log-in-link">
-        <button class="log-in-button js-log-in-button">Log In</button>
-        </a>
+        <div class="password-container">
+          <h2>Password</h2>
+          <div class="password-box-container">
+            <input type="password" class="password-box js-password-box">       
+            <i class="fa-solid fa-eye js-eye"></i>
+          </div>
 
-        <p class="error-message js-error-message"></p>
+          <a class="js-log-in-link">
+          <button class="log-in-button js-log-in-button">Log In</button>
+          </a>
+
+          <p class="error-message js-error-message"></p>
+
+        </div>
+
+        <div>
+          <p class="sign-up-message">Don't have an account? <a href="signup.html" class="sign-up">Sign Up</a></p>
+        </div>
 
       </div>
+    </main>
 
-      <div>
-        <p class="sign-up-message">Don't have an account? <a href="signup.html" class="sign-up">Sign Up</a></p>
-      </div>
-
-    </div>
-  </main>
+    <footer>
+      <p><i class="fa-regular fa-copyright"></i> 2025 Hayes Blackstone</p>
+    </footer>
+  </div>
 
   <script src="/scripts/base-scripts/login.js" type="module"></script>
 

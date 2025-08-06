@@ -1,27 +1,57 @@
-body {
-  background-color: black;
-  font-family: Zen Old Mincho, arial, sans-serif;
+.hidden {
+  visibility: hidden;
 }
 
-a:hover {
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: zain;
+  overflow-x: hidden;
+
+  background-color: rgb(225, 225, 225);
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-link {
+  color: blue;
+}
+
+.text-link:hover {
   color: rgba(52, 7, 165, 0.85);
   text-decoration: underline;
 }
 
+.text-link:hover .exempt {
+  text-decoration: none;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 main {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  flex-direction: column;
+  align-items: center;  
+
+  flex: 1;
 }
 
-.login-box {
-  color: white;
-  box-shadow: 0 0 4px rgb(255,255,255);
-  width: 200px;
-  height: 200px;
+.logged-out-message {
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 24px;
 }
 
-h1 {
-  font-size: 16px;
+.confused-turtle-img {
+  width: 350px;
+  margin-top: 15px;
 }

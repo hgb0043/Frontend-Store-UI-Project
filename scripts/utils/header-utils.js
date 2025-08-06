@@ -22,7 +22,7 @@ export function initializeHeader() {
 function generateHeaderAccountMessage() {
   const firstName = localStorage.getItem('first-name');
   const loginStatus = localStorage.getItem('login-status') || '';
-  const accountMessage = document.querySelector('.account-message');
+  const accountMessage = document.querySelector('.js-account-message');
 
   accountMessage.innerHTML = displayHeaderLoginStatus(loginStatus, firstName);
 }
@@ -32,11 +32,16 @@ function displayHeaderLoginStatus(status, firstName) {
   if (status === 'logged-in') {
     return `<p class="welcome-message">Welcome back, ${firstName}</p>`;
   } else {
-    return '<a href="/code/login.html" class="permanent-header-link">Log in</a> <a href="/code/signup.html" class="permanent-header-link">Sign up</a>'; 
+    return `
+    <a href="/code/login.html" class="account-header-link js-account-header-link text-link" id="log-in">Log in</a> 
+    <a href="/code/signup.html" class="account-header-link js-account-header-link text-link">Sign up</a>
+    `; 
   }
 }
 
 function activateHeaderArrowListeners(header, dropHeader, upArrow, downArrow) {
+  const accountHeaderLinks = document.querySelectorAll('.js-account-header-link');
+  console.log(accountHeaderLinks);
 
   upArrow.addEventListener('click', () => {
     header.style.height = '50px';
@@ -45,6 +50,11 @@ function activateHeaderArrowListeners(header, dropHeader, upArrow, downArrow) {
 
     upArrow.classList.add('hidden');
     downArrow.classList.remove('hidden');
+
+    // Hide log-in/sign-up messages for styling purposes
+    accountHeaderLinks.forEach((el) => {
+      el.classList.remove('hidden');
+    });
   });
 
   downArrow.addEventListener('click', () => {
@@ -54,6 +64,10 @@ function activateHeaderArrowListeners(header, dropHeader, upArrow, downArrow) {
 
     downArrow.classList.add('hidden');
     upArrow.classList.remove('hidden');    
+
+    accountHeaderLinks.forEach((el) => {
+      el.classList.add('hidden');
+    });
   });
 }
 

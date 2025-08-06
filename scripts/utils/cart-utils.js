@@ -106,7 +106,7 @@ export function createCartProductData() {
 export function displayEmptyCartMessage() {
   const emptyCartMessage = document.querySelector('.js-empty-cart-message-container');
   if (!emptyCartMessage) return;
-  emptyCartMessage.innerHTML =  '<h1 class="title js-title">Shopping cart is empty.</h1> <a class="browse-products-link" href="index.html">Browse products</a>'
+  emptyCartMessage.innerHTML =  '<h1 class="title js-title">Shopping cart is empty.</h1> <a class="browse-products-link" href="/index.html">Browse products</a>'
 }
 
 // Update cartProductData and UI when an item is removed

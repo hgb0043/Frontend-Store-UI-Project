@@ -1,14 +1,26 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: arial, sans-serif;
 }
 
-main {
-  width: 100vw;
-  height: 100vh;
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+main {
   display: flex;
   justify-content: center;    
   align-items: center;
+
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
 }
 
 a:hover {

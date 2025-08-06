@@ -11,7 +11,6 @@ async function initializeCategoryPage(page) {
 
   const productsArray = jsonData.filter(product => product.page === page);
   const main = document.querySelector('main');
-  console.log(main);
 
   // Generate code
   let html = productsArray.map(generateCategoryProductHTML).join('');
@@ -22,7 +21,6 @@ async function initializeCategoryPage(page) {
 function runInitializeCategoryPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const categoryPage = urlParams.get('category');
-  console.log(categoryPage);
   initializeCategoryPage(categoryPage);
 }
 runInitializeCategoryPage();

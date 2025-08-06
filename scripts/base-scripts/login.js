@@ -24,7 +24,7 @@ function loginEventListener(button, correctEmail, correctPassword, message) {
     const inputPassword = document.querySelector('.js-password-box').value;
 
     if (inputEmail === correctEmail && inputPassword === correctPassword) {
-      window.location.href = 'index.html';
+      window.location.href = '/index.html';
       localStorage.setItem('login-status', 'logged-in');
       message.innerHTML = '';
     } else if (inputEmail === correctEmail && inputPassword !== correctPassword) {

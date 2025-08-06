@@ -3,7 +3,8 @@
 <head>
 
   <!-- CSS Styles -->
-  <link rel="stylesheet" href="/styles/base-styles/reset.css">
+  <link rel="stylesheet" href="/styles/scalable-styles/reset.css">
+  <link rel="stylesheet" href="/styles/scalable-styles/header.css">
   <link rel="stylesheet" href="/styles/base-styles/order-confirmation.css">
 
   <!-- Google Fonts and Font Awesome -->
@@ -20,75 +21,86 @@
 </head>
 
 <body>
+  <div class="page-wrapper">
+    <header>
 
-  <header>
+      <div class="main-header">
 
-    <div class="main-header">
+        <div class="header-left-side">
+          <div class="arrow-container">
+            <i class="fa-solid fa-arrow-down fa-arrow js-down-arrow hidden"></i>
+            <i class="fa-solid fa-arrow-up fa-arrow js-up-arrow hidden"></i>
+          </div>   
 
-      <div class="arrow-container">
-        <i class="fa-solid fa-arrow-down fa-arrow js-down-arrow hidden"></i>
-        <i class="fa-solid fa-arrow-up fa-arrow js-up-arrow hidden"></i>
-      </div>    
+          <div class="header-logo-container">
+            <img class="header-logo" src="/images/base-images/full-logo.png">
+          </div>
+        </div>
 
-      <a>
-      <img class="header-logo" src="/images/base-images/full-logo.png">
-      </a>
+        <!-- Only visible when resolution width >1200px -->
+        <nav class="header-links-container">
+          <a href="/index.html" class="header-link text-link">Home</a>
+          <a href="/code/account.html" class="header-link text-link">Account</a>
+          <a href="/code/search.html" class="header-link text-link">Search</a>
+          <a href="/code/about-us.html" class="header-link text-link">About Us</a>
+        </nav>
 
-      <nav class="header-links-container">
-        <a href="/code/index.html" class="header-link">Home</a>
-        <a href="/code/account.html" class="header-link">Account</a>
-        <a href="/code/search.html" class="header-link">Search</a>
-        <a href="/code/about-us.html" class="header-link">About Us</a>
+        <div class="header-right-side">
+
+          <div class="account-message js-account-message">
+            <!-- Generate in header-utils.js -->
+          </div>
+          <div class="fa-cart-shopping-container">
+            <a href="/code/cart.html" class="cart-link">
+              <i class="fa-solid fa-cart-shopping js-cart-shopping"></i>
+            </a>
+            <div class="badge js-badge hidden">
+              <span class="badge-quantity js-badge-quantity hidden"></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Drop header that appears if user clicks down-arrow hidden (when present) -->
+      <nav class="drop-header js-drop-header hidden">
+        <a href="/index.html" class="drop-header-link text-link" id="home-drop-header-link">Home</a>
+        <a href="account.html" class="drop-header-link text-link" >Account</a>
+        <a href="search.html" class="drop-header-link text-link">Search</a>
+        <a href="about-us.html" class="drop-header-link text-link">About Us</a>
       </nav>
 
-      <div class="header-right-side">
+    </header>
 
-        <div class="account-message"></div>
-        <div class="fa-cart-shopping-container">
-          <a href="/code/cart.html" class="cart-link">
-            <i class="fa-solid fa-cart-shopping js-cart-shopping"></i>
-          </a>
-          <div class="badge js-badge hidden">
-            <span class="badge-quantity js-badge-quantity hidden"></span>
-          </div>
+    <main>
+
+      <div class="order-confirmation-container js-order-confirmation-message">
+        <!-- Generate in order-confirmation.js-->
+      </div>
+
+      <div class="order-summary-container js-order-summary-container">
+        <!-- Generate in order-confirmation.js -->
+      </div>
+
+      <div class="closing-message-container">
+        <p class="closing-message-text">We sent your email address a full order description and options for further order management. It should be in your inbox withing a few minutes. For now, here's a full list of options to continue your experience on TurtleMarket.com!</p>
+      </div>
+
+        <div class="links-container">
+          <a>Home</a>
+          <a>Account</a>
+          <a>About Us</a>
+          <a>Search</a>
         </div>
       </div>
 
-    </div>
+    </main>
 
-      <!-- Drop header that appears if user clicks down-arrow hidden -->
-    <nav class="drop-header js-drop-header hidden">
-      <a href="index.html" class="drop-header-link" id="home-drop-header-link">Home</a>
-      <a href="account.html" class="drop-header-link">Account</a>
-      <a href="search.html" class="drop-header-link">Search</a>
-      <a href="about-us.html" class="drop-header-link">About Us</a>
-    </nav>
-
-  </header>
-
-  <main>
-
-    <div class="order-confirmation-container js-order-confirmation-message">
-      <!-- Generate in order-confirmation.js-->
-    </div>
-
-    <div class="order-summary-container js-order-summary-container">
-      <!-- Generate in order-confirmation.js -->
-    </div>
-
-    <div class="closing-message-container">
-      <p class="closing-message-text">We sent your email address a full order description and options for further order management. It should be in your inbox withing a few minutes. For now, here's a full list of options to continue your experience on TurtleMarket.com!</p>
-    </div>
-
-      <div class="links-container">
-        <a>Home</a>
-        <a>Account</a>
-        <a>About Us</a>
-        <a>Search</a>
-      </div>
-    </div>
-
-  </main>
+    <footer>
+      <p><i class="fa-regular fa-copyright"></i> 2025 Hayes Blackstone</p>
+    </footer>
+  </div>
   
   <script src="/scripts/base-scripts/order-confirmation.js" type="module"></script>
 

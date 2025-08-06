@@ -3,7 +3,8 @@
 <head>
 
   <!-- CSS Styles -->
-   <link rel="stylesheet" href="/styles/base-styles/reset.css">
+   <link rel="stylesheet" href="/styles/scalable-styles/reset.css">
+  <link rel="stylesheet" href="/styles/scalable-styles/header.css">
     <link rel="stylesheet" href="/styles/base-styles/signup.css">
 
   <!-- Google Fonts and Font Awesome -->
@@ -20,63 +21,68 @@
 </head>
 
 <body>
+  <div class="page-wrapper">
+    <header></header>
 
-  <header></header>
+    <main>
 
-  <main>
+      <!-- close page button -->
+      <a href="/index.html">
+      <i class="fa-solid fa-xmark js-xmark"></i>
+      </a>
 
-    <!-- close page button -->
-    <a href="index.html">
-    <i class="fa-solid fa-xmark js-xmark"></i>
-    </a>
+      <div class="login-box">
 
-    <div class="login-box">
+        <img class="logo" src="/images/base-images/full-logo.png">
 
-      <img class="logo" src="/images/base-images/full-logo.png">
-
-      <div class="container" id="first-name-container">
-        <h1 class="header">First Name</h1>
-        <input type="text" class="box js-first-name-container">
-      </div>
-
-      <div class="container" id="last-name-container">
-        <h1 class="header">Last Name</h1>
-        <input type="text" class="box js-last-name-container">
-      </div>
-
-      <div class="container" id="email-address-box">
-        <h2 class="header">Email Address</h1>
-        <input type="text" class="box js-email-container">
-      </div>
-
-      <div class="container" id="password-container">
-        <h3 class="header">Password</h2>
-        <div class="password-box-container">
-          <input type="password" class="box js-password-box" id="password-box">       
-          <i class="fa-solid fa-eye js-eye"></i>
+        <div class="container" id="first-name-container">
+          <h1 class="header">First Name</h1>
+          <input type="text" class="box js-first-name-container">
         </div>
 
-        <div class="container" id="re-enter-password-container">
-          <h4 class="header">Re-enter Password</h2>
+        <div class="container" id="last-name-container">
+          <h1 class="header">Last Name</h1>
+          <input type="text" class="box js-last-name-container">
+        </div>
+
+        <div class="container" id="email-address-box">
+          <h2 class="header">Email Address</h1>
+          <input type="text" class="box js-email-container">
+        </div>
+
+        <div class="container" id="password-container">
+          <h3 class="header">Password</h2>
           <div class="password-box-container">
-            <input type="password" class="box js-re-enter-password-box" id="re-enter-password-box">       
-            <i class="fa-solid fa-eye js-eye2"></i>
+            <input type="password" class="box js-password-box" id="password-box">       
+            <i class="fa-solid fa-eye js-eye"></i>
+          </div>
+
+          <div class="container" id="re-enter-password-container">
+            <h4 class="header">Re-enter Password</h2>
+            <div class="password-box-container">
+              <input type="password" class="box js-re-enter-password-box" id="re-enter-password-box">       
+              <i class="fa-solid fa-eye js-eye2"></i>
+          </div>
+
+          <p class="error-message js-error-message"></p>
+
+          <div class="message-container">
+            <p>Already have an account? <a class="sign-in-button" href="login.html">Sign in</a></p>
+          </div>
+
+          <a class="sign-up-link"> 
+          <button class="sign-up-button js-sign-up-button">Sign Up</button>
+          </a>
+
         </div>
-
-        <p class="error-message js-error-message"></p>
-
-        <div class="message-container">
-          <p>Already have an account? <a class="sign-in-button" href="login.html">Sign in</a></p>
-        </div>
-
-        <a class="sign-up-link"> 
-        <button class="sign-up-button js-sign-up-button">Sign Up</button>
-        </a>
 
       </div>
+    </main>
 
-    </div>
-  </main>
+    <footer>
+      <p><i class="fa-regular fa-copyright"></i> 2025 Hayes Blackstone</p>
+    </footer>
+  </div>
 
   <script src="/scripts/base-scripts/signup.js" type="module"></script>
 

@@ -66,15 +66,14 @@ async function generateCategorySection() {
 
 // HTML code for each category icon
 function generateIndividualCategoryIcon(category) {
-  console.log(category.page);
   return `
-  <a class="category-link" href="/code/category.html?category=${category.page}">
-  <div class="category-container"> 
-    <div class="circle-container" id="circle-container-${category.id}">
-      <i class="fa-solid fa-${category.icon} fa-browse"></i>
+  <a href="/code/category.html?category=${category.page}" class="category-link">
+    <div class="category-container"> 
+      <div class="circle-container" id="circle-container-${category.id}">
+        <i class="fa-solid fa-${category.icon} fa-browse exempt"></i>
+      </div>
+      <p class="category-title">${category.name}</p>
     </div>
-    <p class="category-title">${category.name}</p>
-  </div>
   </a>
   `;
 }
